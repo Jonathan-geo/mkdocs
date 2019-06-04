@@ -1,4 +1,8 @@
 site_name: JONATHAN
 theme: flatly
 
+pages: 
+  - Home: 'index.md'
+  - Matplotlib: 'matplot.md'
+  - Numpy: 'numpy.md'
 
