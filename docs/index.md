@@ -2,6 +2,12 @@
 
 Olá, muito prazer! Me chamo Jonathan. Se você, assim como eu, é apaixonado por dados, está na documentação certa. Esta é a minha documentação de Data-Science. **Enjoy it!**
 
+###[GITHUB](https://github.com/Jonathan-geo)  ||    [LINKEDIN](https://www.linkedin.com/in/jonathan-domingos-b98b76160/)  ||    [TWITTER](https://twitter.com/jonathan_cdso)
+
+
+
+
+
 **Mas afinal, o que você irá encontrar aqui?**
 
 **Dados**

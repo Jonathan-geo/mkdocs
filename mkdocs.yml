@@ -1,2 +1,12 @@
 site_name: JONATHAN
-theme: flatly
+theme:
+  name: 'material'
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/Jonathan-geo'
+    - type: 'twitter'
+      link: 'https://twitter.com/jonathan_cdso'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/in/jonathan-domingos-b98b76160/'
