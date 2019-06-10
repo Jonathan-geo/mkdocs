@@ -1,6 +1,5 @@
 site_name: JONATHAN
-theme:
-  name: bootstrap4
+theme: flatly
 
 pages: 
   - Home: 'index.md'
