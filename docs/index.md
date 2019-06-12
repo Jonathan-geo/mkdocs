@@ -1,20 +1,12 @@
----
-title: My Document
-summary: A brief description of my document.
-authors:
-    - Waylan Limberg
-    - Tom Christie
-date: 2018-07-10
-some_url: https://example.com
----
-
-
-
-# O que você vai encontrar aqui?
+# Introdução
 
 Olá, muito prazer! Me chamo Jonathan. Se você, assim como eu, é apaixonado por dados, está na documentação certa. Esta é a minha documentação de Data-Science. **Enjoy it!**
 
-###[GITHUB](https://github.com/Jonathan-geo)  ||    [LINKEDIN](https://www.linkedin.com/in/jonathan-domingos-b98b76160/)  ||    [TWITTER](https://twitter.com/jonathan_cdso)
+<h3>Contato</h3>
+
+<button onclick="window.open('https://github.com/Jonathan-geo');">GITHUB</button>
+<button onclick="window.open('https://www.linkedin.com/in/jonathan-domingos-b98b76160/');">LINKEDIN</button>
+<button onclick="window.open('https://twitter.com/jonathan_cdso');">TWITTER</button>
 
 
 
@@ -47,16 +39,17 @@ Out[8]: <matplotlib.collections.PathCollection at 0x7f056ae2d3c8>
 
 
 
-## Python
+## Python / Anaconda
 
-Como toda boa análise de dados, é necessário uma boa ferramenta de manipulação destes dados. Nesta documentação, para tanto, utilizarei o python e suas distribuições anaconda, ou seja, utilizaremos o Numpy, Pandas, Seaborn, Geopandas, etc. 
+Como toda boa análise de dados, é necessário uma boa ferramenta de manipulação destes dados. Nesta documantação falaremos o tempo todo em ferramentas de manipulação de dados, logo recomendo, fortemente, que você tenha instalado a distribuição anaconda, pois ela já vem munida da linguagem de programação python e sua principais bibliotecas pandas, numpy, matplotlib, seabor, etc. Caso contrário poderá instalar o python e as bibliotecas separadamente. Segue o link do Anaconda e do python. 
 
- Patra ver mais sobre a distribuição anaconda clique [aqui ](https://www.anaconda.com/distribution/).
 
-## Tutorial
+<div class="panel panel-info">
+Observação: Recomendo que instale o pack anaconda, assim não precisará instala mais nada
+     
+</div> 
 
-Nesta documantação falaremos o tempo todo em ferramentas de manipulação de dados, logo recomendo, fortemente, que você tenha instalado a distribuição anaconda, pois ela já vem munida da linguagem de programação python e sua principais bibliotecas. Caso contrário poderá instalar o python e as bibliotecas separadamente. 
 
-###[ANACONDA ](https://www.anaconda.com/distribution/)
-###[PYTHON ](https://www.python.org/downloads/)
 
+<button onclick="window.open('https://www.anaconda.com/distribution');">ANACONDA</button>
+<button onclick="window.open('https://www.python.org/downloads/');">PYTHON</button>
