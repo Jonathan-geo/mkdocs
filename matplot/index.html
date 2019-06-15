@@ -82,11 +82,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#matplotlib">Matplotlib</a></li>
-        <li class="main "><a href="#instalacao-matplotlib">Instalação - Matplotlib</a></li>
-        <li class="main "><a href="#letgo-to-the-tutorial">Let'go to the tutorial?</a></li>
-            <li><a href="#importando-as-bibliotecas">Importando as bibliotecas</a></li>
-            <li><a href="#o-uso-do-matplotlib-inline-e-recomendado-para-que-estiver-utilizando-o-jupyter-para-que-o-grafico-seja-plotado-em-sua-linha-de-comando-quem-estiver-utilizando-o-shell-terminal-ou-ipython-recomenda-se-colocar-o-pltshow-no-final-de-cada-chamada-de-grafico">O uso do matplotlib inline é recomendado para que estiver utilizando o jupyter, para que o gráfico seja plotado em sua linha de comando. Quem estiver utilizando o shell, terminal ou ipython, recomenda-se colocar o plt.show() no final de cada chamada de gráfico.</a></li>
-            <li><a href="#lendo-o-data-set">Lendo o data set</a></li>
+        <li class="main "><a href="#tutorial">Tutorial</a></li>
         <li class="main "><a href="#plotando-graficos">Plotando Gráficos</a></li>
     </ul>
 </div></div>
@@ -95,22 +91,22 @@
 <h1 id="matplotlib">Matplotlib</h1>
 <p>Segundo a documentação oficail, o Matplotlib é uma biblioteca de plotagem 2D do Python que produz inúmeros gráficos de qualidade em uma variedade de formatos e ambientes interativos. O Matplotlib pode ser usado em scripts Python, nos shells do Python e do IPython, no notebook Jupyter, nos servidores de aplicativos da web e em kits de ferramentas de interface gráfica do usuário. Para mais informações sobre esta biblioteca, clicar <a href="https://matplotlib.org/">aqui </a>.</p>
 <p>Neste tutorial, o matplotlib será utilizado com o auxíio do numpy e do data-set iris, que pode ser encontrado <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/">aqui </a>. OBS: cliclar na opção iris.data</p>
-<h1 id="instalacao-matplotlib">Instalação - Matplotlib</h1>
+<p><strong>Instalação - Matplotlib</strong></p>
 <p>Essa biblioteca não é nativa do Python, logo você precisará intalar. Se você baixou o pacote Anaconda, como recomenda na página home desta documentação, o matplotlib  já estará incluso, caso contrário, você deverá utilizar a ferramenta pip do seu python. Digite o seguinte comando no seu terminal linux ou prompt  windowns.</p>
 <pre><code class="python">pip install matplotlib
 </code></pre>
 
 <hr />
-<h1 id="letgo-to-the-tutorial">Let'go to the tutorial?</h1>
-<h2 id="importando-as-bibliotecas">Importando as bibliotecas</h2>
-<p>Utilizando o editor de sua preferência como o vsCode, atom ou Pycharme, importe as bibliotecas. </p>
+<h1 id="tutorial">Tutorial</h1>
+<p><strong>Importando as bibliotecas</strong>
+Utilizando o editor de sua preferência como o vsCode, atom ou Pycharme, importe as bibliotecas. </p>
 <pre><code class="python">import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
 </code></pre>
 
-<h2 id="o-uso-do-matplotlib-inline-e-recomendado-para-que-estiver-utilizando-o-jupyter-para-que-o-grafico-seja-plotado-em-sua-linha-de-comando-quem-estiver-utilizando-o-shell-terminal-ou-ipython-recomenda-se-colocar-o-pltshow-no-final-de-cada-chamada-de-grafico">O uso do matplotlib inline é recomendado para que estiver utilizando o jupyter, para que o gráfico seja plotado em sua linha de comando. Quem estiver utilizando o shell, terminal ou ipython, recomenda-se colocar o plt.show() no final de cada chamada de gráfico.</h2>
-<h2 id="lendo-o-data-set">Lendo o data set</h2>
+<p>O uso do matplotlib inline é recomendado para que estiver utilizando o jupyter, para que o gráfico seja plotado em sua linha de comando. Quem estiver utilizando o shell, terminal ou ipython, recomenda-se colocar o plt.show() no final de cada chamada de gráfico. </p>
+<p><strong>Lendo o data set</strong></p>
 <p>Atenção: o caminho ../_DATASET correspondo ao local que esta salvado o meu arquivo irirs.data.</p>
 <pre><code class="python">In [1]: data = np.genfromtxt('../_DATASET/iris.data', delimiter=',', usecols=(0,1,2,3))
 
