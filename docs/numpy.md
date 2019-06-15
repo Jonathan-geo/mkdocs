@@ -5,27 +5,30 @@ O NumPy é uma poderosa biblioteca da linguagem de programação Python, pois pe
 
 Para mais informações sobre o Numpy clique [aqui ](https://www.numpy.org/).
 
-# Instalação - NumPy
+<h3>Instalação - NumPy</h3>
+
 Essa biblioteca não é nativa do Python, logo você precisará intalar. Se você baixou o pacote Anaconda, como recomenda na página home desta documentação, o numpy  já estará incluso, caso contrário, você deverá utilizar a ferramenta pip do seu python. Digite o seguinte comando no seu terminal linux ou prompt  windowns.
 
 ```python
 pip install numpy
 ```
 ---
-# Let'go to the tutorial?
+# Ttutorial
 
-## Importando a biblioteca
+<h3>Importando a biblioteca</h3>
+
 Utilizando o editor de sua preferência como o vsCode, atom ou Pycharme, importe a biblioteca. 
 
 ```python
 import numpy as np
 ```
 ---
-## Criando uma Array(Matriz)
+
+<h3>Criando uma Array(Matriz)</h3>
 No código abaixo podemos observar um exemplo de um list, pois o python não oferece suporte para arrays, porém o Numpy permite que tratemos uma list como um array, como será observado no exemplo 2. 
 
 
-*Exemplo 1: List*
+**Exemplo 1: List**
 
 ```python
 In [1]: lista = [10,20,40,30]
@@ -34,7 +37,7 @@ In [2]: type (lista)
 Out[2]: list
 ```
 
-*Exemplo 2: Numpay Array*
+**Exemplo 2: Numpay Array**
 
 ```python
 In [1]: Matriz = [10,20,40,30]

@@ -4,16 +4,17 @@ Segundo a documentação oficail, o Matplotlib é uma biblioteca de plotagem 2D 
 
 Neste tutorial, o matplotlib será utilizado com o auxíio do numpy e do data-set iris, que pode ser encontrado [aqui ](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/). OBS: cliclar na opção iris.data
 
-# Instalação - Matplotlib
+**Instalação - Matplotlib**
+
 Essa biblioteca não é nativa do Python, logo você precisará intalar. Se você baixou o pacote Anaconda, como recomenda na página home desta documentação, o matplotlib  já estará incluso, caso contrário, você deverá utilizar a ferramenta pip do seu python. Digite o seguinte comando no seu terminal linux ou prompt  windowns.
 
 ```python
 pip install matplotlib
 ```
 ---
-# Let'go to the tutorial?
+# Tutorial
 
-## Importando as bibliotecas
+**Importando as bibliotecas**
 Utilizando o editor de sua preferência como o vsCode, atom ou Pycharme, importe as bibliotecas. 
 
 ```python
@@ -21,9 +22,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
 ```
+
 O uso do matplotlib inline é recomendado para que estiver utilizando o jupyter, para que o gráfico seja plotado em sua linha de comando. Quem estiver utilizando o shell, terminal ou ipython, recomenda-se colocar o plt.show() no final de cada chamada de gráfico. 
----
-## Lendo o data set 
+
+
+**Lendo o data set**
 
 Atenção: o caminho ../_DATASET correspondo ao local que esta salvado o meu arquivo irirs.data.
 
