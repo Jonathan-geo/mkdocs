@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>MySQL - JONATHAN</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">JONATHAN</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Home</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">MySQL</a>
+                            </li>
+                            <li >
+                                <a href="../matplot/">Matplotlib</a>
+                            </li>
+                            <li >
+                                <a href="../numpy/">Numpy</a>
+                            </li>
+                            <li >
+                                <a href="../ruby/">Ruby</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../matplot/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#mysql">MySQL</a></li>
+            <li><a href="#instalacao">Instalação</a></li>
+            <li><a href="#configuracao">Configuração</a></li>
+        <li class="main "><a href="#mysql-basicos">MYSQL BÁSICOS</a></li>
+        <li class="main "><a href="#mysql-exemplos">MYSQL EXEMPLOS</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="mysql">MySQL</h1>
+<p>O MySQL é um sistema gerenciador de banco de dados relacional de código aberto. O serviço utiliza a linguagem SQL (Structure Query Language – Linguagem de Consulta Estruturada), que é a linguagem mais popular para inserir, acessar e gerenciar o conteúdo armazenado num banco de dados.O MySQL é um produto regido pela licença GPL (General Public License) portanto é "parcialmente" Open Source.
+Nesta documentação utilizarei o LAMP, um acrônimo para Linux, Apache, MySQL e Perl/PHP/Python. Nesse conjunto de aplicações, inclui-se, respectivamente, um sistema operacional, um servidor web, um sistema gerenciador de banco de dados e uma linguagem de programação.</p>
+<h2 id="instalacao">Instalação</h2>
+<p>OBS: O sistema operacional utilizado é o Linux Ubuntu. 
+Executar em ordem, no terminal:</p>
+<pre><code>#Instalando o Apache
+
+sudo apt update 
+
+sudo apt upgrade -y
+
+sudo apt install -y apache2
+
+</code></pre>
+
+<p>Para testar se o Apache está funcionando corretamente, devemos digitar localhost na barra de endereços do navegador de sua preferência.</p>
+<pre><code>#Instalando o PHP 
+
+sudo apt install -y php php-cli php-common php-gd php-mbstring php-intl php-xml php-zip php-pear libapache2-mod-php
+</code></pre>
+
+<pre><code>#Testando o PHP
+
+echo “&lt;?php phpinfo(); ?&gt;” | sudo tee /var/www/html/test.php | sudo service apache2 restart
+</code></pre>
+
+<p>Para testar o PHP no navegador, digite na página de endereços: </p>
+<blockquote>
+<p>localhost/test.php</p>
+</blockquote>
+<pre><code>#Instalando o MySQL
+
+sudo apt install -y mysql-server mysql-client php-mysql
+</code></pre>
+
+<pre><code>#Acessar o MySQL no Terminal
+
+sudo mysql
+</code></pre>
+
+<h2 id="configuracao">Configuração</h2>
+<p>Criar novo usuário:</p>
+<pre><code>sudo mysql 
+#Ou somente mysql(depende de seu acesso)
+
+
+CREATE USER 'seu_usuario'@'localhost' IDENTIFIED BY 'sua_senha';
+GRANT ALL PRIVILEGES ON *.* TO 'seu_usuario'@'localhost' WITH GRANT OPTION;
+</code></pre>
+
+<p>Entrando com o usuário criado.</p>
+<pre><code>sudo mysql -u seu_usuario -p
+
+#exit (para sair)
+</code></pre>
+
+<h2>Instalando o phpMyAdmin</h2>
+
+<pre><code>sudo apt install -y phpmyadmin
+</code></pre>
+
+<p>Para testá-lo no navegador, digite na barra de endereços: </p>
+<blockquote>
+<p>localhost/phpmyadmin</p>
+</blockquote>
+<p>Digite seu usuário e senha registrados na configuração do MySQL.</p>
+<h2>Instalação do MySQL WorkBench</h2>
+
+<p>Caso tenha algum resquício de alguma instalação do MySQL WorkBench, realize o comando:</p>
+<pre><code>sudo apt remove --purge mysql-workbench*
+</code></pre>
+
+<p>Instalando a dependência do programa:</p>
+<pre><code>sudo apt install libgtkmm-3.0-1v5
+</code></pre>
+
+<p>Instalando o MySQL WorkBench:</p>
+<pre><code>sudo apt install mysql-workbench*
+</code></pre>
+
+<p>Entre no MySQL WorkBench e depois edite a conexão. Troque o nome do usuário (username) root para o seu_usuario. Feche o programa e depois entre novamente. Digite a sua senha e o MySQL WorkBench estará funcionando normalmente.</p>
+<h1 id="mysql-basicos">MYSQL BÁSICOS</h1>
+<h4>CREATE DATABASES</h4>
+
+<pre><code class="sql">CREATE DATABASE meu_banco
+default character set utf8
+default collate utf8_general_ci;
+</code></pre>
+
+<h4>SHOW DATABASES</h4>
+
+<pre><code class="sql">SHOW DATABASES;
+
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| crudaplication     |
+| formulariopdi      |
+| mysql              |
+| performance_schema |
+| sys                |
+| testando           |
++--------------------+
+
+</code></pre>
+
+<h4>CREATE TABLE</h4>
+
+<p>Antes de criar uma tabela ou realizar qualquer operação, é necessário selecionar o banco de dados que vai ser usado:</p>
+<pre><code class="sql">USE meu_banco;
+</code></pre>
+
+<pre><code>CREATE TABLE `clientes` (
+`idCliente` mediumint(8) unsigned NOT NULL auto_increment,
+`nomeEmpresa` varchar(255),
+`nomeDiretor` varchar(255) default NULL,
+`numEmpregados` mediumint default NULL,
+PRIMARY KEY (`idCliente`)
+
+) AUTO_INCREMENT=1;
+</code></pre>
+
+<h4>SHOW TABLES</h4>
+
+<p>Sempre que quiser usar o SHOW tables deve selecionar o banco de dados primeiro. </p>
+<pre><code class="sql">SHOW tables;
+
++--------------------+
+| Tables_in_testando |
++--------------------+
+| clientes           |
++--------------------+
+
+</code></pre>
+
+<h4>DESCRIBE</h4>
+
+<pre><code class="sql">DESC clientes;
+</code></pre>
+
+<pre><code class="sql">DESCRIBE clientes;
+
++---------------+-----------------------+------+-----+---------+----------------+
+| Field         | Type                  | Null | Key | Default | Extra          |
++---------------+-----------------------+------+-----+---------+----------------+
+| idCliente     | mediumint(8) unsigned | NO   | PRI | NULL    | auto_increment |
+| nomeEmpresa   | varchar(255)          | YES  |     | NULL    |                |
+| nomeDiretor   | varchar(255)          | YES  |     | NULL    |                |
+| numEmpregados | mediumint(9)          | YES  |     | NULL    |                |
++---------------+-----------------------+------+-----+---------+----------------+
+
+</code></pre>
+
+<h4>INSERT INTO</h4>
+
+<pre><code class="sql">INSERT INTO `clientes` (`nomeEmpresa`,`nomeDiretor`,`numEmpregados`) VALUES (&quot;Malesuada Inc.&quot;,&quot;Johnny Pedd&quot;,4847);
+</code></pre>
+
+<p>Note que no exemplo não tem o campo idCliente, pois foi criado com o parâmetro auto_increment. Seu preenchimento é automático.</p>
+<h4>SELECT</h4>
+
+<pre><code class="sql">SELECT * FROM clientes;
+</code></pre>
+
+<p>Para ver colunas selecionadas:</p>
+<pre><code class="sql">SELECT nomeDiretor FROM clientes;
+
++-------------------+
+| nomeDiretor       |
++-------------------+
+| Macaulay Bulkin   |
+| Jonathan Domingos |
+| Leda Grasiele     |
++-------------------+
+
+</code></pre>
+
+<h4>DELETE</h4>
+
+<pre><code class="sql">DELETE FROM clientes WHERE nomeDiretor = 'Jonathan Domingos';
+</code></pre>
+
+<p>Neste caso, deletei todos os registros ligado ao Jonathan. Minha tabela ficou assim:</p>
+<pre><code class="sql">
+SELECT * FROM clientes;
+
+
++-----------+-------------+-----------------+---------------+
+| idCliente | nomeEmpresa | nomeDiretor     | numEmpregados |
++-----------+-------------+-----------------+---------------+
+|         1 | In Company  | Macaulay Bulkin |          4440 |
+|         3 | MinasSA     | Leda Grasiele   |           340 |
++-----------+-------------+-----------------+---------------+
+</code></pre>
+
+<p>Cuidado: A comando DELETE acima deletará todos registros relacionados a Jonathan, caso queira deletar apenas uma única linha, identificar pelo id:</p>
+<pre><code class="sql">DELETE FROM clientes WHERE idCliente = 7;
+</code></pre>
+
+<h4>DROP TABLE</h4>
+
+<p>Eliminar uma tabela:</p>
+<pre><code class="sql">DROP TABLE nome_da_tabela;
+</code></pre>
+
+<h4>DROP DATABASE</h4>
+
+<p>Elimina um banco de dados:</p>
+<pre><code class="sql">DROP DATABASE nome_do_banco;
+</code></pre>
+
+<h4>TRUNCATE</h4>
+
+<p>Para limpar uma tabela, use o comando TRUNCATE. Internamente, ele remove a tabela primeiro e, depois, a recria com a mesma estrutura – só que sem os dados. Se houver um contador AUTO_INCREMENT, na tabela em questão, ele é zerado e recolocado. Veja como funciona:</p>
+<pre><code class="sql">TRUNCATE TABLE nome_da_tabela;
+</code></pre>
+
+<h4>UPDATE</h4>
+
+<pre><code class="sql">UPDATE clientes SET numEmpregados=1999 WHERE idCliente = 1;
+</code></pre>
+
+<h1 id="mysql-exemplos">MYSQL EXEMPLOS</h1>
+<h4>CREATE TABLE</h4>
+
+<pre><code class="sql">CREATE TABLE `pessoas` (
+`id` int NOT NULL AUTO_INCREMENT,
+`nome` varchar(30) NOT NULL,
+`nascimento` date,
+`sexo` enum('M','F'),
+`peso` decimal (5,2),
+`altura` decimal (3,2),
+`nacionalidade` varchar(20) DEFAULT 'Brasil',
+PRIMARY KEY (id)
+) DEFAULT CHARSET = utf8;
+</code></pre>
+
+<p>Outro Exemplo:</p>
+<pre><code class="sql">CREATE TABLE IF NOT EXISTS `cursos` (
+`nome` varchar(30) NOT NULL UNIQUE,
+`descricao` text,
+`carga` int UNSIGNED,
+`totaulas` int UNSIGNED,
+`ano` year DEFAULT '2016',
+) DEFAULT CHARSET = utf8;
+</code></pre>
+
+<h4>INSERT INTO</h4>
+
+<pre><code class="sql">INSERT INTO `pessoas` (`nome`, `nascimento`, `sexo`,`peso`, `altura`, `nacionalidade`) VALUES ('Godofredo', '1984-01-02', 'M', '78.5', '1.83', 'Brasil');
+
+INSERT INTO `pessoas` (`id`, `nome`, `nascimento`, `sexo`,`peso`, `altura`, `nacionalidade`) VALUES (DEFAULT, 'Creuza', '1999-01-02', 'F', '78.5', '1.83', 'Argentina'), 
+(DEFAULT, 'Carlos', '1999-01-02', 'M', '80.5', '1.83', 'Uruguai');
+
+</code></pre>
+
+<h4>SELECT ALL</h4>
+
+<pre><code class="sql">SELECT * FROM pessoas;
+
++----+-----------+------------+------+-------+--------+---------------+
+| id | nome      | nascimento | sexo | peso  | altura | nacionalidade |
++----+-----------+------------+------+-------+--------+---------------+
+|  1 | Godofredo | 1984-01-02 | M    | 78.50 |   1.83 | Brasil        |
+|  2 | Maria     | 1999-01-02 | F    | 78.50 |   1.83 | Portugal      |
+|  3 | Creuza    | 1999-01-02 | F    | 78.50 |   1.83 | Argentina     |
+|  4 | Carlos    | 1999-01-02 | M    | 80.50 |   1.83 | Uruguai       |
++----+-----------+------------+------+-------+--------+---------------+
+
+</code></pre>
+
+<h4>DESCRIBE</h4>
+
+<pre><code class="sql">DESC pessoas;
+
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| id            | int(11)       | NO   | PRI | NULL    | auto_increment |
+| nome          | varchar(30)   | NO   |     | NULL    |                |
+| nascimento    | date          | YES  |     | NULL    |                |
+| sexo          | enum('M','F') | YES  |     | NULL    |                |
+| peso          | decimal(5,2)  | YES  |     | NULL    |                |
+| altura        | decimal(3,2)  | YES  |     | NULL    |                |
+| nacionalidade | varchar(20)   | YES  |     | Brasil  |                |
++---------------+---------------+------+-----+---------+----------------+
+
+</code></pre>
+
+<h4>ADD COLUMN</h4>
+
+<p>Adicionar uma coluna em minha tabela:</p>
+<pre><code class="sql">ALTER TABLE pessoas ADD COLUMN profissao varchar(10);
+</code></pre>
+
+<pre><code class="sql">DESC pessoas;
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| id            | int(11)       | NO   | PRI | NULL    | auto_increment |
+| nome          | varchar(30)   | NO   |     | NULL    |                |
+| nascimento    | date          | YES  |     | NULL    |                |
+| sexo          | enum('M','F') | YES  |     | NULL    |                |
+| peso          | decimal(5,2)  | YES  |     | NULL    |                |
+| altura        | decimal(3,2)  | YES  |     | NULL    |                |
+| nacionalidade | varchar(20)   | YES  |     | Brasil  |                |
+| profissao     | varchar(10)   | YES  |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+</code></pre>
+
+<h4>ADD COLUMN 2</h4>
+
+<p>Adicionar uma coluna em minha tabela, escolhendo a posição:</p>
+<pre><code class="sql">ALTER TABLE pessoas ADD COLUMN profissao varchar(10) after nome;
+</code></pre>
+
+<h4>ADD COLUMN 3</h4>
+
+<p>Adicionar uma coluna em minha tabela, escolhendo a primeira posição:</p>
+<pre><code class="sql">ALTER TABLE pessoas ADD COLUMN código INT first;
+</code></pre>
+
+<h4>MODIFY COLUMN</h4>
+
+<p>Modificando o tipo primitivo e as constraints. No caso abaixo troquei varchar(10) por varchar(30).</p>
+<pre><code class="sql">ALTER TABLE pessoas MODIFY COLUMN profissao varchar(20) not null default '';
+</code></pre>
+
+<h4>CHANGE COLUMN</h4>
+
+<p>Renomear a coluna.</p>
+<pre><code class="sql">ALTER TABLE pessoas CHANGE COLUMN profissao prof varchar(20) not null default '';
+</code></pre>
+
+<p>OBS: o uso do not null defaul '' é para permitir ter uma coluna not null. </p>
+<h4>RENAME TO</h4>
+
+<p>Renomear a tabela.</p>
+<pre><code class="sql">ALTER TABLE pessoas RENAME TO pessoal;
+</code></pre>
+
+<h4>ADD PRIMARY KEY</h4>
+
+<pre><code class="sql">ALTER TABLE cursos ADD COLUMN id INT first;
+
+ALTER TABLE cursos ADD PRIMARY KEY (id);
+</code></pre>
+
+<h4>DROP COLUMN</h4>
+
+<p>Apagar uma coluna em minha tabela:</p>
+<pre><code class="sql">ALTER TABLE pessoas DROP COLUMN profissao;
+</code></pre>
+
+<hr />
+<p><br>
+<br></p>
+<h4>TUTORIAL UNICAMP</h4>
+
+<pre><code class="sql">CREATE TABLE taxi (
+placa VARCHAR (7) NOT NULL,
+marca VARCHAR (30) NOT NULL,
+modelo VARCHAR (30) NOT NULL,
+ano INTEGER,
+licenca VARCHAR (9),
+PRIMARY KEY (placa)
+);
+</code></pre>
+
+<pre><code class="sql">
+CREATE TABLE cliente (
+cliId VARCHAR (4) NOT NULL,
+nome VARCHAR (80) NOT NULL,
+cpf VARCHAR (14) NOT NULL,
+PRIMARY KEY (cliId)
+);
+</code></pre>
+
+<pre><code class="sql">CREATE TABLE corrida (
+cliId VARCHAR (4) NOT NULL,
+placa VARCHAR (7) NOT NULL,
+dataPedido DATE NOT NULL,
+PRIMARY KEY (cliId, placa, dataPedido),
+FOREIGN KEY (cliId)
+    REFERENCES cliente (cliId)
+        ON DELETE NO ACTION
+        ON UPDATE NO ACTION,
+FOREIGN KEY (placa)
+    REFERENCES taxi (placa)
+        ON DELETE NO ACTION
+        ON UPDATE NO ACTION
+);
+</code></pre>
+
+<p>OBS: FOREIHN KEY = Chave estrangeira que aponta para a chave primária de outro campo.</p>
+<p>Ações em relação a tabela a qual estou referenciando, ou seja, a tabela que possui a primary key. </p>
+<pre><code>NO ACTION = impede a ação na tabela mestre (tabela_ref)
+CASCADE = propaga a ação da tabela mestre (Apaga tudo ou altera tudo)
+SET NULL = valores de referências alterados para nulo.
+SET DEFAULT = valores de referências alterados para default.
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
