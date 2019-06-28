@@ -3,6 +3,9 @@ theme: flatly
 
 pages: 
   - Home: 'index.md'
+  - MySQL: 'mysql.md'
   - Matplotlib: 'matplot.md'
   - Numpy: 'numpy.md'
+  - Ruby: 'ruby.md'
+
 
