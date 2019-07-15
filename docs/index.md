@@ -42,11 +42,11 @@ Out[8]: <matplotlib.collections.PathCollection at 0x7f056ae2d3c8>
 
 # Python
 
-Como toda boa análise de dados, é necessário uma boa ferramenta de manipulação destes dados. Nesta documantação falaremos o tempo todo em ferramentas de manipulação de dados, logo recomendo, fortemente, que você tenha instalado a distribuição anaconda, pois ela já vem munida da linguagem de programação python e sua principais bibliotecas pandas, numpy, matplotlib, seabor, etc. Caso contrário poderá instalar o python e as bibliotecas separadamente. Segue o link do Anaconda e do python. 
+Como toda boa análise de dados, é necessário uma boa ferramenta de manipulação destes dados. Nesta documentação falaremos o tempo todo em ferramentas de manipulação de dados. Logo, recomendo fortemente que você tenha instalado a distribuição anaconda, pois ela já vem munida da linguagem de programação python e sua principais bibliotecas, como pandas, numpy, matplotlib, seaborn etc. Caso contrário, você poderá instalar o python e as bibliotecas separadamente. Segue o link do Anaconda e do python. 
 
 
 <div class="panel panel-info">
-Observação: Recomendo que instale o pack anaconda, assim não precisará instala mais nada
+Observação: Recomendo que instale o pack anaconda, assim não precisará instalar mais nada.
      
 </div> 
 
@@ -108,7 +108,7 @@ Para entender o Jupyter
 - sum([209, 32, 4, 23 e 45]) ou sum(x) - soma os valores.
 - min(x) e max(x) - mostra os valores mínimos e máximos.
 
-##Operadores matemáticos##
+##Operadores matemáticos
 
 - 3 * 2 (multiplicação)
 - 6 / 3 (divisão)

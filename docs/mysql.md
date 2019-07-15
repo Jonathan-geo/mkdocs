@@ -1,6 +1,6 @@
 #MySQL 
 
-O MySQL é um sistema gerenciador de banco de dados relacional de código aberto. O serviço utiliza a linguagem SQL (Structure Query Language – Linguagem de Consulta Estruturada), que é a linguagem mais popular para inserir, acessar e gerenciar o conteúdo armazenado num banco de dados.O MySQL é um produto regido pela licença GPL (General Public License) portanto é "parcialmente" Open Source.
+O MySQL é um sistema gerenciador de banco de dados relacional de código aberto. O serviço utiliza a linguagem SQL (Structured Query Language – Linguagem de Consulta Estruturada), que é a linguagem mais popular para inserir, acessar e gerenciar o conteúdo armazenado num banco de dados. O MySQL é um produto regido pela licença GPL (General Public License). Portanto, é "parcialmente" Open Source.
 Nesta documentação utilizarei o LAMP, um acrônimo para Linux, Apache, MySQL e Perl/PHP/Python. Nesse conjunto de aplicações, inclui-se, respectivamente, um sistema operacional, um servidor web, um sistema gerenciador de banco de dados e uma linguagem de programação.
 
 ##Instalação
@@ -224,7 +224,7 @@ SELECT * FROM clientes;
 +-----------+-------------+-----------------+---------------+
 ```
 
-Cuidado: A comando DELETE acima deletará todos registros relacionados a Jonathan, caso queira deletar apenas uma única linha, identificar pelo id:
+Cuidado: A comando DELETE acima deletará todos registros relacionados a Jonathan. Caso queira deletar apenas uma única linha, identificar pelo id:
 
 ```sql
 DELETE FROM clientes WHERE idCliente = 7;
@@ -467,7 +467,7 @@ FOREIGN KEY (placa)
 
 OBS: FOREIHN KEY = Chave estrangeira que aponta para a chave primária de outro campo.
 
-Ações em relação a tabela a qual estou referenciando, ou seja, a tabela que possui a primary key. 
+Ações em relação à tabela a qual estou referenciando, ou seja, a tabela que possui a primary key.
 
     NO ACTION = impede a ação na tabela mestre (tabela_ref)
     CASCADE = propaga a ação da tabela mestre (Apaga tudo ou altera tudo)

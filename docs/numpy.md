@@ -1,13 +1,13 @@
 # Numpy
 (Introdução ao Numpy)
 
-O NumPy é uma poderosa biblioteca da linguagem de programação Python, pois permite trabalhar, com eficiência, vetores, matrizes, arranjos e permite diversas funçoes e operaçĩes matemáticas. Assim como no python, o Numpy possui um sintaxe clare e objetiva. Dentro da matemática, esta biblioteca permite trabalhar, de forma aplicada, com arrandos multidimencionais, matrizes de n dimensões, álgebra linear, geração de números aleatórios, etc.
+O NumPy é uma poderosa biblioteca da linguagem de programação Python, que permite trabalhar com eficiência vetores, matrizes, arranjos e permite diversas funções e operações matemáticas. Assim como no python, o Numpy possui um sintaxe clara e objetiva. Dentro da matemática, esta biblioteca permite trabalhar, de forma aplicada, com arranjos multidimensionais, matrizes de n dimensões, álgebra linear, geração de números aleatórios etc.
 
 Para mais informações sobre o Numpy clique [aqui ](https://www.numpy.org/).
 
 <h3>Instalação - NumPy</h3>
 
-Essa biblioteca não é nativa do Python, logo você precisará intalar. Se você baixou o pacote Anaconda, como recomenda na página home desta documentação, o numpy  já estará incluso, caso contrário, você deverá utilizar a ferramenta pip do seu python. Digite o seguinte comando no seu terminal linux ou prompt  windowns.
+Essa biblioteca não é nativa do Python, logo você precisará instalar. Se você baixou o pacote Anaconda, como recomendado, o numpy  já estará incluso. Caso contrário, você deverá utilizar a ferramenta pip do seu python. Digite o seguinte comando no seu terminal linux ou prompt windowns.
 
 ```python
 pip install numpy
@@ -17,7 +17,7 @@ pip install numpy
 
 <h3>Importando a biblioteca</h3>
 
-Utilizando o editor de sua preferência como o vsCode, atom ou Pycharme, importe a biblioteca. 
+Utilizando o editor de sua preferência como o vsCode, atom ou Pycharme, importe a biblioteca.
 
 ```python
 import numpy as np
@@ -25,7 +25,7 @@ import numpy as np
 ---
 
 <h3>Criando uma Array(Matriz)</h3>
-No código abaixo podemos observar um exemplo de um list, pois o python não oferece suporte para arrays, porém o Numpy permite que tratemos uma list como um array, como será observado no exemplo 2. 
+No código abaixo podemos observar um exemplo de uma list, pois o python não oferece suporte para arrays, porém o Numpy permite que tratemos uma list como um array, como será observado no exemplo 2. 
 
 
 **Exemplo 1: List**
@@ -94,7 +94,7 @@ In [7]: m4 = np.array([[1,2], [3,4]])
 
 ```
 **Somando matrizes**
-OBS: as soma, subtração e a multiplicação, funcionam como na geometria. Para manipulações de dadas de modo convencional do python, utilizar uma list.
+OBS: a soma, a subtração e a multiplicação funcionam como na geometria. Para manipulações de dados de modo convencional do python, utilizar uma list.
 
 ```python
 In [8] print(m3 + m4)
@@ -102,7 +102,7 @@ Out[8] [[ 6  8]
         [10 12]]
 ```
 
-**Somando todos elementos**
+**Somando todos os elementos**
 OBS: foram somados os elementos da matriz m3, criada logo acima. 
 
 ```python
