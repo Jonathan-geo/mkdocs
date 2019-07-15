@@ -97,7 +97,7 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="mysql">MySQL</h1>
-<p>O MySQL é um sistema gerenciador de banco de dados relacional de código aberto. O serviço utiliza a linguagem SQL (Structure Query Language – Linguagem de Consulta Estruturada), que é a linguagem mais popular para inserir, acessar e gerenciar o conteúdo armazenado num banco de dados.O MySQL é um produto regido pela licença GPL (General Public License) portanto é "parcialmente" Open Source.
+<p>O MySQL é um sistema gerenciador de banco de dados relacional de código aberto. O serviço utiliza a linguagem SQL (Structured Query Language – Linguagem de Consulta Estruturada), que é a linguagem mais popular para inserir, acessar e gerenciar o conteúdo armazenado num banco de dados. O MySQL é um produto regido pela licença GPL (General Public License). Portanto, é "parcialmente" Open Source.
 Nesta documentação utilizarei o LAMP, um acrônimo para Linux, Apache, MySQL e Perl/PHP/Python. Nesse conjunto de aplicações, inclui-se, respectivamente, um sistema operacional, um servidor web, um sistema gerenciador de banco de dados e uma linguagem de programação.</p>
 <h2 id="instalacao">Instalação</h2>
 <p>OBS: O sistema operacional utilizado é o Linux Ubuntu. 
@@ -293,7 +293,7 @@ SELECT * FROM clientes;
 +-----------+-------------+-----------------+---------------+
 </code></pre>
 
-<p>Cuidado: A comando DELETE acima deletará todos registros relacionados a Jonathan, caso queira deletar apenas uma única linha, identificar pelo id:</p>
+<p>Cuidado: A comando DELETE acima deletará todos registros relacionados a Jonathan. Caso queira deletar apenas uma única linha, identificar pelo id:</p>
 <pre><code class="sql">DELETE FROM clientes WHERE idCliente = 7;
 </code></pre>
 
@@ -493,7 +493,7 @@ FOREIGN KEY (placa)
 </code></pre>
 
 <p>OBS: FOREIHN KEY = Chave estrangeira que aponta para a chave primária de outro campo.</p>
-<p>Ações em relação a tabela a qual estou referenciando, ou seja, a tabela que possui a primary key. </p>
+<p>Ações em relação à tabela a qual estou referenciando, ou seja, a tabela que possui a primary key.</p>
 <pre><code>NO ACTION = impede a ação na tabela mestre (tabela_ref)
 CASCADE = propaga a ação da tabela mestre (Apaga tudo ou altera tudo)
 SET NULL = valores de referências alterados para nulo.

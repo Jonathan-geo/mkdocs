@@ -88,11 +88,16 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#ruby">Ruby</a></li>
+        <li class="main "><a href="#gem">GEM</a></li>
+        <li class="main "><a href="#require">Require</a></li>
         <li class="main "><a href="#my-ruby-cheat-sheet">My Ruby Cheat Sheet</a></li>
         <li class="main "><a href="#strings">STRINGS</a></li>
-        <li class="main "><a href="#interpolacao">Interpolação</a></li>
-        <li class="main "><a href="#to_i-e-to_f">To_i e To_f</a></li>
-        <li class="main "><a href="#array">Array</a></li>
+            <li><a href="#operador-ternario">Operador Ternário</a></li>
+            <li><a href="#get">GET</a></li>
+            <li><a href="#chomp-puts">CHOMP PUTS</a></li>
+            <li><a href="#interpolacao">Interpolação</a></li>
+        <li class="main "><a href="#array-metodos">Array + Métodos</a></li>
+            <li><a href="#detect-select-grep-reject-uniq">Detect - Select - Grep - Reject - Uniq</a></li>
         <li class="main "><a href="#hash">Hash</a></li>
         <li class="main "><a href="#funcao">Função</a></li>
         <li class="main "><a href="#blocos-e-iteracoes">Blocos e Iterações</a></li>
@@ -112,152 +117,213 @@
 </code></pre>
 
 <p>Ou pode usar um gerenciador de versão para a instalação como o ​ RVM​. Para isso recomento utilizar o tutorial da própria documentação do ruby <a href="https://www.ruby-lang.org/en/downloads/">https://www.ruby-lang.org/en/downloads/</a> ou utilizar a documentação do RMV <a href="https://rvm.io/">https://rvm.io/</a>. </p>
+<h1 id="gem">GEM</h1>
+<pre><code class="Ruby">gem install os
+gem uninstall os
+gem list
+</code></pre>
+
+<p><strong>Instalando gem com o Bundle</strong></p>
+<ol>
+<li>Instalar o Bundle</li>
+</ol>
+<pre><code class="Ruby">gem install bundler #(bundler é tipo um estalador de gens)
+</code></pre>
+
+<ol>
+<li>Criar um aquivo GemFile sem extenção e colocar a lista de gens que quero.</li>
+</ol>
+<pre><code>source 'https://rubygems.org'
+
+gem 'os'
+gem 'http', '-&gt; 3.3'
+</code></pre>
+
+<ol>
+<li>Depois rodar bundle no terminal, na pasta que esta a lista criada.</li>
+</ol>
+<blockquote>
+<p>$bundle</p>
+</blockquote>
+<p>Este comando ira procurar por uma lista de gem e instala-las.</p>
+<h1 id="require">Require</h1>
+<pre><code class="Ruby">require 'os'
+
+def myOS
+  if OS.windows?
+    &quot;seu sistema é windows&quot;
+  elsif OS.linux?
+    &quot;seu sistema é linux&quot;
+  else
+    &quot;não identificamos seu OS&quot;
+  end
+end
+
+puts &quot;O seu PC possui #{OS.cpu_count} cores, é #{OS.bits} bits e #{myOS}&quot;
+</code></pre>
+
 <h1 id="my-ruby-cheat-sheet">My Ruby Cheat Sheet</h1>
+<p>[Ainda em construção]</p>
 <p>Esta é minha documentação para consulta de comandos em Ruby. Foi elaborada com base em comandos criados por mim e com base em consulta nos seguintes endereços:</p>
 <p>https://www.devmedia.com.br/introducao-ao-recursos-basicos-da-linguagem-ruby/31504</p>
 <p>https://github.com/albertoleal/prazer--ruby/blob/master/trabalhando-com-strings.mkdn</p>
 <p>https://www.ruby-lang.org/pt/documentation/quickstart/</p>
+<p>http://www.akitaonrails.com/2012/06/29/algumas-dicas-da-linguagem-ruby</p>
+<p>https://medium.com/trainingcenter/ruby-101-o-b%C3%A1sico-260e8605962</p>
 <pre><code class="Ruby">#Shell Interativo
 $ irb
 </code></pre>
 
-<p>Exemplo de utilização do comando puts com aspas simples e aspas duplas. </p>
-<pre><code class="Ruby">2.6.3 :002 &gt; puts &quot;def teste\n\tputs teste\nend&quot;
-def teste
-    puts teste
-end
- =&gt; nil 
-</code></pre>
-
-<pre><code class="Ruby">2.6.3 :003 &gt; puts 'def teste\n\tputs teste\nend'
-def teste\n\tputs teste\nend
- =&gt; nil 
-</code></pre>
-
 <h1 id="strings">STRINGS</h1>
-<pre><code class="Ruby">
-#Gerando Strings 
+<p>Exemplo de utilização do comando puts com aspas simples e aspas duplas (strings)</p>
+<pre><code class="Ruby">In:  puts 'Hoje o sol\n\não apareceu\né o fim!'
+Out: Hoje o sol\n\não apareceu\né o fim!
+</code></pre>
 
-2.6.3 :012 &gt; s1 = &quot;Isso é uma string&quot;
- =&gt; &quot;Isso é uma string&quot; 
+<pre><code class="Ruby">In:  puts &quot;Hoje o sol\n\tnão apareceu\né o fim!&quot;
+Out: hoje o sol
+        não apareceu
+     é o fim!
+</code></pre>
 
-2.6.3 :013 &gt; s2 = 'Isso, também, é uma string'
- =&gt; &quot;Isso, também, é uma string&quot; 
+<pre><code class="Ruby">#Gerando Strings 
 
-2.6.3 :014 &gt; s3 = %q[Mais uma forma de se criar uma string] 
- =&gt; &quot;Mais uma forma de se criar uma string&quot; 
+In: s1 = &quot;Isso é uma string&quot;
+out: &quot;Isso é uma string&quot; 
 
-2.6.3 :015 &gt; s4 = %Q[Outra forma de se criar uma string]
- =&gt; &quot;Outra forma de se criar uma string&quot; 
+In: s2 = 'Isso, também, é uma string'
+out: &quot;Isso, também, é uma string&quot; 
+
+In: s3 = %q[Mais uma forma de se criar uma string]
+Out: &quot;Mais uma forma de se criar uma string&quot; 
+
+In: s4 = %Q[Outra forma de se criar uma string]
+Out: &quot;Outra forma de se criar uma string&quot; 
 
 #Substituindo Strings
 
 #sub
-2.6.3 :031 &gt; str = &quot;Olá, meu nome é Jonathan&quot;
- =&gt; &quot;Olá, meu nome é Jonathan&quot; 
-2.6.3 :032 &gt; str.sub(/Jonathan/, &quot;Leda&quot;)
- =&gt; &quot;Olá, meu nome é Leda&quot;
+In: str = &quot;Olá, meu nome é Jonathan&quot;
+In: str.sub(/Jonathan/, &quot;Leda&quot;)
+Out: &quot;Olá, meu nome é Leda&quot;
 
 #gsub
-2.6.3 :035 &gt; str = &quot;Olá, meu nome é Jonathan, caro amigo Jonathan&quot;
- =&gt; &quot;Olá, meu nome é Jonathan, caro amigo Jonathan&quot; 
-2.6.3 :036 &gt; str.gsub(/Jonathan/, &quot;Leda&quot;)
- =&gt; &quot;Olá, meu nome é Leda, caro amigo Leda&quot; 
+In: str = &quot;Olá, meu nome é Jonathan, caro amigo Jonathan&quot;
+In: str.gsub(/Jonathan/, &quot;Leda&quot;)
+Out: &quot;Olá, meu nome é Leda, caro amigo Leda&quot;
 
 #Pesquisando Strings
-
-2.6.3 :054 &gt; str = &quot;Hoje o sol não apareceu, é o fim!&quot;
- =&gt; &quot;Hoje o sol não apareceu, é o fim!&quot; 
-2.6.3 :056 &gt; str[7,3]
- =&gt; &quot;sol&quot;
+In: str = &quot;Hoje o sol não apareceu, é o fim!&quot;
+In: str[7,3]
+Out: &quot;sol&quot;
 
 #Buscando a posição da String
-
-2.6.3 :057 &gt; str = &quot;Hoje o Sol não Apareceu, é o fim!&quot;
- =&gt; &quot;Hoje o Sol não Apareceu, é o fim!&quot; 
-2.6.3 :058 &gt; str.index(/apareceu/i)
- =&gt; 15 
 #o i foi usado para tornar a busca não case-sensitive
+In: str = &quot;Hoje o Sol não Apareceu, é o fim!&quot;
+In: str.index(/apareceu/i)
+Out: 15
 
-#Retornado Arrays de strings
+#Scam
+In: str = &quot;Hoje a noite não tem luar&quot;
+In: str.scan(/\w/)
+Out: [&quot;H&quot;, &quot;o&quot;, &quot;j&quot;, &quot;e&quot;, &quot;a&quot;, &quot;n&quot;, &quot;o&quot;, &quot;i&quot;, &quot;t&quot;, &quot;e&quot;, &quot;n&quot;, &quot;o&quot;, &quot;t&quot;, &quot;e&quot;, &quot;m&quot;, &quot;l&quot;, &quot;u&quot;, &quot;a&quot;, &quot;r&quot;] 
 
-2.6.3 :059 &gt; str = &quot;Hoje a noite não tem luar&quot;
- =&gt; &quot;Hoje a noite não tem luar&quot; 
+In: str.scan(/\w+/)
+Out: [&quot;Hoje&quot;, &quot;a&quot;, &quot;noite&quot;, &quot;n&quot;, &quot;o&quot;, &quot;tem&quot;, &quot;luar&quot;] 
 
-2.6.3 :060 &gt; str.scan(/\w/)
- =&gt; [&quot;H&quot;, &quot;o&quot;, &quot;j&quot;, &quot;e&quot;, &quot;a&quot;, &quot;n&quot;, &quot;o&quot;, &quot;i&quot;, &quot;t&quot;, &quot;e&quot;, &quot;n&quot;, &quot;o&quot;, &quot;t&quot;, &quot;e&quot;, &quot;m&quot;, &quot;l&quot;, &quot;u&quot;, &quot;a&quot;, &quot;r&quot;] 
-
-2.6.3 :061 &gt; str.scan(/\w+/)
- =&gt; [&quot;Hoje&quot;, &quot;a&quot;, &quot;noite&quot;, &quot;n&quot;, &quot;o&quot;, &quot;tem&quot;, &quot;luar&quot;] 
-
-2.6.3 :080 &gt; str.split
- =&gt; [&quot;Hoje&quot;, &quot;a&quot;, &quot;noite&quot;, &quot;não&quot;, &quot;tem&quot;, &quot;luar&quot;] 
+#Split
+In: str.split
+Out: [&quot;Hoje&quot;, &quot;a&quot;, &quot;noite&quot;, &quot;não&quot;, &quot;tem&quot;, &quot;luar&quot;] 
 
 #Espaços em Strings
-2.6.3 :097 &gt; str = 'Jonathan Cardoso'
- =&gt; &quot;Jonathan Cardoso&quot; 
-2.6.3 :098 &gt; str.ljust(20)
- =&gt; &quot;Jonathan Cardoso    &quot; 
-2.6.3 :099 &gt; str.rjust(20)
- =&gt; &quot;    Jonathan Cardoso&quot; 
-2.6.3 :100 &gt; str.center(20)
- =&gt; &quot;  Jonathan Cardoso  &quot; 
+In: str = 'Jonathan Cardoso'
+In: str.ljust(20)
+Out: &quot;Jonathan Cardoso    &quot;
+
+In :str.rjust(20)
+Out:&quot;    Jonathan Cardoso&quot;
+
+In: str.center(20)
+Out: &quot;  Jonathan Cardoso  &quot;
 
 
 #Métodos em Strings
+In: 'jonathan'.upcase
+Out: &quot;JONATHAN&quot;
 
-2.6.3 :004 &gt;'jonathan'.upcase
- =&gt; &quot;JONATHAN&quot;
+In:'JoNaThan'.capitalize
+Out: &quot;Jonathan&quot; 
 
-2.6.3 :005 &gt; 'JoNaThan'.capitalize
- =&gt; &quot;Jonathan&quot; 
+In: 'JONATHAN'.downcase
+Out: &quot;jonathan&quot;
 
-2.6.3 :006 &gt; 'JONATHAN'.downcase
- =&gt; &quot;jonathan&quot;
+In: 'JoNaThaN'.swapcase
+Out: &quot;jOnAtHAn&quot;
 
-2.6.3 :104 &gt; 'JoNaThaN'.swapcase
- =&gt; &quot;jOnAtHAn&quot;
+In: 'JONATHAN'.length  #'JONATHAN'.size
+Out: 8 
 
-2.6.3 :007 &gt; 'JONATHAN'.length  #'JONATHAN'.size
- =&gt; 8 
-
-2.6.3 :115 &gt; 'JJooNnaTTthan'.squeeze
+In: 'JJooNnaTTthan'.squeeze
  =&gt; &quot;JoNnaTthan&quot; #Remove caracters duplicados
 
-2.6.3 :128 &gt; 'Jonathan'.reverse
- =&gt; &quot;nahtanoJ&quot;
+In: 'Jonathan'.reverse
+Out: &quot;nahtanoJ&quot;
 
-2.6.3 :138 &gt; 'Jonathan Cardoso'.split(&quot;&quot;).reverse.join(&quot;&quot;)
- =&gt; &quot;osodraC nahtanoJ&quot;
+In: 'Jonathan Cardoso'.split(&quot;&quot;).reverse.join(&quot;&quot;)
+Out: &quot;osodraC nahtanoJ&quot;
 
-2.6.3 :171 &gt; puts 'Jonathan'.count('a')
- =&gt; 2
+In: 'Jonathan'.count('a')
+Out: 2
+
+In: &quot;I have white space&quot;.delete(' ') #deletar os espaços
+Out: &quot;Ihavewhitespace&quot;
 </code></pre>
 
-<h1 id="interpolacao">Interpolação</h1>
+<p>Para converter tipos, devemos usar os métodos to_i, to_f e to_s.</p>
+<pre><code class="Ruby">In: &quot;10&quot;.to_i   #Transforma em Integer
+Out: 10
+
+In: &quot;10.23&quot;.to_F   #Transforma em Float
+Out: 10.23
+
+In: 12.to_s   #Transforma em String
+Out: &quot;12&quot;
+
+</code></pre>
+
+<h2 id="operador-ternario">Operador Ternário</h2>
+<pre><code class="Ruby">def no_limite?
+  saldo == saldo + limite ? false : true
+end
+p no_limite?
+
+</code></pre>
+
+<h2 id="get">GET</h2>
+<pre><code class="Ruby">puts &quot;Qual é o seu nome?&quot;
+nome = gets
+print &quot;Seja bem vindo {nome}&quot;
+</code></pre>
+
+<h2 id="chomp-puts">CHOMP PUTS</h2>
+<pre><code class="Ruby">In: gets  # Testo digitado: Um texto qualquer
+Out: &quot;Um texto qualquer\n&quot;
+
+In: gets.chomp # Testo digitado: Um texto qualquer
+Out: &quot;Um texto qualquer&quot;
+</code></pre>
+
+<h2 id="interpolacao">Interpolação</h2>
 <p>Nos exemplos abaixo foi utilizado o construtor #{}, que serve para substituições de varáveis. Essa técnica é conhecida como interpolation. Note que em ambos os exemplos foram utilizados as aspas duplas. </p>
-<pre><code class="Ruby">2.6.3 :013 &gt; &quot;Agora é #{Time.now}&quot;
- =&gt; &quot;Agora é 2019-06-27 19:24:27 -0300&quot; 
+<pre><code class="Ruby">In: &quot;Agora é #{Time.now}&quot;
+Out: &quot;Agora é 2019-06-27 19:24:27 -0300&quot; 
+
+In: nome = 'jonathan'
+In: puts &quot;Meu nome é:  #{nome}&quot;
+Out: &quot;Meu nome é:  jonathan&quot; 
 </code></pre>
 
-<pre><code class="Ruby">2.6.3 :015 &gt; nome = 'jonathan'
- =&gt; &quot;jonathan&quot;
-
-2.6.3 :043 &gt; &quot;Meu nome é:  #{nome}&quot;
- =&gt; &quot;Meu nome é:  jonathan&quot; 
-</code></pre>
-
-<h1 id="to_i-e-to_f">To_i e To_f</h1>
-<pre><code class="Ruby">2.6.3 :152 &gt; 'Jonathan10'.to_f
- =&gt; 0.0 
-2.6.3 :153 &gt; '105Jonathan'.to_i
- =&gt; 105 
-2.6.3 :154 &gt; '105Jonathan'.to_f
- =&gt; 105.0 
-
-</code></pre>
-
-<h1 id="array">Array</h1>
+<h1 id="array-metodos">Array + Métodos</h1>
 <pre><code class="Ruby"># array vazio
 var1 = []
 
@@ -277,45 +343,93 @@ var2 + ['vento']
 
 #métodos da classe array
 var3 = [15, 24, 189, 1]
-var3.sort #embaralha a matriz
-var3.lengthm #retorno 4
-var3.first #retorno 15
+var3.sort #orden a matrix
+var3.length #retorno 4
+var3.first ou .first 3 #retorno 15 e no caso do .first 3 retorna os 3 primeiros valores.
 var3.last #retorno 1
+var3.pop #retorno 1 porém o array perde este valor var3 = [15, 24, 189]
+var3.push(15) #Adiciona o 15 no final do array
+var3.take 3 #retorna os 3 primeiros valores
 
-# o método each
-#(do end): é um bloco de código. A variável lang se refere a cada item no array a medida que ele é iterado no loop
-alimento = ['chocolate', 'bolo', 'sorvete']
+-----------------------------------------------------------------
 
-alimento.each do |lang|
-   puts 'Eu amo ' + lang + '!'
-   puts 'voce nao?'
-end
-'''
-Eu amo chocolate!
-voce nao?
-Eu amo bolo!
-voce nao?
-Eu amo sorvete!
-voce nao?
- =&gt; [&quot;chocolate&quot;, &quot;bolo&quot;, &quot;sorvete&quot;]
+string1 = [&quot;some&quot;, &quot;thing&quot;]
+string2 = [&quot;another&quot;, &quot;thing&quot;]
+integer1 = [1, 2, 3, 4]
+integer2 = [5, 8, 11, 15]
+mix1 = [1, 2, ['foo', 'bar']]
+mix2 = [[1, 2], ['foo', 'bar']]
+m10 = [[&quot;a&quot;, &quot;b&quot;], [&quot;c&quot;, &quot;d&quot;]]
+m20 = [[1], [2]]
 
-'''
 
-# apaga uma entrada no meio e desloca o restante da entradas
 
-alimento.delete('bolo')
-alimento.each do |lang|
-    puts 'Eu amo ' + lang + '!'
-    puts 'voce nao?'
-end
-'''
-Eu amo chocolate!
-voce nao?
-Eu amo sorvete!
-voce nao?
- =&gt; [&quot;chocolate&quot;, &quot;sorvete&quot;] 
-'''
+print integer1.insert(integer1.length, *integer2)
+[1, 2, 3, 4, 5, 8, 11, 15]
 
+
+print mix1.flatten!
+[1, 2, &quot;foo&quot;, &quot;bar&quot;]
+
+print mix2.flatten!
+[1, 2, &quot;foo&quot;, &quot;bar&quot;]
+
+print (mix1 &lt;&lt; mix2).flatten!
+[1, 2, &quot;foo&quot;, &quot;bar&quot;, 1, 2, &quot;foo&quot;, &quot;bar&quot;]
+
+
+print string1.push(string2.flatten!)
+[&quot;some&quot;, &quot;thing&quot;, nil]
+
+---------------------------------------
+print string1 + string2
+print string1.concat string2
+[&quot;some&quot;, &quot;thing&quot;, &quot;another&quot;, &quot;thing&quot;]
+
+print string1|integer1
+[&quot;some&quot;, &quot;thing&quot;, 1, 2, 3, 4]
+
+print integer1 |= string1
+[1, 2, 3, 4, &quot;some&quot;, &quot;thing&quot;]
+
+print integer1 += string1
+[1, 2, 3, 4, &quot;some&quot;, &quot;thing&quot;]
+
+--------------------------------------------
+
+print string1.push(*mix1)
+[&quot;some&quot;, &quot;thing&quot;, 1, 2, [&quot;foo&quot;, &quot;bar&quot;]]
+print string1.unshift(*mix1)
+[1, 2, [&quot;foo&quot;, &quot;bar&quot;], &quot;some&quot;, &quot;thing&quot;]
+
+</code></pre>
+
+<h2 id="detect-select-grep-reject-uniq">Detect - Select - Grep - Reject - Uniq</h2>
+<pre><code class="Ruby">numbers = [1, 2, 3, 4, 5, 6]
+
+# detect é o mesmo que find
+#recupera um elemento com base em um critério
+detectEle = numbers.detect {|elem| elem % 2 == 0} #retorno o 2 (primeiro divisivel)
+
+# select é o mesmo que find_all
+# recupera todos os elementos com base em um critério
+selectEle = numbers.select {|elem| elem % 2 == 0} #retorna os divisiveis por 2
+divTresCinco = numbers.select {|elem| elem % valor1 == 0 and elem % valor2 == 0} #com operador lógico
+
+# grep
+# recupera todos os elementos encontrados para o pattern passado
+# em outras palavras recupera os elementos em um intervalo (range)
+grepEle = numbers.grep(4..6) #retorna do 4 ao 6.
+
+# Reject
+# retira os elementos de um array, segundo uma condição
+rejectEle = numbers.reject {|elem| elem % 2 == 0} #retira os divisiveis por 2
+
+
+# Uniq
+# removo elementos duplicados de um array
+num = [1, 2, 3, 3, 4, 5, 2, 6]
+uniqEle = num.uniq
 </code></pre>
 
 <h1 id="hash">Hash</h1>
@@ -329,7 +443,9 @@ meu_hash [:curso] = &quot;Geo&quot; #substitui Mat
 </code></pre>
 
 <h1 id="funcao">Função</h1>
-<pre><code class="Ruby">def divisao (primeiro_numero, segundo_numero)
+<pre><code class="Ruby">
+#Divisão
+def divisao (primeiro_numero, segundo_numero)
     if segundo_numero == 0 
         return 'Não é possível dividir por zero'
     else 
@@ -339,80 +455,229 @@ end
 
 divisao(10, 5)
 
+
+
+#Retornar a soma das vogais
+
+def vowels_count(frase)
+    vogais = frase.downcase.count &quot;aãeiou&quot;
+    puts vogais
+end
+
+vowels_count('A casa não tem teto')
+
+#Retornar a soma das consoantes
+
+def consonants_count(frase)
+    texto = frase.delete(' ')
+    txt = texto.downcase.count &quot;aãeiou&quot;
+    result = texto.length - txt
+    puts result
+end
+
+consonants_count(&quot;A lua nao&quot;)
+
 </code></pre>
 
 <h1 id="blocos-e-iteracoes">Blocos e Iterações</h1>
-<pre><code class="Ruby">
-2.6.3 :103 &gt; 3.times { puts &quot;Olá!&quot; }
-Olá!
-Olá!
-Olá!
- =&gt; 3 
+<pre><code class="Ruby">#Each
 
+#(do end): é um bloco de código. A variável lang se refere a cada item no array a medida que ele é iterado.
 
-2.6.3 :104 &gt; :063 &gt; numeros = [1, 2, 3] 
-2.6.3 :105 &gt; :065 &gt; numeros.each {|numero| puts numero} 
+--------------------------------------------
+
+itens = ['Espada', 'Cajado', 'Machado']
+
+itens.each do |lang|
+   puts 'Eu uso ' + lang + '!'
+   puts 'E você?'
+end
+
+'''
+Eu uso Espada!
+E você?
+Eu uso Cajado!
+E você?
+Eu uso Machado!
+E você?
+'''
+
+In: 3.times { puts &quot;Olá!&quot; }
+Out: Olá!
+Out: Olá!
+Out: Olá!
+
+--------------------------------------------
+
+In: numeros = [1, 2, 3] 
+In: numeros.each {|numero| puts numero} 
+Out:
 1 
 2 
 3 
 =&gt; [1, 2, 3] 
 
+--------------------------------------------
 
-2.6.3 :106 &gt; numeros = [1, 2, 3] 
-2.6.3 :107 &gt; numeros.each do |numero| 
-2.6.3 :108 &gt;     puts numero 
-2.6.3 :109?&gt;   end 
+In: numeros = [1, 2, 3] 
+In: numeros.each do |numero| 
+        puts numero 
+    end 
+Out:
 1 
 2 
 3 
  =&gt; [1, 2, 3]  
 
+--------------------------------------------
 
-2.6.3 :110  &gt; numeros = [1, 2, 3] 
-2.6.3 :111  &gt; numeros.each_with_index do |numero, index| 
-2.6.3 :112 &gt;     puts &quot;Valor: #{numero}, Índice: #{index}&quot;  
-2.6.3 :113?&gt;   end 
+In: numeros = [1, 2, 3] 
+In: numeros.each_with_index do |numero, index| 
+        puts &quot;Valor: #{numero}, Índice: #{index}&quot;  
+    end 
+Out:
 Valor: 1, Índice: 0 
 Valor: 2, Índice: 1 
 Valor: 3, Índice: 2 
  =&gt; [1, 2, 3]
 
+--------------------------------------------
+
+def self.multiplica_indices(array)
+  array.collect!.with_index { |x, i| x * i }
+  return array
+end
+
+--------------------------------------------
+
+def tabuada(arg1)
+  total = []
+  (1..arg1).map do |i|
+    valores = []
+    (1..10).map do |e|
+      valores &lt;&lt; e * i
+    end
+    total &lt;&lt; valores
+  end
+  total
+end
 
 </code></pre>
 
 <h1 id="classe">Classe</h1>
-<pre><code class="Ruby">01 class Jogador
-02  attr_acessor :primeiro_nome, :ultimo_nome, :numero
-03
-04  def initialize (prim_nome, ult_nome, numero)
-05   @primeiro_nome = prim_nome
-06   @ultimo_nome = ult_nome
-07   @numero = numero
-08  end
-09
-10  def nome_completo 
-11    “#{ultimo_nome.capitalize}, #{primeiro_nome.capitalize}”
-12  end
-13
-14  def posição
-15   while @numero == 0 || @numero &lt; 0
-16      puts “Coloque novamente um número possível: “
-17      @numero = gets.to_i
-18   end
-19    if @numero &lt; 6 &amp;&amp; @numero &lt;0
-20     return “Zaga”
-21    elsif @numero &gt;= 6 &amp;&amp; @numero &lt;=10
-22      return “Meio Campo”
-23    else
-24      return “Ataque”
-25    end
-26   end
-27  end
-28 jogador = jogador .new(gets.chomp, gets.chomp, gets.to_i)
-29 p “#{jogador.nome_completo} – Função no(a): #{jogador.posicao}”
+<pre><code class="Ruby">class Monstro
+  attr_accessor :energia, :ataque, :vivo
+
+  def initialize
+    self.energia = Random.rand(10) + 6
+    self.vivo = true
+  end
+
+  def bater(alvo)
+    if alvo.esta_vivo?
+      self.ataque = Random.rand(5)
+      puts &quot;O dano do monstro foi #{self.ataque}&quot;
+      alvo.energia -= self.ataque
+    else
+      puts &quot;Você está morto!&quot;
+    end
+  end
+
+  def esta_vivo?
+    true if self.energia &gt; 0
+  end
+end
+
+
+
+
+
+class Heroi
+  attr_accessor :energia, :ataque, :vivo, :numero_de_mortos
+
+  def initialize
+    self.energia = 30
+    self.vivo = true
+    self.numero_de_mortos = 0
+  end
+
+
+
+  def bater(alvo)
+    if alvo.esta_vivo?
+      self.ataque = Random.rand(5) + 3
+      puts &quot;O dano do heroi foi #{self.ataque}&quot;
+      alvo.energia -= self.ataque
+    else
+      puts &quot;O monstro está morto!\n\n&quot;
+    end
+    unless alvo.esta_vivo?
+      puts &quot;O monstro está morto!\n\n&quot;
+      self.numero_de_mortos += 1
+    end
+  end
+
+  def esta_vivo?
+    true if self.energia &gt; 0
+  end
+
+end
+
+--------------------------------------------
+
+class Conta
+  attr_accessor :titular, :limite, :saldo, :numero
+
+  def initialize(numero, titular, saldo, limite)
+    @numero = numero
+    @titular = titular
+    @saldo = saldo
+    @limite = limite
+  end
+
+  def sacar(valor)
+    return false if valor &gt; (@saldo + @limite)
+
+    @saldo -= valor
+    true
+  end
+
+  def depositar(valor)
+    @saldo += valor
+  end
+
+  def no_limite?
+    @saldo &lt; 0
+  end
+
+  def ==(conta)
+    conta.titular == titular &amp;&amp;
+      conta.limite == limite &amp;&amp;
+      conta.saldo == saldo &amp;&amp;
+      conta.numero == numero
+  end
+
+  def transfere(conta_destino, valor_transferencia)
+    return false unless sacar(valor_transferencia)
+
+    conta_destino.depositar(valor_transferencia)
+  end
+end
+
+
+
+
+
+
 </code></pre>
 
-<p>Ainda em construção...</p></div>
+<pre><code class="Ruby">
+
+</code></pre>
+
+<pre><code class="Ruby">
+
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">

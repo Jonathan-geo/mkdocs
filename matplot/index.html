@@ -95,25 +95,25 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="matplotlib">Matplotlib</h1>
-<p>Segundo a documentação oficail, o Matplotlib é uma biblioteca de plotagem 2D do Python que produz inúmeros gráficos de qualidade em uma variedade de formatos e ambientes interativos. O Matplotlib pode ser usado em scripts Python, nos shells do Python e do IPython, no notebook Jupyter, nos servidores de aplicativos da web e em kits de ferramentas de interface gráfica do usuário. Para mais informações sobre esta biblioteca, clicar <a href="https://matplotlib.org/">aqui </a>.</p>
+<p>Segundo a documentação oficial, o Matplotlib é uma biblioteca de plotagem 2D do Python que produz inúmeros gráficos de qualidade em uma variedade de formatos e ambientes interativos. O Matplotlib pode ser usado em scripts Python, nos shells do Python e do IPython, no notebook Jupyter, nos servidores de aplicativos da web e em kits de ferramentas de interface gráfica do usuário. Para mais informações sobre esta biblioteca, clicar <a href="https://matplotlib.org/">aqui </a>.</p>
 <p>Neste tutorial, o matplotlib será utilizado com o auxíio do numpy e do data-set iris, que pode ser encontrado <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/">aqui </a>. OBS: cliclar na opção iris.data</p>
 <p><strong>Instalação - Matplotlib</strong></p>
-<p>Essa biblioteca não é nativa do Python, logo você precisará intalar. Se você baixou o pacote Anaconda, como recomenda na página home desta documentação, o matplotlib  já estará incluso, caso contrário, você deverá utilizar a ferramenta pip do seu python. Digite o seguinte comando no seu terminal linux ou prompt  windowns.</p>
+<p>Essa biblioteca não é nativa do Python, logo você precisará instalar. Se você baixou o pacote Anaconda, como recomendado nesta documentação, o matplotlib  já estará incluso Caso contrário, você deverá utilizar a ferramenta pip do seu python. Digite o seguinte comando no seu terminal linux ou prompt windowns.</p>
 <pre><code class="python">pip install matplotlib
 </code></pre>
 
 <hr />
 <h1 id="tutorial">Tutorial</h1>
 <p><strong>Importando as bibliotecas</strong>
-Utilizando o editor de sua preferência como o vsCode, atom ou Pycharme, importe as bibliotecas. </p>
+Utilizando o editor de sua preferência como o vsCode, atom ou Pycharm, importe as bibliotecas.</p>
 <pre><code class="python">import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
 </code></pre>
 
-<p>O uso do matplotlib inline é recomendado para que estiver utilizando o jupyter, para que o gráfico seja plotado em sua linha de comando. Quem estiver utilizando o shell, terminal ou ipython, recomenda-se colocar o plt.show() no final de cada chamada de gráfico. </p>
+<p>O uso do matplotlib inline é recomendado para quem estiver utilizando o jupyter, para que o gráfico seja plotado em sua linha de comando. Quem estiver utilizando o shell, terminal ou ipython, recomenda-se colocar o plt.show() no final de cada chamada de gráfico. </p>
 <p><strong>Lendo o data set</strong></p>
-<p>Atenção: o caminho ../_DATASET correspondo ao local que esta salvado o meu arquivo irirs.data.</p>
+<p>Atenção: o caminho ../_DATASET corresponde ao local em que está salvo o meu arquivo iris.data.</p>
 <pre><code class="python">In [1]: data = np.genfromtxt('../_DATASET/iris.data', delimiter=',', usecols=(0,1,2,3))
 
 In [2]: data
@@ -298,7 +298,7 @@ Out[4]: array([5.1, 4.9, 4.7, 4.6, 5. , 5.4, 4.6, 5. , 4.4, 4.9, 5.4, 4.8, 4.8,
 </code></pre>
 
 <h1 id="plotando-graficos">Plotando Gráficos</h1>
-<p><strong>plotando o gráfico das 50 primeiras iris(iris setosa)(coluna 1)</strong></p>
+<p><strong>Plotando o gráfico das 50 primeiras iris(iris setosa)(coluna 1)</strong></p>
 <pre><code class="python">In [5]: plt.plot(data[:50,0], c='Red', ls=':', marker='s', ms=8)
 
 Out[5]: [&lt;matplotlib.lines.Line2D at 0x7f2844d13940&gt;]
@@ -322,7 +322,7 @@ Out[8]: array([7. , 6.4, 6.9, 5.5, 6.5, 5.7, 6.3, 4.9, 6.6, 5.2, 5. , 5.9, 6. ,
 
 </code></pre>
 
-<p><strong>Plotando um gráfico comparativos das petolas da: Iris Setosa e Iris Versucolor</strong></p>
+<p><strong>Plotando um gráfico comparativo das petolas da: Iris Setosa e Iris Versicolor</strong></p>
 <pre><code class="python">In [8]: plt.plot(data[:50,0], c='Red', ls=':', marker='s', ms=8, label='Comp. Sépala Iris-Setosa')
         plt.plot(data[50:100,0], c='Black', ls=':', marker='o', ms=8, label='Comp. Sépala Iris-Versicolor')
         plt.legend()
