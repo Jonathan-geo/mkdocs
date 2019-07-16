@@ -444,7 +444,7 @@ ALTER TABLE pessoas DROP COLUMN profissao;
 
 #SQL - UNICAMP
 
-Este cheat Sheet foi elaborado com o intuito de ser meu material de rápida consulta sql. Todos os códigos descritos aqui podem ser encontrados no material do professor [André Santanchè](https://www.ic.unicamp.br/~santanch/) disponibilizados em seu site. Inclusive, lá você encontrará  o material completo disponível para download.
+Este cheat Sheet foi elaborado com o intuito de ser meu material de rápida consulta sql. Todos os códigos descritos aqui podem ser encontrados no material do professor <a href="https://www.ic.unicamp.br/~santanch/" target="_blank">André Santanchè</a> disponibilizados em seu site. Inclusive, lá você encontrará  o material completo disponível para download.
 
 **Algumas Observações:**
 
