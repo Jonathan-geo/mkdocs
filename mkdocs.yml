@@ -7,5 +7,6 @@ pages:
   - Matplotlib: 'matplot.md'
   - Numpy: 'numpy.md'
   - Ruby: 'ruby.md'
+  - NodeJS: 'nodeJS.md'
 
 
