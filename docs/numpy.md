@@ -3,7 +3,7 @@
 
 O NumPy é uma poderosa biblioteca da linguagem de programação Python, que permite trabalhar com eficiência vetores, matrizes, arranjos e permite diversas funções e operações matemáticas. Assim como no python, o Numpy possui um sintaxe clara e objetiva. Dentro da matemática, esta biblioteca permite trabalhar, de forma aplicada, com arranjos multidimensionais, matrizes de n dimensões, álgebra linear, geração de números aleatórios etc.
 
-Para mais informações sobre o Numpy clique [aqui ](https://www.numpy.org/).
+Para mais informações sobre o Numpy clique <a href="https://www.numpy.org/" target="_blank">aqui</a>.
 
 <h3>Instalação - NumPy</h3>
 

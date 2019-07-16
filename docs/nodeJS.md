@@ -6,50 +6,62 @@ Documentação pessoal de consulta rápida ao NodeJs.
 
 Estas configurações foram utilizadas para criar um app no modelo rest, foi utilizado: o NodeJs, o Gerenciador de pacotes Yarn e o sistema operacional Ubuntu.
 
+<h3>1. NodeJs</h3>
 
-1. NodeJs:
-    a) Installing Node.js via package manager https://github.com/nodesource/distributions/blob/master/README.md
-    b) Install
+a) Installing Node.js via package manager https://github.com/nodesource/distributions/blob/master/README.md
+
+b) Install
     
-    ```
-        # Using Ubuntu
-        curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-        sudo apt-get install -y nodejs
-    ```
+```bash
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
     > node -v = v10.16.0
 
+<h3>2. NVM</h3>
+Node Version Manager: Controlador de versões Node
+
+a) https://github.com/nvm-sh/nvm
+
+    > source ~/.profile
+
+    > nvm ls-remote
+
+    > nvm install 10.15.1
+
+    > node -v
 
 
-2. NVM - Node Version Manager 
-    Controlador de versões Node
-    a) https://github.com/nvm-sh/nvm
+<h3>3. NPM</h3>
+Node Package Manager: Controlador de pacotes Node
 
-
-3. NPM - Node Package Manager
-    Controlador de pacotes Node
-    a) https://www.npmjs.com/
+a) https://www.npmjs.com/
     
-    >npm -v = 6.9.0
+    > npm -v = 6.9.0
 
 
+<h3>4. Yarn</h3>
+Controlador de pacotes Node (substituto do NPM)
 
-4. Yarn:
-    Controlador de pacotes Node (substituto do NPM)
-    a)  Install
+a)  Install
 
-    ```
-    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-    sudo apt-get update
-    sudo apt-get install --no-install-recommends yarn (Caso já tenha instalado o node)
-    ```
+```
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update
+sudo apt-get install --no-install-recommends yarn (Caso já tenha instalado o node)
+```
     > yarn -v = 1.16.0
-    
-    c) Ironicamente podemos instalar o yarn usando o npm
-    >$npm install -g yarn
 
-    d) Usando o yarn 
-    >$yarn init (Logo abaixo descrevo melhor como iniciar um projeto)
+c) Ironicamente podemos instalar o yarn usando o npm
+
+    > npm install -g yarn
+
+d) Usando o yarn 
+
+    > yarn init (Logo abaixo descrevo melhor como iniciar um projeto)
 
 
 
@@ -75,7 +87,7 @@ Segue logo abaixo algumas dependencias do yarn e seus respctivos modos de instal
 O Express é um framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto robusto de recursos para aplicativos web e móvel.
 
 ```
-$ yarn add express
+$yarn add express
 ```
 
 **Multer**
@@ -99,7 +111,7 @@ $yarn add sharp
 
 **Nodemon**
 ```
-$ yarn add nodemon
+$yarn add nodemon
 ```
 Com o nodemon, posso criar um script dev no meu arquivo package.json.
 ```
@@ -150,14 +162,14 @@ $yarn add socket.io
 No terminal executar o Yarn para dar "um start" no projeto. Este comando ira criar um package.json
 
 ```
-$ yarn init -y
+$yarn init -y
 ```
 
 **Rodar o projeto**
 
 No terminal digitar:
 ```
-$ node src/index.js
+$node src/index.js
 ```
 
 Caso tenha instalado o Nodemon, basta digitar:
@@ -172,8 +184,11 @@ $yarn dev
 https://www.mongodb.com/cloud/atlas
 
 a) create cluster 
+
 b) clicar em conect
+
 c) conect you aplication
+
 d) copiar o link de conecção.
 
 

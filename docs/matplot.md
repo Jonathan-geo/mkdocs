@@ -1,8 +1,8 @@
 # Matplotlib
 
-Segundo a documentação oficial, o Matplotlib é uma biblioteca de plotagem 2D do Python que produz inúmeros gráficos de qualidade em uma variedade de formatos e ambientes interativos. O Matplotlib pode ser usado em scripts Python, nos shells do Python e do IPython, no notebook Jupyter, nos servidores de aplicativos da web e em kits de ferramentas de interface gráfica do usuário. Para mais informações sobre esta biblioteca, clicar [aqui ](https://matplotlib.org/).
+Segundo a documentação oficial, o Matplotlib é uma biblioteca de plotagem 2D do Python que produz inúmeros gráficos de qualidade em uma variedade de formatos e ambientes interativos. O Matplotlib pode ser usado em scripts Python, nos shells do Python e do IPython, no notebook Jupyter, nos servidores de aplicativos da web e em kits de ferramentas de interface gráfica do usuário. Para mais informações sobre esta biblioteca, clicar <a href="https://matplotlib.org/" target="_blank">aqui</a>.
 
-Neste tutorial, o matplotlib será utilizado com o auxíio do numpy e do data-set iris, que pode ser encontrado [aqui ](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/). OBS: cliclar na opção iris.data
+Neste tutorial, o matplotlib será utilizado com o auxíio do numpy e do data-set iris, que pode ser encontrado <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/" target="_blank">aqui</a>. OBS: cliclar na opção iris.data
 
 **Instalação - Matplotlib**
 

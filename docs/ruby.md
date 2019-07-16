@@ -11,7 +11,7 @@ Em sistemas Unix como Ubuntu, você pode abrir o Terminal e digitar o comando �
 ```
 apt-get install ruby​
 ```
-Ou pode usar um gerenciador de versão para a instalação como o ​ RVM​. Para isso recomento utilizar o tutorial da própria documentação do ruby <https://www.ruby-lang.org/en/downloads/> ou utilizar a documentação do RMV <https://rvm.io/>. 
+Ou pode usar um gerenciador de versão para a instalação como o ​ RVM​. Para isso recomento utilizar o tutorial da própria documentação do <a href="https://www.ruby-lang.org/en/downloads/" target="_blank">[RUBY]</a> ou utilizar a documentação do <a href="https://rvm.io/" target="_blank">[RMV]</a>. 
 
 
 #GEM
