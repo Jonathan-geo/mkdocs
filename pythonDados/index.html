@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Matplotlib - JONATHAN</title>
+        <title>PythonDados - JONATHAN</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -53,10 +53,7 @@
                                 <a href="../mysql/">MySQL</a>
                             </li>
                             <li class="active">
-                                <a href="./">Matplotlib</a>
-                            </li>
-                            <li >
-                                <a href="../numpy/">Numpy</a>
+                                <a href="./">PythonDados</a>
                             </li>
                             <li >
                                 <a href="../ruby/">Ruby</a>
@@ -78,7 +75,7 @@
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../numpy/">
+                                <a rel="prev" href="../ruby/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -90,14 +87,342 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#matplotlib">Matplotlib</a></li>
-        <li class="main "><a href="#tutorial">Tutorial</a></li>
-        <li class="main "><a href="#plotando-graficos">Plotando Gráficos</a></li>
+        <li class="main active"><a href="#python">PYTHON</a></li>
+        <li class="main "><a href="#comandos-uteis">COMANDOS ÚTEIS</a></li>
+        <li class="main "><a href="#numpy">Numpy</a></li>
+        <li class="main "><a href="#matplotlib">MATPLOTLIB</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="matplotlib">Matplotlib</h1>
+<h1 id="python">PYTHON</h1>
+<p><div class="panel panel-info">
+AINDA EM CONSTRUÇÃO
+</div></p>
+<p>Como toda boa análise de dados, é necessário uma boa ferramenta de manipulação destes dados. Nesta documentação falaremos o tempo todo em ferramentas de manipulação de dados. Logo, recomendo fortemente que você tenha instalado a distribuição anaconda, pois ela já vem munida da linguagem de programação python e sua principais bibliotecas, como pandas, numpy, matplotlib, seaborn etc. Caso contrário, você poderá instalar o python e as bibliotecas separadamente. Segue o link do Anaconda e do python. </p>
+<p>Observação: Recomendo que instale o pack anaconda, assim não precisará instalar mais nada.</p>
+<p><button onclick="window.open('https://www.anaconda.com/distribution');">ANACONDA</button>
+<button onclick="window.open('https://www.python.org/downloads/');">PYTHON</button></p>
+<h1 id="comandos-uteis">COMANDOS ÚTEIS</h1>
+<p>Lista de comandos para análise de dados em python</p>
+<h3> Para entender o Jupyter </h3>
+
+<p><strong>Dois modos</strong></p>
+<ol>
+<li>modo edição: escreve em uma célula</li>
+<li>modo comando: movimenta as células</li>
+</ol>
+<p><strong>Dois tipos de células</strong></p>
+<ol>
+<li>código (esc, depois y)</li>
+<li>markdown (esc, depois m)</li>
+</ol>
+<p><strong>Modo comando (azul)</strong></p>
+<ul>
+<li>m - muda célula para markdown</li>
+<li>y - muda célula para python</li>
+<li>a - cria célula acima (above)</li>
+<li>b - cria célula abaixo (bellow)</li>
+<li>v - cola célula</li>
+<li>c - copia célula</li>
+<li>x - recorta/apaga célula</li>
+<li>f - pesquisar e substituir palavras</li>
+<li>l - mostra números das linhas</li>
+<li>h - lista de atalhos</li>
+<li>00 (zero duas vezes) - reinicia o notebook</li>
+<li>SHIFT - M: mescla células</li>
+<li>CTRL + SHIFT + (sinal de menos): divide célula</li>
+</ul>
+<p><strong>Modo edição (verde)</strong></p>
+<ul>
+<li>SHIFT-ENTER - executa os comandos que estão dentro da célula</li>
+<li>objeto.<TAB> - sugestões de métodos</li>
+</ul>
+<p><strong>Alguns comandos</strong></p>
+<ul>
+<li>%matplotlib inline - para que os gráficos apareçam no documento (um resquício de versões antigas)</li>
+<li>import pandas as pd - carrega algum pacote (p. ex., pandas) como alguma sigla (p. ex., pd)</li>
+<li>x = [209, 32, 4, 23, 45] - cria um objeto chamado x contendo uma lista com os números 209, 32, 4, 23 e 45. Atenção: o python começa a contar em zero.</li>
+<li>x[0] - mostra o primeiro elemento da lista (209),</li>
+<li>x[1] mostra o segundo elemento (32) etc.</li>
+<li>x[1:4] - mostra os números nas posições 1, 2, 3 (32, 4 e 23)</li>
+<li>x[:2] - mostra todos os elementos até o terceiro (209 e 32), não incluindo o terceiro (intervalo aberto).</li>
+<li>x[3:] - mostra todos os elementos a partir do quarto (23 e 45), incluindo o quarto.</li>
+<li>x[:] - mostra todos os elementos da lista.</li>
+<li>len(x) - mostra o tamanho de x. Nesse caso, 3.</li>
+<li>sum([209, 32, 4, 23 e 45]) ou sum(x) - soma os valores.</li>
+<li>min(x) e max(x) - mostra os valores mínimos e máximos.</li>
+</ul>
+<p><strong>Operadores matemáticos</strong></p>
+<ul>
+<li>3 * 2 (multiplicação)</li>
+<li>6 / 3 (divisão)</li>
+<li>2 ** 3 (potenciação (p. ex, dois elevado a três))</li>
+<li>=  (atribuição (p. ex., x recebe 3))</li>
+<li>==  (teste de igualdade (p. ex., ‘município == “Varginha”’ testa se o município é Varginha)).</li>
+<li>!=  (teste de desigualdade (p. ex., ‘município != “Varginha”’ testa se o município não é Varginha).</li>
+<li>&amp;  ( operador lógico e)</li>
+<li>| (operador lógico ou)</li>
+<li>&lt;= &gt;= (menor ou igual que, maior ou igual que)</li>
+</ul>
+<p><strong>Ler dados e mostrar informações básicas</strong></p>
+<p><em>Os exemplos a seguir foram elaborados com uma base em dados do pnad (Pesquisa Nacional por Amostra de Domicílios - IBGE), isso explica a utilização do pnad na maioria dos comandos.</em></p>
+<ul>
+<li>pnad = pd.read_csv('pnad022017.csv') - lê o arquivo csv e o transforma em um objeto dataframe chamado pnad</li>
+<li>pnad = pd.read_excel('pnad022017.xls') - lê o arquivo do Excel (xls ou xlsx) e o transforma em um objeto dataframe.</li>
+<li>pnad.shape - mostra o número de linhas e colunas do dataframe. Obs: nesse caso não é preciso abrir e fechar parêntesis.</li>
+<li>pnad.columns - mostra o nome das colunas (variáveis). Obs: nesse caso não é preciso abrir e fechar parêntesis.</li>
+<li>pnad.head(10) - mostra as primeiras dez linhas do dataframe, o padrão é mostrar 5.</li>
+<li>pnad.tail(10) - mostra as últimas dez linhas do dataframe.</li>
+<li>pnad.info() - mostra os tipos das variáveis e o tamanho do dataframe na memória.</li>
+<li>pnad.loc[ :, ['sexo', 'idade', 'renda']] - subseleção por rótulos (labels), mostra todas as linhas, apenas das variáveis indicadas.</li>
+<li>pnad.iloc[ :10, [3, 4, 5]] - subseleção por posição (i). No exemplo, mostra apenas as primeiras das variáveis nas posições indicadas.</li>
+</ul>
+<p><em>Atenção: note o uso de dois pares de colchetes em .loc e .iloc. O primeiro deles deriva do fato de que funções usam colchetes ao invés pois são subseleções, como no caso das listas explicado acima. O segundo par de colchete é usado quando queremos indicar mais de um elemento, situação em que é preciso criar uma lista.</em></p>
+<p><strong>Estatísticas básicas</strong></p>
+<ul>
+<li>pnad.describe() - mostra o resumo estatístico (mínimo, máximo, média, mediana e quartis) de todas as variáveis do dataframe.</li>
+<li>pnad.min() - mostra o valor mínimo de todas as variáveis. O mesmo pode ser feito com todos os comandos abaixo.</li>
+<li>pnad.renda.describe() - mostra o resumo estatístico da variável selecionada.</li>
+<li>pnad.renda.min() - mostra a observação com a menor renda.</li>
+<li>pnad.renda.max() - a maior renda.</li>
+<li>pnad.renda.mean() - a média da renda.</li>
+<li>pnad.renda.std() - o desvio padrão da renda.</li>
+<li>pnad.renda.var() - a variância da renda.</li>
+<li>pnad.renda.mad() - o desvio absoluto médio da renda.</li>
+<li>pnad.renda.sum() - o somatório da renda.</li>
+<li>pnad.renda.cumsum() - a soma acumulada da renda.</li>
+<li>pnad.cov( ) - a matriz de covariâncias</li>
+<li>pnad.corr( ) - a matriz de correlações.</li>
+<li>pnad.loc[ :, [‘renda’, ‘idade’, ‘estudo’]].corr() - a correlação entre a renda, a idade e anos de estudo.</li>
+</ul>
+<p><strong>Operações com dataframes</strong></p>
+<ul>
+<li>pd.ocup_cod.unique() - mostra todos os valores não repetidos da variável ocup_cod (código da ocupação).</li>
+<li>pd.sexo.value_counts() - mostra quantas observações há em cada um valores da variável sexo.</li>
+<li>pnad.query(‘renda &gt; 10000’) - seleciona apenas as observações com renda maior do que 10 mil.</li>
+<li>pnad.query(‘renda &gt; 10000 &amp; idade &lt; 60 &amp; sexo == 2’) - apenas observações com renda maior do que 10 mil, idade menor do que 60 e que sejam mulheres (o sexo feminino foi codificado como 2).</li>
+<li>pnad.groupby('sexo').idade.mean() - agrupa as observações por sexo e mostra a média de idade de cada um dos sexos.</li>
+<li>pnad.sort_values(by='renda', ascending=False) - ordena as observações por renda, em ordem decrescente.</li>
+<li>Ajuda - SHIFT-TAB quando o curso estiver em algum comando. Segure o SHIFT e vá apertando o TAB até quatro vezes para ir aumentando o tamanho da ajuda.</li>
+<li>pnad.head? - o mesmo que apertar SHIFT-TAB quatro vezes, mostra a documentação do comando .head().</li>
+<li>pnad.head?? - mostra o código usado pela função .head().</li>
+</ul>
+<hr />
+<h1 id="numpy">Numpy</h1>
+<p>(Introdução ao Numpy)</p>
+<p>O NumPy é uma poderosa biblioteca da linguagem de programação Python, que permite trabalhar com eficiência vetores, matrizes, arranjos e permite diversas funções e operações matemáticas. Assim como no python, o Numpy possui um sintaxe clara e objetiva. Dentro da matemática, esta biblioteca permite trabalhar, de forma aplicada, com arranjos multidimensionais, matrizes de n dimensões, álgebra linear, geração de números aleatórios etc.</p>
+<p>Para mais informações sobre o Numpy clique <a href="https://www.numpy.org/" target="_blank">aqui</a>.</p>
+<h3>Instalação - NumPy</h3>
+
+<p>Essa biblioteca não é nativa do Python, logo você precisará instalar. Se você baixou o pacote Anaconda, como recomendado, o numpy  já estará incluso. Caso contrário, você deverá utilizar a ferramenta pip do seu python. Digite o seguinte comando no seu terminal linux ou prompt windowns.</p>
+<pre><code class="python">pip install numpy
+</code></pre>
+
+<hr />
+<p><h2> Ttutorial </h2></p>
+<h3>Importando a biblioteca</h3>
+
+<p>Utilizando o editor de sua preferência como o vsCode, atom ou Pycharme, importe a biblioteca.</p>
+<pre><code class="python">import numpy as np
+</code></pre>
+
+<hr />
+<h3>Criando uma Array(Matriz)</h3>
+
+<p>No código abaixo podemos observar um exemplo de uma list, pois o python não oferece suporte para arrays, porém o Numpy permite que tratemos uma list como um array, como será observado no exemplo 2. </p>
+<p><strong>Exemplo 1: List</strong></p>
+<pre><code class="python">In [1]: lista = [10,20,40,30]
+In [2]: type (lista)
+
+Out[2]: list
+</code></pre>
+
+<p><strong>Exemplo 2: Numpay Array</strong></p>
+<pre><code class="python">In [1]: Matriz = [10,20,40,30]
+In [2]: type (Matriz)
+
+Out[2]: numpy.ndarray
+</code></pre>
+
+<h2> Manipulando Arrays </h2>
+
+<p><strong>Criando uma matriz</strong></p>
+<pre><code class="python">
+In [1]: m2 = np.array ([[1, 2], [3, 4]])
+In [2]: m2
+
+Out[2]: array([[1, 2],
+               [3, 4]])
+
+</code></pre>
+
+<p><strong>Selecionando elementos de uma matriz</strong></p>
+<pre><code class="python">
+In [3]: print(m2[0])
+Out[3]: [1 2]
+
+In [4]: print(m2[1])
+Out[4]: [3 4]
+
+In [5]: print(m2[1][0])
+Out[5]: 3
+
+</code></pre>
+
+<p><strong>Matriz transposta</strong></p>
+<pre><code class="python">
+In [3]: print(m2.transpose())
+Out[5]: [[1 3]
+         [2 4]]
+
+</code></pre>
+
+<p><strong>Criando novas matrizes</strong></p>
+<pre><code class="python">
+In [6]: m3 = np.array([[5,6], [7,8]])
+In [7]: m4 = np.array([[1,2], [3,4]])
+
+</code></pre>
+
+<p><strong>Somando matrizes</strong>
+OBS: a soma, a subtração e a multiplicação funcionam como na geometria. Para manipulações de dados de modo convencional do python, utilizar uma list.</p>
+<pre><code class="python">In [8] print(m3 + m4)
+Out[8] [[ 6  8]
+        [10 12]]
+</code></pre>
+
+<p><strong>Somando todos os elementos</strong>
+OBS: foram somados os elementos da matriz m3, criada logo acima. </p>
+<pre><code class="python">In [9] print (m3.sum())
+Out[9] 26
+</code></pre>
+
+<p><strong>Média Aritmética</strong></p>
+<pre><code class="python">In [10]: print (m4.mean())
+Out[10]: 2.5
+</code></pre>
+
+<h2> Fatiamento de Array </h2>
+
+<p><strong>Criando nova matriz</strong></p>
+<pre><code class="python">In [11]: m4 = np.array([[1,2,5,10], [3,4,6,8],[5,7,6,8],[3,2,0,4]])
+
+In [12]: m4
+Out[12]:  [[ 1,  2,  5, 10],
+           [ 3,  4,  6,  8],
+           [ 5,  7,  6,  8],
+           [ 3,  2,  0,  4]]
+</code></pre>
+
+<p><strong>Fatiando a Matriz</strong></p>
+<pre><code class="python">In [13]: print(m4[1:3])
+
+Out[13]:  [[3, 4, 6, 8],
+           [5, 7, 6, 8]]
+</code></pre>
+
+<pre><code class="python">In [14]: print(m4[::2])
+
+Out[14]:  [[ 1,  2,  5, 10],
+           [ 5,  7,  6,  8]]
+</code></pre>
+
+<pre><code class="python">In [15]: np.array_split(x8,2,axis=0)
+
+Out[15]:  [array([[ 1,  2,  5, 10]]), array([[5, 7, 6, 8]])]
+</code></pre>
+
+<h2> Manipulando termos da Array </h2>
+
+<p><strong>Criando nova matriz</strong></p>
+<pre><code class="python">
+In [16]: m5 = np.array([[12,2,27,12],[31,4,5,25]])
+
+In [17]: print(m5)
+Out[17]:  [[12,  2, 27, 12],
+           [31,  4,  5, 25]]
+</code></pre>
+
+<p><strong>Trocando um termo da matriz</strong></p>
+<pre><code class="python">In [18]: m5[0,0] = 100
+
+In [19]: print(m5)
+Out[19]:  [[100,   2,  27,  12]
+           [ 31,   4,   5,  25]]
+</code></pre>
+
+<p><strong>Criando duas matrizes</strong></p>
+<pre><code class="python">
+In [20]: m6 = np.array([1,2,3])
+In [21]: m61 = np.array([4,5,8])
+
+</code></pre>
+
+<p><strong>anexar apenas um termo</strong></p>
+<pre><code class="python">In [22]: Result = np.insert(m6, 1, 10)
+
+In [23]: print(Result)
+Out[23]:  [ 1 10  2  3]
+
+</code></pre>
+
+<p><strong>anexar vários termos</strong></p>
+<pre><code class="python">In [22]: varios = np.append(m6, [10,15,16])
+
+In [23]: print(varios)
+Out[23]:  [ 1,  2,  3, 10, 15, 16]
+
+</code></pre>
+
+<p><strong>concatenar dois arrays</strong></p>
+<pre><code class="python">In [24]: Result2 = np.concatenate((m6, m61), axis=0)
+
+In [25]: print(Result2)
+Out[25]:  [1 2 3 4 5 8]
+
+</code></pre>
+
+<p><strong>anexar em dimensões de eixo 0</strong></p>
+<pre><code class="python">In [26]: m7 = np.array([[1,2,3],[5,8,7]])
+
+In [27]: np.append(m7, [[8,8,8]], axis=0)
+Out[27]: array([[1, 2, 3],
+                [5, 8, 7],
+                [8, 8, 8]])
+
+</code></pre>
+
+<p><strong>anexar em dimensões de eixo 1</strong></p>
+<pre><code class="python">In [28]: m8 = np.array([[1,2,3],[5,9,7]])
+
+In [29]: np.append(m8, [[8],[8]], axis=1)
+Out[29]: array([[1, 2, 3, 8],
+                [5, 9, 7, 8]])
+
+</code></pre>
+
+<p><strong>deletar termo de uma matriz</strong></p>
+<pre><code class="python">In [30]: m9 = np.array([[1,2],[3,4],[5,6]])
+</code></pre>
+
+<pre><code class="python">#deletando em axis 0
+In [31]: np.delete(m9, 1, 0)
+Out[31]: array([[1, 2],
+                [5, 6]])
+
+</code></pre>
+
+<pre><code class="python">#deletando em fatiamento(com razão 2)
+In [32]: m10 = np.array([[1,2,3],[3,4,7],[5,6,4]0,[4,5,9]])
+In [33]: np.delete(m10,np.s_[::2],0)
+Out[32]: array([[1, 2],
+                [5, 6]])
+
+</code></pre>
+
+<hr />
+<h1 id="matplotlib">MATPLOTLIB</h1>
 <p>Segundo a documentação oficial, o Matplotlib é uma biblioteca de plotagem 2D do Python que produz inúmeros gráficos de qualidade em uma variedade de formatos e ambientes interativos. O Matplotlib pode ser usado em scripts Python, nos shells do Python e do IPython, no notebook Jupyter, nos servidores de aplicativos da web e em kits de ferramentas de interface gráfica do usuário. Para mais informações sobre esta biblioteca, clicar <a href="https://matplotlib.org/" target="_blank">aqui</a>.</p>
 <p>Neste tutorial, o matplotlib será utilizado com o auxíio do numpy e do data-set iris, que pode ser encontrado <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/" target="_blank">aqui</a>. OBS: cliclar na opção iris.data</p>
 <p><strong>Instalação - Matplotlib</strong></p>
@@ -106,7 +431,7 @@
 </code></pre>
 
 <hr />
-<h1 id="tutorial">Tutorial</h1>
+<p><h3> Tutorial </h3></p>
 <p><strong>Importando as bibliotecas</strong>
 Utilizando o editor de sua preferência como o vsCode, atom ou Pycharm, importe as bibliotecas.</p>
 <pre><code class="python">import numpy as np
@@ -300,7 +625,8 @@ Out[4]: array([5.1, 4.9, 4.7, 4.6, 5. , 5.4, 4.6, 5. , 4.4, 4.9, 5.4, 4.8, 4.8,
 
 </code></pre>
 
-<h1 id="plotando-graficos">Plotando Gráficos</h1>
+<h3> Plotando Gráficos </h3>
+
 <p><strong>Plotando o gráfico das 50 primeiras iris(iris setosa)(coluna 1)</strong></p>
 <pre><code class="python">In [5]: plt.plot(data[:50,0], c='Red', ls=':', marker='s', ms=8)
 
