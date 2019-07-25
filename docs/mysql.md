@@ -118,10 +118,12 @@ Entre no MySQL WorkBench e depois edite a conexão. Troque o nome do usuário (u
 
 --------------------------------------------------------------------
 
-#MYSQL BÁSICOS
+<h2> MYSQL BÁSICOS </h2>
 
 
-<h4>CREATE DATABASES</h4>
+
+
+##CREATE DATABASES
 
 ```sql
 CREATE DATABASE meu_banco
@@ -129,7 +131,10 @@ default character set utf8
 default collate utf8_general_ci;
 ```
 
-<h4>SHOW DATABASES</h4>
+
+
+
+##SHOW DATABASES
 
 ```sql
 SHOW DATABASES;
@@ -145,15 +150,22 @@ SHOW DATABASES;
 | sys                |
 | testando           |
 +--------------------+
-
 ```
 
-<h4>CREATE TABLE</h4>
 
-Antes de criar uma tabela ou realizar qualquer operação, é necessário selecionar o banco de dados que vai ser usado:
+
+##USE
+
 ```sql
 USE meu_banco;
 ```
+
+
+
+##CREATE TABLE
+
+Antes de criar uma tabela ou realizar qualquer operação, é necessário selecionar o banco de dados que vai ser usado:
+
 ```
 CREATE TABLE `clientes` (
 `idCliente` mediumint(8) unsigned NOT NULL auto_increment,
@@ -165,7 +177,45 @@ PRIMARY KEY (`idCliente`)
 ) AUTO_INCREMENT=1;
 ```
 
-<h4>SHOW TABLES</h4>
+
+##SHOW ENGINES
+
+```sql
+SHOW ENGINES;
+```
+
+Geralmente o MySQL vem com a engine InnoDB (um mecanismo mantido pela Oracle). Dentre outras funções, o InnoDB permite a criação de tabela com suporte para chaves estrangeiras. A XtraDB também oferece esse suporte. Enfim, estas duas engines satisfazem a condição ACID, ao passo que a MyISAN não. 
+1. Atomicidade: Não pode ser dividida em subtarefas. 
+1. Consistência: Um banco de dados consistente deve permanecer consistente após a transação. 
+1. Isolamento: Duas transações acorrem em paralelo, isoladas. 
+1. Durabilidade: Durar o tempo que for necessário. 
+
+
+##SHOW TABLE STATUS
+
+Ver em qual engine foi criado a tabela. 
+
+```sql
+SHOW TABLE STATUS;
+```
+
+(Normalmente usa-se InnoDB por default)
+Para mudar a engine basta digitar, no final do create table, engine=NomeDoEngine 
+
+```sql
+CREATE TABLE `cursos` ( `idcurso` INT(11) NOT NULL DEFAULT '0',
+    'nome' varchar(30) NOT NULL,
+    'descricao' text,
+    'carga' int(10) unsigned DEFAULT NULL,
+    'totaulas' int(10) unsigned DEFAULT NULL,
+    'ano' year(4) DEFAULT '2016',
+    PRIMARY KEY ('idcurso'),
+    UNIQUE KEY 'nome' ('nome')
+    ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
+
+##SHOW TABLES
 
 Sempre que quiser usar o SHOW tables deve selecionar o banco de dados primeiro. 
 
@@ -180,7 +230,7 @@ SHOW tables;
 
 ```
 
-<h4>DESCRIBE</h4>
+##DESCRIBE
 
 ```sql
 DESC clientes;
@@ -200,7 +250,7 @@ DESCRIBE clientes;
 
 ```
 
-<h4>INSERT INTO</h4>
+##INSERT INTO
 
 ```sql
 INSERT INTO `clientes` (`nomeEmpresa`,`nomeDiretor`,`numEmpregados`) VALUES ("Malesuada Inc.","Johnny Pedd",4847);
@@ -228,7 +278,7 @@ SELECT nomeDiretor FROM clientes;
 
 ```
 
-<h4>DELETE</h4>
+##DELETE
 
 ```sql
 DELETE FROM clientes WHERE nomeDiretor = 'Jonathan Domingos';
@@ -254,7 +304,7 @@ Cuidado: A comando DELETE acima deletará todos registros relacionados a Jonatha
 DELETE FROM clientes WHERE idCliente = 7;
 ```
 
-<h4>DROP TABLE</h4>
+##DROP TABLE
 
 Eliminar uma tabela:
 
@@ -270,7 +320,7 @@ Elimina um banco de dados:
 DROP DATABASE nome_do_banco;
 ```
 
-<h4>TRUNCATE</h4>
+##TRUNCATE
 
 Para limpar uma tabela, use o comando TRUNCATE. Internamente, ele remove a tabela primeiro e, depois, a recria com a mesma estrutura – só que sem os dados. Se houver um contador AUTO_INCREMENT, na tabela em questão, ele é zerado e recolocado. Veja como funciona:
 
@@ -278,7 +328,7 @@ Para limpar uma tabela, use o comando TRUNCATE. Internamente, ele remove a tabel
 TRUNCATE TABLE nome_da_tabela;
 ```
 
-<h4>UPDATE</h4>
+##UPDATE
 
 ```sql
 UPDATE clientes SET numEmpregados=1999 WHERE idCliente = 1;

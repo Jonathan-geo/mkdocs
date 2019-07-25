@@ -4,8 +4,12 @@ theme: flatly
 pages: 
   - Home: 'index.md'
   - MySQL: 'mysql.md'
+  - MongoDB: 'mongoDB.md'
   - PythonDados: 'pythonDados.md'
-  - Ruby: 'ruby.md'
-  - NodeJS: 'nodeJS.md'
+  - RESUMOS:
+    - NodeJS: 'RESUMOS/nodeJS.md'
+    - Ruby: 'RESUMOS/ruby.md'
+    - CSS: 'RESUMOS/css.md'
 
-
+extra_css:
+  - css/extra_css.css

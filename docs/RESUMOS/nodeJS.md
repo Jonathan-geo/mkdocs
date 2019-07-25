@@ -12,7 +12,9 @@ Estas configurações foram utilizadas para criar um app no modelo rest, foi uti
 
 <h3>1. NodeJs</h3>
 
-a) Installing Node.js via package manager https://github.com/nodesource/distributions/blob/master/README.md
+a) Installing Node.js via package manager 
+
+https://github.com/nodesource/distributions/blob/master/README.md
 
 b) Install
     
