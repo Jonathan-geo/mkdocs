@@ -7,20 +7,21 @@
         
         
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>NodeJS - JONATHAN</title>
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>CSS - JONATHAN</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <link href="../../css/extra_css.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -39,7 +40,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="..">JONATHAN</a>
+                    <a class="navbar-brand" href="../..">JONATHAN</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -47,19 +48,33 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href="..">Home</a>
+                                <a href="../..">Home</a>
                             </li>
                             <li >
-                                <a href="../mysql/">MySQL</a>
+                                <a href="../../mysql/">MySQL</a>
                             </li>
                             <li >
-                                <a href="../pythonDados/">PythonDados</a>
+                                <a href="../../mongoDB/">MongoDB</a>
                             </li>
                             <li >
-                                <a href="../ruby/">Ruby</a>
+                                <a href="../../pythonDados/">PythonDados</a>
                             </li>
-                            <li class="active">
-                                <a href="./">NodeJS</a>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">RESUMOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../nodeJS/">NodeJS</a>
+</li>
+                                    
+<li >
+    <a href="../ruby/">Ruby</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">CSS</a>
+</li>
+                                </ul>
                             </li>
                         </ul>
 
@@ -87,162 +102,137 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#nodejs">NodeJS</a></li>
-        <li class="main "><a href="#instalacao-e-configuracoes">Instalação e Configurações</a></li>
-            <li><a href="#iniciando-o-projeto-node">Iniciando o projeto NODE</a></li>
-            <li><a href="#mongo-db-online">MONGO DB online</a></li>
-            <li><a href="#testarmetodos">TestarMétodos</a></li>
+        <li class="main active"><a href="#css-cheat-sheet">CSS - Cheat Sheet</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="nodejs">NodeJS</h1>
+<h1 id="css-cheat-sheet">CSS - Cheat Sheet</h1>
 <div class="panel panel-info">
 AINDA EM CONSTRUÇÃO
 </div>
 
-<p>Documentação pessoal de consulta rápida ao NodeJs.</p>
-<h1 id="instalacao-e-configuracoes">Instalação e Configurações</h1>
-<p>Estas configurações foram utilizadas para criar um app no modelo rest, foi utilizado: o NodeJs, o Gerenciador de pacotes Yarn e o sistema operacional Ubuntu.</p>
-<h3>1. NodeJs</h3>
+<p>Esta documentação é apenas um guia rápido de CSS básico que utilizo no dia-a-dia. </p>
+<p>1 - Estrutura de área:</p>
+<p><img alt="Screenshot" src="img/boxcss.png" /></p>
+<p>2 - No CSS temos três formas de elaborar uma formatação:</p>
+<blockquote>
+<p>-------------------- Formatação incorporada:</p>
+</blockquote>
+<pre><code class="html">&lt;head&gt;
+    &lt;title&gt; Incorporado &lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt; 
+        h1{
+            color: rgb(8, 14, 41);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 0;
+            background: #ddd;
+            font-size: 35px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }    
+    &lt;/style&gt;
+&lt;/head&gt;
 
-<p>a) Installing Node.js via package manager https://github.com/nodesource/distributions/blob/master/README.md</p>
-<p>b) Install</p>
-<pre><code class="bash"># Using Ubuntu
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
-</code></pre>
-
-<pre><code>&gt; node -v = v10.16.0
-</code></pre>
-<h3>2. NVM</h3>
-
-<p>Node Version Manager: Controlador de versões Node</p>
-<p>a) https://github.com/nvm-sh/nvm</p>
-<pre><code>&gt; source ~/.profile
-
-&gt; nvm ls-remote
-
-&gt; nvm install 10.15.1
-
-&gt; node -v
-</code></pre>
-<h3>3. NPM</h3>
-
-<p>Node Package Manager: Controlador de pacotes Node</p>
-<p>a) https://www.npmjs.com/</p>
-<pre><code>&gt; npm -v = 6.9.0
-</code></pre>
-<h3>4. Yarn</h3>
-
-<p>Controlador de pacotes Node (substituto do NPM)</p>
-<p>a)  Install</p>
-<pre><code>curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update
-sudo apt-get install --no-install-recommends yarn (Caso já tenha instalado o node)
-</code></pre>
-
-<pre><code>&gt; yarn -v = 1.16.0
-</code></pre>
-<p>c) Ironicamente podemos instalar o yarn usando o npm</p>
-<pre><code>&gt; npm install -g yarn
-</code></pre>
-<p>d) Usando o yarn </p>
-<pre><code>&gt; yarn init (Logo abaixo descrevo melhor como iniciar um projeto)
-</code></pre>
-<p><strong>DependenciasYarn</strong></p>
-<p>Segue logo abaixo algumas dependencias do yarn e seus respctivos modos de instalação.</p>
-<pre><code>  },
-  &quot;dependencies&quot;: {
-    &quot;cors&quot;: &quot;^2.8.5&quot;,
-    &quot;express&quot;: &quot;^4.17.1&quot;,
-    &quot;mongoose&quot;: &quot;^5.6.0&quot;,
-    &quot;multer&quot;: &quot;^1.4.1&quot;,
-    &quot;nodemon&quot;: &quot;^1.19.1&quot;,
-    &quot;sharp&quot;: &quot;^0.22.1&quot;,
-    &quot;socket.io&quot;: &quot;^2.2.0&quot;
-  }
+&lt;body&gt;
+    &lt;h1&gt; Titulo do Texto&lt;/h1&gt;
+&lt;/body&gt;
 
 </code></pre>
 
-<p><strong>Express</strong></p>
-<p>O Express é um framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto robusto de recursos para aplicativos web e móvel.</p>
-<pre><code>$yarn add express
+<blockquote>
+<p>------------------------ Formatação inline:</p>
+</blockquote>
+<pre><code class="html">&lt;head&gt;
+    &lt;title&gt; Incorporado &lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1 style=&quot;padding: 30px 20px; 
+                border-radius: 8px; 
+                border: 0; 
+                background: #ddd;&quot;&gt; Titulo do Texto&lt;/h1&gt;
+&lt;/body&gt;
 </code></pre>
 
-<p><strong>Multer</strong></p>
-<p>Multer: biblioteca que lida com corpos multPartForm-data (images) e já automatiza o processo de upload de arquivos.
-cd backend(Pasta que esta meu package.json)</p>
-<pre><code>$yarn add multer
+<blockquote>
+<p>----------------------------- CSS externo:</p>
+</blockquote>
+<pre><code class="html">
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;arquivo.css&quot;&gt;
+    &lt;title&gt; Moonlight &lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt; Melhores RPGs &lt;/h1&gt;
+
+    &lt;p id=&quot;Story&quot;&gt;
+        Vagrant Story é um jogo eletrônico de RPG desenvolvido pela Squaresoft, 
+        lançado para o PlayStation em 2000 e relançado 9 anos depois em formato de 
+        download na Playstation Network, disponibilizando-o assim para PlayStation 3 
+        e PlayStation Portable..
+    &lt;/p&gt;
+
+    &lt;p class=&quot;classFormat&quot;&gt;
+        Final Fantasy é uma franquia multimídia de ficção científica e fantasia 
+        criada por Hironobu Sakaguchi e desenvolvida pela Square Enix. A franquia é 
+        centrada em uma série de jogos eletrônicos do gênero RPG.
+    &lt;/p&gt;
+
+&lt;/body&gt;
 </code></pre>
 
-<p><strong>Sharp</strong></p>
-<p>Sharp: Permite manipular imagens size.</p>
-<pre><code>$yarn add sharp
-</code></pre>
+<blockquote>
+<p>arquivo.css</p>
+</blockquote>
+<pre><code class="css">
 
-<p><strong>Nodemon</strong></p>
-<pre><code>$yarn add nodemon
-</code></pre>
+/* Formatação direto em tag. */
+body {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
 
-<p>Com o nodemon, posso criar um script dev no meu arquivo package.json.</p>
-<pre><code>{
-  &quot;name&quot;: &quot;backend&quot;,
-  &quot;version&quot;: &quot;1.0.0&quot;,
-  &quot;main&quot;: &quot;index.js&quot;,
-  &quot;license&quot;: &quot;MIT&quot;,
-  &quot;scripts&quot;: {
-    &quot;dev&quot;: &quot;nodemon src/index.js&quot;
-  },
-  &quot;dependencies&quot;: {
-    &quot;express&quot;: &quot;^4.17.1&quot;,
-    &quot;nodemon&quot;: &quot;^1.19.1&quot;
-  }
+h1 {
+    border-radius: 8px;
+    background: #8787af;
+    border: 1px solid #303030;
+    padding: 10px 10px;
+}
+
+
+
+/* No caso do id, eu estou atribuindo uma 
+formatação ao id criado no html. */
+#Story{
+    padding: 30px 20px; 
+    border-radius: 8px; 
+    background: #ddd;
+    border: 1px solid #303030;
+}
+
+
+
+
+/* No caso da classe, eu crio a classe e 
+utilizo sua funcionalidade em quelquer 
+lugar do html que eu desejar, basta invocar. */
+.classFormat {
+    padding: 30px 20px; 
+    border-radius: 8px; 
+    background: #ddd;
 }
 </code></pre>
 
-<p>Isso permite o reload do servidor.
-Agora passo a digitar( $yarn dev )no terminal.</p>
-<p><strong>Mongoose</strong></p>
-<p>Esta bibllioteca permite utilizar o mongoDb em nossa aplicação com base em node. </p>
-<pre><code>$yarn add mongoose
-</code></pre>
-
-<p><strong>cors</strong></p>
-<p>Permite que meu backend seja acessível pelo frontend react, 
-mesmo estando em domínios diferentes.</p>
-<pre><code>$yarn add cors
-</code></pre>
-
-<p><strong>Socket io</strong></p>
-<p>Para usar outro protocolo. O protocolo web socket. </p>
-<pre><code>$yarn add socket.io
-</code></pre>
-
-<h2 id="iniciando-o-projeto-node">Iniciando o projeto NODE</h2>
-<p>No terminal executar o Yarn para dar "um start" no projeto. Este comando ira criar um package.json</p>
-<pre><code>$yarn init -y
-</code></pre>
-
-<p><strong>Rodar o projeto</strong></p>
-<p>No terminal digitar:</p>
-<pre><code>$node src/index.js
-</code></pre>
-
-<p>Caso tenha instalado o Nodemon, basta digitar:</p>
-<pre><code>$yarn dev
-</code></pre>
-
-<h2 id="mongo-db-online">MONGO DB online</h2>
-<p>https://www.mongodb.com/cloud/atlas</p>
-<p>a) create cluster </p>
-<p>b) clicar em conect</p>
-<p>c) conect you aplication</p>
-<p>d) copiar o link de conecção.</p>
-<h2 id="testarmetodos">TestarMétodos</h2>
-<p>insomnia:
-https://insomnia.rest/</p></div>
+<blockquote>
+<p>Referências:</p>
+<p>https://docstore.mik.ua/orelly/webprog/jscript/ch18_02.htm
+http://ictacademy.com.ng/css-height-width/</p>
+</blockquote></div>
         </div>
 
         <footer class="col-md-12">
@@ -250,11 +240,11 @@ https://insomnia.rest/</p></div>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
