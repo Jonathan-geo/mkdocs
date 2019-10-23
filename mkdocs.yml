@@ -3,6 +3,7 @@ theme: flatly
 
 pages: 
   - Home: 'index.md'
+  - BLAZE: 'blaze01.md'
   - MySQL: 'mysql.md'
   - MongoDB: 'mongoDB.md'
   - PythonDados: 'pythonDados.md'
