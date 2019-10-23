@@ -8,7 +8,7 @@ Esta documentação é apenas um guia rápido de CSS básico que utilizo no dia-
 
 1 - Estrutura de área:
 
-![Screenshot](img/boxcss.png)
+![Screenshot](../img/boxcss.png)
 
 
 2 - No CSS temos três formas de elaborar uma formatação:

@@ -1,7 +1,7 @@
 site_name: JONATHAN
 theme: flatly
 
-pages: 
+nav: 
   - Home: 'index.md'
   - BLAZE: 'blaze01.md'
   - MySQL: 'mysql.md'
