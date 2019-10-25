@@ -26,9 +26,11 @@ Obs: fique atento ao local em que o programa está sendo instalado. No meu caso,
 
 ------------------------
 
-Instale o arquivo: 
+Instale o arquivo: <button onclick="window.open('https://marketplace.ficoanalyticcloud.com/apps/134263#!overview');">BLAZE PARA DOWNLOAD</button> <button onclick="window.open('https://drive.google.com/drive/folders/1XjpXLq40dpZurVS4NesaBRvp3_zAlgFl?usp=sharing');">REPOSITÓRIO NO GDRIVE</button>
 
 >blaze-advisor_7.5.7500.v11760_Windows (Blaze)
+
+
 
 Obs: novamente fique atento ao local onde o programa está sendo instalado. No meu caso, ele está na seguinte pasta: C:\Blaze. 
 
@@ -101,7 +103,7 @@ Instalar o plug-in do Blaze: após abrir o eclipse e escolher o workspace, devem
 	
 Para utilizar o plug-in do Blaze:
 
-- Ao reiniciar, o blaze irá pedir uma licença que pode ser adquirida com a FICO. https://www.fico.com/br/products
+- Ao reiniciar, o blaze irá pedir uma licença que pode ser adquirida com a FICO. <button onclick="window.open('https://marketplace.ficoanalyticcloud.com/apps/134263#!overview');">FICO</button>
 
 - Após colocar a licença, basta ir em: Window - Perspective - Open Perspective - Other.
 
@@ -156,7 +158,7 @@ Crie, dentro da pasta repositório, as seguintes pastas:
 				
 Iniciando o repositório no eclipse:
 
-- Apoós criar as pastas necessárias para o início do nosso projeto, iremos voltar ao eclipse e fazer o seguinte:
+- Após criar as pastas necessárias para o início do nosso projeto, iremos voltar ao eclipse e fazer o seguinte:
 
 	- Ir na aba Repository - New Repository [Novo Repositório] 
 
@@ -226,6 +228,8 @@ Para iniciar, iremos criar a parte Technical do projeto:
 
 -------------------------				
 
+- Finish.
+
 ## Business Object Model (BOM)
 
 Neste tutorial iremos utilizar um arquivo.jar para importar as classes e as variáveis que iremos utilizar. 
@@ -290,6 +294,8 @@ Em um turorial à parte, ensino a criar um arquivo.jar e a modificar este arquiv
 
 		-------------------------		
 		
+	- Apply and Close.
+	
 	
 ## Usando o bom-Carro3.jar
 
@@ -462,7 +468,9 @@ Antes de iniciar as configurações, vá em:
 
 		-------------------------	
 
-					
+
+- Na aba RMADefinition: 
+				
 	- Application Title [Título do Aplicativo]: Regras de Aluguel de Carros
 
 	- Habilitar as seguintes opções:
@@ -509,7 +517,7 @@ Criando uma função que irá "startar" o uso do fluxo de decisão no nosso RMA.
 
 - No eclipse, clicar com o botão direito do mouse sobre a pasta Technical Library - New - Folder - Name: Entrypoint.
 
-- Clicar com o botão direito do mouse sobre a pasta Entrypoint - New - SRL Decision Entities - Function.
+- Clicar com o botão direito do mouse sobre a pasta Entrypoint - New - SRL Decision Entities - Function - Name: entrypoint - Finish.
 	- Name: entrypoint
 	- Type: Decisioninput
 	- Criar um parâmetro e o corpo de uma função.
@@ -600,7 +608,7 @@ Criando uma variável global input.
 ## Tutoriais Blaze
 
 	> 2 Utilizando o RMA - Em construção data prevista para 27/10/2019
-	> 3 Deploy no Toncat - Em construção
+	> 3 Deploy no Tomcat - Em construção
 	> 4 Tópicos Avançados - Em construção
 
 
