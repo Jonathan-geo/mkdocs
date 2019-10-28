@@ -395,9 +395,11 @@ Para saber se tudo está correto até o momento, iremos fazer um teste.
 
 ## Mais utoriais - Blaze
 
-	> 1 Introdução ao Blaze - Link
-	> 3 Deploy no Toncat - Link
-	> 4 Tópicos avançados - Em construção.
+- 1 Introdução ao Blaze <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze01/');">Blaze - Instalações</button>
+
+- 3 Deploy no Tomcat - <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze02/');">Blaze - Deploy</button>
+
+- 4 Tópicos avançados - Em construção.
 
 Elaborado por:
 <br/>

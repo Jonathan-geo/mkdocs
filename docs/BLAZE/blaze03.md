@@ -517,9 +517,11 @@ Já no exemplo abaixo, a idade é de 16 e a renda de R$ 5420. Mesmo a renda send
 		
 ## Mais utoriais - Blaze
 
-	> 1 Introdução ao Blaze - Link
-	> 3 Deploy no Toncat - Link
-	> 4 Tópicos avançados - Em construção.
+- 1 Introdução ao Blaze <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze01/');">Blaze - Instalações</button>
+
+- 2 Utilizando o RMA - <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze02/');">Blaze - Utilização</button>
+
+- 4 Tópicos avançados - Em construção.
 
 Elaborado por:
 <br/>

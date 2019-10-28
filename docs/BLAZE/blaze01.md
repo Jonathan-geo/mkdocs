@@ -607,9 +607,11 @@ Criando uma variável global input.
 
 ## Mais utoriais - Blaze
 
-	> 2 Utilizando o RMA - Em construção data prevista para 27/10/2019
-	> 3 Deploy no Tomcat - Em construção
-	> 4 Tópicos Avançados - Em construção
+- 2 Utilizando o RMA - <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze02/');">Blaze - Utilização</button>
+
+- 3 Deploy no Tomcat - <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze02/');">Blaze - Deploy</button>
+
+- 4 Tópicos Avançados - Em construção
 
 
 Elaborado por:
