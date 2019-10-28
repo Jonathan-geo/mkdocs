@@ -37,21 +37,21 @@ Obs: novamente fique atento ao local onde o programa está sendo instalado. No m
 Criar uma pasta **projetos** em C:\Blaze e copiar(Desempacotar) o arquivo **eclipse-jee-oxygen-3a-win32-x86_64.zip** para dentro desta pasta.
 
 -------------------------
-![Screenshot](/img/blaze/02.png)
+![Screenshot](../../img/blaze/02.png)
 				
 -------------------------
 
 Renomear a pasta **eclipse-jee-oxygen-3a-win32-x86_64** para **eclipse01** para facilitar a localização. 		
 
 -------------------------
-![Screenshot](/img/blaze/04.png)
+![Screenshot](../../img/blaze/04.png)
 
 -------------------------
 				
 Executar, com um duplo clique, o arquivo **eclipse.exe** que está dentro da pasta eclipse01 (pasta renomeada). 
 
 -------------------------
-![Screenshot](/img/blaze/03.png)		
+![Screenshot](../../img/blaze/03.png)		
 
 -------------------------
 
@@ -64,7 +64,7 @@ Instalar o plug-in do Blaze: após abrir o eclipse e escolher o workspace, devem
 - No eclipse, ir em: Help - Install new software.
 
 -------------------------
-![Screenshot](/img/blaze/05.png)
+![Screenshot](../../img/blaze/05.png)
 
 -------------------------
 
@@ -72,7 +72,7 @@ Instalar o plug-in do Blaze: após abrir o eclipse e escolher o workspace, devem
 - Add - local.
 
 -------------------------
-![Screenshot](/img/blaze/06.png)
+![Screenshot](../../img/blaze/06.png)
 
 -------------------------
 
@@ -80,14 +80,14 @@ Instalar o plug-in do Blaze: após abrir o eclipse e escolher o workspace, devem
 - Ir na pasta C:\Blaze\Advisor75\EclipsePluginUpdateSite 
 	
 -------------------------
-![Screenshot](/img/blaze/07.png)
+![Screenshot](../../img/blaze/07.png)
 
 -------------------------
 	
 - Depois de selecionar a pasta, digitar **Blaze Advisor** e clicar em ok.
 
 -------------------------
-![Screenshot](/img/blaze/08.png)
+![Screenshot](../../img/blaze/08.png)
 
 -------------------------
 
@@ -95,7 +95,7 @@ Instalar o plug-in do Blaze: após abrir o eclipse e escolher o workspace, devem
 
 
 -------------------------
-![Screenshot](/img/blaze/09.png)
+![Screenshot](../../img/blaze/09.png)
 
 -------------------------
 
@@ -109,7 +109,7 @@ Para utilizar o plug-in do Blaze:
 
 
 -------------------------
-![Screenshot](/img/blaze/10.png)
+![Screenshot](../../img/blaze/10.png)
 
 -------------------------
 
@@ -117,7 +117,7 @@ Para utilizar o plug-in do Blaze:
 - Blaze Advisor - Open.
 
 -------------------------
-![Screenshot](/img/blaze/11.png)
+![Screenshot](../../img/blaze/11.png)
 
 -------------------------
 
@@ -133,7 +133,7 @@ Todo nosso ambiente será preparado na pasta
 Crie uma pasta com o nome **repositorio01** em C:\Blaze\projetos
 
 -------------------------
-![Screenshot](/img/blaze/12.png)
+![Screenshot](../../img/blaze/12.png)
 
 -------------------------
 
@@ -152,7 +152,7 @@ Crie, dentro da pasta repositório, as seguintes pastas:
 				
 				
 -------------------------
-![Screenshot](/img/blaze/13.png)
+![Screenshot](../../img/blaze/13.png)
 
 -------------------------				
 				
@@ -164,7 +164,7 @@ Iniciando o repositório no eclipse:
 
 
 	-------------------------
-	![Screenshot](/img/blaze/14.png)
+	![Screenshot](../../img/blaze/14.png)
 
 	-------------------------
 
@@ -179,12 +179,12 @@ Iniciando o repositório no eclipse:
 	- Colocar admin como usuário nas duas opções. Para este tutorial não será necessário utilizar senha. 
 	
 -------------------------
-![Screenshot](/img/blaze/15.png)
+![Screenshot](../../img/blaze/15.png)
 
 -------------------------			
 
 -------------------------
-![Screenshot](/img/blaze/16.png)
+![Screenshot](../../img/blaze/16.png)
 
 -------------------------				
 				
@@ -203,28 +203,28 @@ Para iniciar, iremos criar a parte Technical do projeto:
 - Ir na aba File - New - Project
 
 -------------------------
-![Screenshot](/img/blaze/17.png)
+![Screenshot](../../img/blaze/17.png)
 
 -------------------------
 
 - Blaze Advisor - Rule Project - Next 
 
 -------------------------
-![Screenshot](/img/blaze/18.png)
+![Screenshot](../../img/blaze/18.png)
 
 -------------------------	
 
 - Escolher o repositório que criamos - next
 
 -------------------------
-![Screenshot](/img/blaze/19.png)
+![Screenshot](../../img/blaze/19.png)
 
 -------------------------	
 
 - Selecionar o repositório e colocar o nome do projeto: Technical Library
 
 -------------------------
-![Screenshot](/img/blaze/20.png)
+![Screenshot](../../img/blaze/20.png)
 
 -------------------------				
 
@@ -272,7 +272,7 @@ Em um turorial à parte, ensino a criar um arquivo.jar e a modificar este arquiv
 
 
 		-------------------------
-		![Screenshot](/img/blaze/21.png)
+		![Screenshot](../../img/blaze/21.png)
 
 		-------------------------	
 
@@ -282,7 +282,7 @@ Em um turorial à parte, ensino a criar um arquivo.jar e a modificar este arquiv
 	- Procurar pelo arquivo que salvamos na pasta projetos **bom-Carro3.jar**
 
 		-------------------------
-		![Screenshot](/img/blaze/22.png)
+		![Screenshot](../../img/blaze/22.png)
 
 		-------------------------
 
@@ -290,7 +290,7 @@ Em um turorial à parte, ensino a criar um arquivo.jar e a modificar este arquiv
 	- Após selecioado, o arquivo aparecerá na caixa de texto localizada no canto inferior esquerdo da tela. 
 		
 		-------------------------
-		![Screenshot](/img/blaze/23.png)
+		![Screenshot](../../img/blaze/23.png)
 
 		-------------------------		
 		
@@ -306,7 +306,7 @@ Em um turorial à parte, ensino a criar um arquivo.jar e a modificar este arquiv
 	- Dar o nome de BOM.
 
 		-------------------------
-		![Screenshot](/img/blaze/24.png)
+		![Screenshot](../../img/blaze/24.png)
 
 		-------------------------
 
@@ -315,7 +315,7 @@ Em um turorial à parte, ensino a criar um arquivo.jar e a modificar este arquiv
 	- New - Business Object Model - Modelo Java
 
 		-------------------------
-		![Screenshot](/img/blaze/25.png)
+		![Screenshot](../../img/blaze/25.png)
 
 		-------------------------		
 
@@ -326,7 +326,7 @@ Em um turorial à parte, ensino a criar um arquivo.jar e a modificar este arquiv
 	- next - Finish[Concluir]. 
 
 		-------------------------
-		![Screenshot](/img/blaze/26.png)
+		![Screenshot](../../img/blaze/26.png)
 
 		-------------------------
 
@@ -335,7 +335,7 @@ Em um turorial à parte, ensino a criar um arquivo.jar e a modificar este arquiv
 	- Nota-se que dentro da pasta BOM, no editor eclipse, foi criado um arquivo [Java]. Podemos renomeá-lo para **JavaBOM** para facilitar nossa compreensão. 
 					
 		-------------------------
-		![Screenshot](/img/blaze/27.png)
+		![Screenshot](../../img/blaze/27.png)
 
 		-------------------------					
 					
@@ -347,13 +347,13 @@ Em um turorial à parte, ensino a criar um arquivo.jar e a modificar este arquiv
 	- Adicionar um comentário e fazer o Check-in.
 
 		-------------------------
-		![Screenshot](/img/blaze/28.png)
+		![Screenshot](../../img/blaze/28.png)
 
 		-------------------------	
 
 
 		-------------------------
-		![Screenshot](/img/blaze/29.png)
+		![Screenshot](../../img/blaze/29.png)
 
 		-------------------------	
 
@@ -371,7 +371,7 @@ Obs: o tempo todo iremos utilizar as funções Check-in e Check-out.
 	- File - New - Project - Blaze Advisor - Rule Project - Next - RepositorioCarro - Next - RepositorioCarro - name: Business Library - Finish.
 
 -------------------------
-![Screenshot](/img/blaze/30.png)
+![Screenshot](../../img/blaze/30.png)
 
 -------------------------
 
@@ -391,7 +391,7 @@ Obs: o tempo todo iremos utilizar as funções Check-in e Check-out.
 Após criar os projetos nosso eclipse ficará assim:
 
 -------------------------
-![Screenshot](/img/blaze/31.png)
+![Screenshot](../../img/blaze/31.png)
 
 -------------------------
 
@@ -405,19 +405,19 @@ Para conectar todos os projetos em apenas um, basta fazer o seguinte:
 	- Na área de edição do projeto, clicar no ícone, como mostrado na imagem a seguir:
 	
 		-------------------------
-		![Screenshot](/img/blaze/32.png)
+		![Screenshot](../../img/blaze/32.png)
 
 		-------------------------				
 					
 	- Incluir os projetos Business Library e Technical
 
 		-------------------------
-		![Screenshot](/img/blaze/33.png)
+		![Screenshot](../../img/blaze/33.png)
 
 		-------------------------
 
 		-------------------------
-		![Screenshot](/img/blaze/34.png)
+		![Screenshot](../../img/blaze/34.png)
 
 		-------------------------
 
@@ -427,7 +427,7 @@ Para conectar todos os projetos em apenas um, basta fazer o seguinte:
 	- Nota-se que agora os projetos estão conectados com o projeto RegrasAluguelCarros. 
 
 		-------------------------
-		![Screenshot](/img/blaze/35.png)
+		![Screenshot](../../img/blaze/35.png)
 
 		-------------------------
 				
@@ -440,7 +440,7 @@ Para conectar todos os projetos em apenas um, basta fazer o seguinte:
 	- Após fechar os projetos, clicar com o botão direito sobre o projeto RegrasAluguelCarros e fazer o check-in.
 	
 		-------------------------
-		![Screenshot](/img/blaze/36.png)
+		![Screenshot](../../img/blaze/36.png)
 
 		-------------------------	
 
@@ -464,7 +464,7 @@ Antes de iniciar as configurações, vá em:
 		- New - Deployment Entities - Rule Maintenance Application Definition - Entity Name: RMADefinition - Finish.
 
 		-------------------------
-		![Screenshot](/img/blaze/37.png)
+		![Screenshot](../../img/blaze/37.png)
 
 		-------------------------	
 
@@ -478,7 +478,7 @@ Antes de iniciar as configurações, vá em:
 
 
 		-------------------------
-		![Screenshot](/img/blaze/38.png)
+		![Screenshot](../../img/blaze/38.png)
 
 		-------------------------
 
@@ -488,7 +488,7 @@ Antes de iniciar as configurações, vá em:
 					
 					
 		-------------------------
-		![Screenshot](/img/blaze/39.png)
+		![Screenshot](../../img/blaze/39.png)
 
 		-------------------------					
 					
@@ -502,7 +502,7 @@ Antes de iniciar as configurações, vá em:
 
 
 		-------------------------
-		![Screenshot](/img/blaze/40.png)
+		![Screenshot](../../img/blaze/40.png)
 
 		-------------------------
 
@@ -525,7 +525,7 @@ Criando uma função que irá "startar" o uso do fluxo de decisão no nosso RMA.
 - Obs: faça como na imagem a seguir:
 
 -------------------------
-![Screenshot](/img/blaze/41.png)
+![Screenshot](../../img/blaze/41.png)
 
 -------------------------
 
@@ -534,7 +534,7 @@ Criando uma função que irá "startar" o uso do fluxo de decisão no nosso RMA.
 
 
 -------------------------
-![Screenshot](/img/blaze/42.png)
+![Screenshot](../../img/blaze/42.png)
 
 -------------------------
 
@@ -568,7 +568,7 @@ Criando uma variável global input.
 
 
 		-------------------------
-		![Screenshot](/img/blaze/43.png)
+		![Screenshot](../../img/blaze/43.png)
 
 		-------------------------
 
@@ -577,7 +577,7 @@ Criando uma variável global input.
 
 
 		-------------------------
-		![Screenshot](/img/blaze/44.png)
+		![Screenshot](../../img/blaze/44.png)
 
 		-------------------------
 	
@@ -591,17 +591,17 @@ Criando uma variável global input.
 
 
 		-------------------------
-		![Screenshot](/img/blaze/45.png)
+		![Screenshot](../../img/blaze/45.png)
 
 		-------------------------
 
 		-------------------------
-		![Screenshot](/img/blaze/46.png)
+		![Screenshot](../../img/blaze/46.png)
 
 		-------------------------
 
 		-------------------------
-		![Screenshot](/img/blaze/47.png)
+		![Screenshot](../../img/blaze/47.png)
 
 		-------------------------
 

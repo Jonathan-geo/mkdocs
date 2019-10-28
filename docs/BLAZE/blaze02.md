@@ -7,7 +7,7 @@ Interface inicial:
 - Funções importantes que iremos utilizar:
 
 	-------------------------
-	![Screenshot](/img/blaze/48.png)
+	![Screenshot](../../img/blaze/48.png)
 
 	------------------------
 
@@ -44,19 +44,19 @@ Criando um fluxo principal
 - Ir em New - Decision Flow - dar o nome de Fluxo_Principal. Lembre-se que o nome deve ser o mesmo que você atribuiu no tutorial anterior.
 
 	-------------------------
-	![Screenshot](/img/blaze/49.png)
+	![Screenshot](../../img/blaze/49.png)
 
 	------------------------
 
 
 	-------------------------
-	![Screenshot](/img/blaze/50.png)
+	![Screenshot](../../img/blaze/50.png)
 
 	------------------------
 
 
 	-------------------------
-	![Screenshot](/img/blaze/51.png)
+	![Screenshot](../../img/blaze/51.png)
 
 	------------------------
 
@@ -87,7 +87,7 @@ Para ter um bom projeto é necessário estar bem organizado. Iremos, neste tópi
 OBS: Não é necessário criar todas as pastas agora. Você pode ir criando conforme necessidade. Estou criando todas agora para fins didáticos. 
 						
 -------------------------
-![Screenshot](/img/blaze/52.png)
+![Screenshot](../../img/blaze/52.png)
 
 ------------------------						
 
@@ -100,7 +100,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 	- Dar o nome de **VariaveisNegocio**
 
 	-------------------------
-	![Screenshot](/img/blaze/53.png)
+	![Screenshot](../../img/blaze/53.png)
 
 	------------------------
 
@@ -110,7 +110,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/55.png)
+	![Screenshot](../../img/blaze/55.png)
 
 	------------------------
 
@@ -119,12 +119,12 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/56.png)
+	![Screenshot](../../img/blaze/56.png)
 
 	------------------------
 
 	-------------------------
-	![Screenshot](/img/blaze/57.png)
+	![Screenshot](../../img/blaze/57.png)
 
 	------------------------
 
@@ -133,7 +133,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/58.png)
+	![Screenshot](../../img/blaze/58.png)
 
 	------------------------
 
@@ -145,7 +145,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/54.png)
+	![Screenshot](../../img/blaze/54.png)
 
 	------------------------
 
@@ -163,12 +163,12 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/59.png)
+	![Screenshot](../../img/blaze/59.png)
 
 	------------------------
 
 	-------------------------
-	![Screenshot](/img/blaze/60.png)
+	![Screenshot](../../img/blaze/60.png)
 
 	------------------------
 
@@ -177,7 +177,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 	- Basta clicar com o botão direito do mouse sobre o ícone do Start para iniciar a construção da Decision Tree.
 
 	-------------------------
-	![Screenshot](/img/blaze/61.png)
+	![Screenshot](../../img/blaze/61.png)
 
 	------------------------
 
@@ -189,7 +189,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/62.png)
+	![Screenshot](../../img/blaze/62.png)
 
 	------------------------
 
@@ -201,7 +201,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/63.png)
+	![Screenshot](../../img/blaze/63.png)
 
 	------------------------
 
@@ -212,13 +212,13 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/64.png)
+	![Screenshot](../../img/blaze/64.png)
 
 	------------------------
 
 
 	-------------------------
-	![Screenshot](/img/blaze/65.png)
+	![Screenshot](../../img/blaze/65.png)
 
 	------------------------
 						
@@ -230,7 +230,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/66.png)
+	![Screenshot](../../img/blaze/66.png)
 
 	------------------------
 
@@ -238,7 +238,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 	- Clicar em Fluxo_Principal para acrescentar nossa árvore de decisão.
 
 	-------------------------
-	![Screenshot](/img/blaze/67.png)
+	![Screenshot](../../img/blaze/67.png)
 
 	------------------------
 						
@@ -249,7 +249,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/68.png)
+	![Screenshot](../../img/blaze/68.png)
 
 	------------------------	
 
@@ -258,7 +258,7 @@ Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decis
 
 
 	-------------------------
-	![Screenshot](/img/blaze/69.png)
+	![Screenshot](../../img/blaze/69.png)
 
 	------------------------
 						
@@ -279,12 +279,12 @@ Agora iremos criar uma função que recebe estes valores (Aprovado ou Reprovado)
 
 
 	-------------------------
-	![Screenshot](/img/blaze/70.png)
+	![Screenshot](../../img/blaze/70.png)
 
 	------------------------
 
 	-------------------------
-	![Screenshot](/img/blaze/71.png)
+	![Screenshot](../../img/blaze/71.png)
 
 	------------------------
 	
@@ -298,12 +298,12 @@ Agora iremos criar uma função que recebe estes valores (Aprovado ou Reprovado)
 	- Observe as imagens abaixo como exemplo:
 
 	-------------------------
-	![Screenshot](/img/blaze/72.png)
+	![Screenshot](../../img/blaze/72.png)
 
 	------------------------
 
 	-------------------------
-	![Screenshot](/img/blaze/73.png)
+	![Screenshot](../../img/blaze/73.png)
 
 	------------------------
 
@@ -316,7 +316,7 @@ Agora iremos criar uma função que recebe estes valores (Aprovado ou Reprovado)
 	- Observe a imagem a seguir:
 
 	-------------------------
-	![Screenshot](/img/blaze/74.png)
+	![Screenshot](../../img/blaze/74.png)
 
 	------------------------	
 
@@ -331,7 +331,7 @@ Para saber se tudo está correto até o momento, iremos fazer um teste.
 	- Clicar na aba Testar e ir em Decision Testing. 
 
 	-------------------------
-	![Screenshot](/img/blaze/75.png)
+	![Screenshot](../../img/blaze/75.png)
 
 	------------------------
 
@@ -342,14 +342,14 @@ Para saber se tudo está correto até o momento, iremos fazer um teste.
 	- Clicar em Download para concluir. 
 
 	-------------------------
-	![Screenshot](/img/blaze/76.png)
+	![Screenshot](../../img/blaze/76.png)
 
 	------------------------
 						
 	- Ir na sua pasta de Downloads e abrir, no notepad++, o arquivo (inputdata.csv) que foi gerado.
 
 	-------------------------
-	![Screenshot](/img/blaze/77.png)
+	![Screenshot](../../img/blaze/77.png)
 
 	------------------------
 						
@@ -359,7 +359,7 @@ Para saber se tudo está correto até o momento, iremos fazer um teste.
 	- Seguir o exemplo abaixo:
 
 	-------------------------
-	![Screenshot](/img/blaze/78.png)
+	![Screenshot](../../img/blaze/78.png)
 
 	------------------------
 
@@ -373,14 +373,14 @@ Para saber se tudo está correto até o momento, iremos fazer um teste.
 	- Lembrando que o arquivo deve estar na pasta C:\Blaze\projetos\unit-tests. O arquivo se chama **inputdata.csv**
 
 	-------------------------
-	![Screenshot](/img/blaze/79.png)
+	![Screenshot](../../img/blaze/79.png)
 
 	------------------------
 						
 	- Ao carregar o arquivo, basta clicar em RUN TEST e esperar pelos resultados.
 
 	-------------------------
-	![Screenshot](/img/blaze/80.png)
+	![Screenshot](../../img/blaze/80.png)
 
 	------------------------ 
 						
@@ -389,7 +389,7 @@ Para saber se tudo está correto até o momento, iremos fazer um teste.
 	- Esta foi uma simulação simples de aprovação para alugar carros. Muitas variáveis podem ser levadas em consideração. Modelos de decisão mais avançados serão discutidos nas próximas publicações. 
 
 	-------------------------
-	![Screenshot](/img/blaze/81.png)
+	![Screenshot](../../img/blaze/81.png)
 
 	------------------------
 
