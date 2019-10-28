@@ -3,7 +3,10 @@ theme: flatly
 
 nav: 
   - Home: 'index.md'
-  - BLAZE: 'blaze01.md'
+  - BLAZE: 
+    - Blaze - Instalações: 'BLAZE/blaze01.md'
+    - Blaze - Utilização: 'BLAZE/blaze02.md'
+    - Blaze - Deploy: 'BLAZE/blaze03.md'
   - MySQL: 'mysql.md'
   - MongoDB: 'mongoDB.md'
   - PythonDados: 'pythonDados.md'
