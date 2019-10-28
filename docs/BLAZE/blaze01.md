@@ -22,7 +22,7 @@ Instale o arquivo:
 Obs: fique atento ao local em que o programa está sendo instalado. No meu caso, ele está na seguinte pasta: **C:\Program Files\Java**
 
 -------------------------
-![Screenshot](../img/blaze/01.png)
+![Screenshot](../../img/blaze/01.png)
 
 ------------------------
 
