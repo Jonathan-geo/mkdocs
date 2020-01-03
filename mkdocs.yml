@@ -2,14 +2,22 @@ site_name: JONATHAN
 theme: flatly
 
 nav: 
-  - Home: 'index.md'
   - BLAZE: 
     - Blaze - Instalações: 'BLAZE/blaze01.md'
     - Blaze - Utilização: 'BLAZE/blaze02.md'
     - Blaze - Deploy: 'BLAZE/blaze03.md'
-  - MySQL: 'mysql.md'
-  - MongoDB: 'mongoDB.md'
-  - PythonDados: 'pythonDados.md'
+    
+  - DMPS:
+    - TUTORIAL 01: 'DMPS/dmps01.md'
+    
+  - DATA-SCIENCE:
+    - PythonDados: 'DATA-SCIENCE/pythonDados.md'
+    - Web Screping: 'DATA-SCIENCE/pyScrap4.md'
+    
+  - DATABASES:
+    - MySQL: 'DATABASES/mysql.md'
+    - MongoDB: 'DATABASES/mongoDB.md'
+    
   - RESUMOS:
     - NodeJS: 'RESUMOS/nodeJS.md'
     - Ruby: 'RESUMOS/ruby.md'
