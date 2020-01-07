@@ -616,7 +616,7 @@ Out[5]: [<matplotlib.lines.Line2D at 0x7f2844d13940>]
 ```
 Gráfico plotado.
 
-![Screenshot](img/grafico1.png)
+![Screenshot](../img/grafico1.png)
 
  OBS: Caso não esteja usando o jupyter, você deverá colocar plt.show(), como no exemplo abaixo:
 
@@ -646,4 +646,4 @@ In [8]: plt.plot(data[:50,0], c='Red', ls=':', marker='s', ms=8, label='Comp. S�
 ```
 Gráfico plotado.
 
-![Screenshot](img/grafico2.png)
+![Screenshot](../img/grafico2.png)

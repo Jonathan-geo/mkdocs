@@ -13,6 +13,7 @@ nav:
   - DATA-SCIENCE:
     - PythonDados: 'DATA-SCIENCE/pythonDados.md'
     - Web Screping: 'DATA-SCIENCE/pyScrap4.md'
+    - Perceptron: 'DATA-SCIENCE/perceptron.md'
     
   - DATABASES:
     - MySQL: 'DATABASES/mysql.md'

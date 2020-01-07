@@ -9,6 +9,35 @@ Jonathan Cardoso Lopes Domingos
 > O seguinte web screping é apenas um material de consulta rápida, aqui não apresenta nenhuma análise aprofundade sobre o assunto. 
 Neste material apresento um scraping das ações do Bradesco. 
 
+Ambientando Selenium no Windows. Baixar e instalar os programas/pacotes abaixo:
+
+Selenium:
+
+> pip install -U selenium
+
+Drivers para browsers:
+
+> Firefox: https://github.com/mozilla/geckodriver/releases
+
+Depois de baixar o arquivo, copie **geckodriver.exe** para o diretório C: ele ficará assim: “C:\geckodriver.exe”.
+Ir em **Configurações Avançadas do Sistema** => propriedades do sistema => **Variáveis de ambiente** => **Variáveis de Sistema** => Editar => Novo => preencha o caminho do arquivo “C:\geckodriver.exe” no path. (OBS: path do sistema e não do usuário).
+
+
+<p align="center">
+<img src="https://i.imgur.com/KroffOk.jpg">
+</p>
+
+Em todos os scripts Selenium incluir o código abaixo:
+
+```Python
+from selenium import webdriver
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+binary = FirefoxBinary(‘C:\\Program Files\\Mozilla Firefox\\firefox.exe’)
+driver = webdriver.Firefox(firefox_binary=binary, executable_path=r’C:\\geckodriver.exe’)
+
+driver.get(‘https://www.google.com')
+```
+
 ```python
 # O modulo time aqui foi utilizado para esperar o carregamento das paginas atraves do firefox
 # Este módulo não é necessário no jupyter lab

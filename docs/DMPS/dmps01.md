@@ -6,12 +6,12 @@ Jonathan Cardoso Lopes Domingos
 <br/>
 02/01/2020
 
-Neste exemplo iremos importar um CSV via http. O csv pertence ao site do <button onclick="window.open('http://dados.turismo.gov.br/');">Ministério do Turismo</button>. Este csv contém entre outras, as informações
-sobre ementa parlamentar destinado a alguns municípios brasileiros. 
+Neste exemplo iremos importar um CSV via http. O csv pertence ao site do <button onclick="window.open('http://dados.turismo.gov.br/');">Ministério do Turismo</button>. Este csv contém, dentre outras, as informações
+sobre emendas parlamentares destinadas a alguns municípios brasileiros. 
 
 ## Importando CSV via http.
 
-OBS: Para esta série de atividades estarei utilizando o DMPS em uma máquina virtual na AWS.
+Obs: para esta série de atividades, estarei utilizando o DMPS em uma máquina virtual na AWS.
 
 > Tela inicial do login do DMPS
 
@@ -42,7 +42,7 @@ OBS: Para esta série de atividades estarei utilizando o DMPS em uma máquina vi
 ------------------------
 
 
-> Adicionar nome e descrissão
+> Adicionar nome e descrição
 
 -------------------------
 
@@ -50,7 +50,7 @@ OBS: Para esta série de atividades estarei utilizando o DMPS em uma máquina vi
 
 ------------------------
 
-> No lado esquerdo temos os Jobs steps, que são estapas do nosso fluxo de decião. 
+> No lado esquerdo temos os job steps, que são estapas do nosso fluxo de decisão. 
 
 -------------------------
 
@@ -61,7 +61,7 @@ OBS: Para esta série de atividades estarei utilizando o DMPS em uma máquina vi
 ## Job Step: http-inbound
 
 
-> Para importar um CSV de um link HTTP usaremos o Job step **http-inbound**. Basta segurar e arrastar o job para o centro da mesa de trabalho. 
+> Para importar um CSV de um link HTTP usaremos o job step **http-inbound**. Basta segurar e arrastar o job para o centro da mesa de trabalho. 
 
 
 -------------------------
@@ -72,7 +72,7 @@ OBS: Para esta série de atividades estarei utilizando o DMPS em uma máquina vi
 
 
 
-> Dando um duplo clique sobre o job step, voce pode comecar a configura-lo. Siga o passo das imagens abaixo. 
+> Dando um duplo clique sobre o job step, você pode começar a configurá-lo. Siga o passo das imagens abaixo. 
 
 -------------------------
 
@@ -80,12 +80,12 @@ OBS: Para esta série de atividades estarei utilizando o DMPS em uma máquina vi
 
 ------------------------
 
-OBS: O DMPS obriga você a escolher uma autenticação, mesmo que o link seja livre. 
+Obs: O DMPS obriga você a escolher uma autenticação, mesmo que o link seja livre. 
 No nosso caso usaremos um link livre. Logo em Username e Password você poderá colocar qualquer caractere. 
 Eu optei por colocar admin no Username e admin no Password. 
 
 
-link para o arquivo csv:  
+Link para o arquivo csv:  
 
 > http://dados.turismo.gov.br/images/csv/emendas/2017-emendas.csv
 
@@ -112,12 +112,12 @@ link para o arquivo csv:
 ------------------------
 
 
-> Nossa tabela apresenta algumas inconsistencias nos dados que, na medida que avançaremos com
-os tutoriais, iremos corrigir. 
+> Nossa tabela apresenta algumas inconsistências nos dados que, à medida que avançamos com
+os tutoriais, iremos corrigindo. 
 
 ## Job Step: csv-unpack
 
-> Este job faz um "reconhecimento" de uma linha do nosso dataset. Assim podermos trabalhar com índices. 
+> Este job faz um "reconhecimento" de uma linha do nosso dataset. Assim podemos trabalhar com índices. 
 
 
 -------------------------
@@ -142,7 +142,7 @@ os tutoriais, iremos corrigir.
 
 ## Job Step: csv-normalization
 
-> Este job "diz" quais coluna(dados) iremos utilizar em nosso fluxo. 
+> Este job nos mostra quais coluna(dados) iremos utilizar em nosso fluxo. 
 
 -------------------------
 
@@ -150,7 +150,7 @@ os tutoriais, iremos corrigir.
 
 ------------------------
 
-OBS: Sempre ver qual é o delimitador do seu CSV.
+Obs: sempre ver qual é o delimitador do seu CSV.
 
 -------------------------
 
@@ -159,8 +159,8 @@ OBS: Sempre ver qual é o delimitador do seu CSV.
 ------------------------
 
 
-> Pegando os dados da coluna 0 (NºConvênio) do nosso dataset e atribuindo o nome de numeroConvenio.
-Neste caso estamos dizendo para o nosso fluxo utilizar a coluna zero do nosso dataset, porém ela recebera, dentro do DMPS, o nome de numeroConvenio.
+> Pegando os dados da coluna 0 (Nº Convênio) do nosso dataset e atribuindo o nome de numeroConvenio.
+Neste caso, estamos dizendo para o nosso fluxo utilizar a coluna zero do nosso dataset, porém ela receberá dentro do DMPS o nome de numeroConvenio.
 
 -------------------------
 
@@ -174,8 +174,8 @@ Neste caso estamos dizendo para o nosso fluxo utilizar a coluna zero do nosso da
 
 ------------------------
 
-> Como vamos trabalhar com mais dados do nosso csv, iremos adicionar quantas iterações necessárias. Cada iteração corresponde a uma coluna que iremos trabalhar. 
-Para este Job iremos utilizar as seguintes colunas com os seguintes nomes:
+> Como vamos trabalhar com mais dados do nosso csv, iremos adicionar quantas iterações forem necessárias. Cada iteração corresponde a uma coluna que iremos trabalhar. 
+Para este job, iremos utilizar as seguintes colunas com os seguintes nomes:
 
 iterations:
 
@@ -233,9 +233,9 @@ iterations:
 
 > Observe que no exemplo a seguir, o valorGlobal receberá o tipo de string. 
 Isso acontece por que a notação da coluna Valor Global está com um ponto 
-como separador do número (295.500). Neste caso teremos que tratar este dado (o que faremos mais
-a diante) para que ele se torne um número inteiro. 
-Se você tentar converter sem tratar o DMPS irá mante-lo como string. Ele não 
+como separador do número (295.500). Neste caso, teremos que tratar este dado (o que faremos mais
+adiante) para que ele se torne um número inteiro. 
+Se você tentar converter sem tratar, o DMPS irá mantê-lo como string. Ele não 
 irá transformar o arquivo em Float pois tem dados que possuem dois pontos (1.239.346).
 
 -------------------------
@@ -262,7 +262,7 @@ o tipo de string para integer.
 ------------------------
 
 
-> Você pode escolher entre Python e JavaScrip, recomendo utilizar o Python, 
+> Você pode escolher entre Python e JavaScript. Eu recomendo utilizar o Python, 
 reza a lenda que ele é infinitas vezes melhor que JS. 
 
 -------------------------
@@ -272,7 +272,7 @@ reza a lenda que ele é infinitas vezes melhor que JS.
 ------------------------
 
 
-> Selecione a variavel que iremos tratar.
+> Selecione a variável que iremos tratar.
 
 -------------------------
 
@@ -281,9 +281,9 @@ reza a lenda que ele é infinitas vezes melhor que JS.
 ------------------------
 
 
-> Nomeie uma nova variavel de saída. 
+> Nomeie uma nova variável de saída. 
 Neste caso, a variável valorGlobal do tipo 
-string ira sair como novoValorGlobal do tipo
+string irá sair como novoValorGlobal do tipo
 integer. 
 
 -------------------------
@@ -293,7 +293,7 @@ integer.
 ------------------------
 
 
-> Criando um código python para retirar as inconsistencias dos dados. 
+> Criando um código python para retirar as inconsistências dos dados. 
 
 -------------------------
 
@@ -302,7 +302,7 @@ integer.
 ------------------------
 
 
-> Lembre-se (SALVAR)
+> Lembre-se: SALVAR
 
 -------------------------
 
@@ -313,7 +313,7 @@ integer.
 ## Job Step: Visualization-Store
 
 > Agora iremos colocar um job step que permite visualizar os
-resultados do nosso processo de stream de dados. 
+resultados do nosso processo de streaming de dados. 
 
 -------------------------
 
@@ -360,8 +360,8 @@ e desmarque as seguintes opções.
 
 ## Testando o Fluxo:
 
-> Após todo o processo de construção do fluxo iremos testar. 
-Clicar em salvar, verificar o código e por fim clicar em enviar. 
+> Após todo o processo de construção do fluxo, faremos um teste: 
+clicar em salvar, verificar o código e por fim clicar em enviar. 
 
 -------------------------
 
@@ -371,7 +371,7 @@ Clicar em salvar, verificar o código e por fim clicar em enviar.
 
 
 > Após enviar, você poderá verificar que o seu job estará em situação de 
-configurado. Agora bastar rodar o Job e esperar que esteja tudo pronto. 
+configurado. Agora basta rodar o job e esperar que esteja tudo pronto. 
 
 -------------------------
 
@@ -461,8 +461,8 @@ Mas para isso devemos parar o nosso job.
 
 ------------------------
 
-> Dar um duplo clique no job estrairColunas e procurar a iteration que está com problema. 
-Neste caso, a iteration 4. Você deverá mudar o fild position para 3. 
+> Dar um duplo clique no job extrairColunas e procurar a iteration que está com problema. 
+Neste caso, é a iteration 4. Você deverá mudar o field position para 3. 
 
 -------------------------
 
@@ -490,8 +490,8 @@ Observe a imagem a seguir:
 A nossa iteration 4 é a variavél local e no nosso csv a variável 
 local está com 3. Isso ocorre por que no csv a primeira coluna é 
 a coluna 0 e as iterações começam do 1. 
-Após a alteração devemos salvar. Para que as alterações sejam de 
-fato visualizada no nosso visualisation job devemos deletar o cash. 
+Após a alteração, devemos salvar o que foi feito. Para que as alterações sejam de 
+fato visualizadas no nosso visualization job, devemos deletar o cash. 
 Ir na aba visualization e clicar em jobs. Ir na opção **stores**
 
 -------------------------
@@ -500,7 +500,7 @@ Ir na aba visualization e clicar em jobs. Ir na opção **stores**
 
 ------------------------
 
-> Em stores clique em atualizar, digite o nome do seu job, clique nos três pontinhos e por fim  deletar. 
+> Em stores clique em atualizar, digite o nome do seu job, clique nos três pontinhos e, por fim, clique em deletar. 
 
 -------------------------
 
@@ -508,7 +508,7 @@ Ir na aba visualization e clicar em jobs. Ir na opção **stores**
 
 ------------------------
 
-> Após deletar o cash do seu job vá na aba JOBS, clique em All, 
+> Após deletar o cash do seu job, vá na aba JOBS, clique em All, 
 digite o nome do seu job e clique sobre ele. 
 
 -------------------------
@@ -531,8 +531,7 @@ digite o nome do seu job e clique sobre ele.
 
 ------------------------
 
-> Se tudo deu certo, seu job apresentará os comportamentos normais. 
-Como já visualizado anteriormente. 
+> Se tudo deu certo, seu job apresentará os comportamentos normais, como já visualizado anteriormente. 
 
 -------------------------
 
@@ -540,6 +539,6 @@ Como já visualizado anteriormente.
 
 ------------------------
 
-> Agora basta ir em visualization - jobs - Discover e selecionar o seu job.
-Podemos observar que a variavel local está corrigida. Agora ela apresenta
+> Agora basta ir em visualization - jobs - discover e selecionar o seu job.
+Podemos observar que a variável local está corrigida. Agora ela apresenta
 o nome do município.  
