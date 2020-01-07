@@ -1,4 +1,4 @@
-![Screenshot](../../img/dataJon02.jpg)
+![Screenshot](../img/dataJon02.jpg)
 
 ## Introdução
 
