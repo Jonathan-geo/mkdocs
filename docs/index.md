@@ -1,4 +1,7 @@
+
 ![Screenshot](img/dataJon02.jpg)
+![Screenshot](../../img/perceptron/01.png)
+![Screenshot](../img/boxcss.png)
 
 ## Introdução
 
