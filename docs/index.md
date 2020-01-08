@@ -1,7 +1,5 @@
 
 ![Screenshot](img/dataJon02.jpg)
-![Screenshot](../../img/perceptron/01.png)
-![Screenshot](../img/boxcss.png)
 
 ## Introdução
 
@@ -12,15 +10,15 @@ Olá, me chamo Jonathan e esta é a minha documentação pessoal.
 
 Utilize a barra de navegação, na parte superior da página, para acessar as seguintes documentações:
 
-<button onclick="window.open('https://github.com/Jonathan-geo');">BLAZE</button>: Software de tomada de decisões da FICO Analytic Consulting. 
+<button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze01/');">BLAZE</button>: Software de tomada de decisões da FICO Analytic Consulting. 
 
-<button onclick="window.open('https://github.com/Jonathan-geo');">DMPS</button>: (Data Management Platform Streaming) é uma plataforma de gestão de dados da FICO Analytic Consulting. 
+<button onclick="window.open('https://jonathan-geo.github.io/mkdocs/DMPS/dmps01/');">DMPS</button>: (Data Management Platform Streaming) é uma plataforma de gestão de dados da FICO Analytic Consulting. 
 
-<button onclick="window.open('https://github.com/Jonathan-geo');">DATA-SCIENCE</button>: Aqui você encontrará vários exemplos de códigos em Python e modelos estatísticos. 
+<button onclick="window.open('https://jonathan-geo.github.io/mkdocs/DATA-SCIENCE/perceptron/');">DATA-SCIENCE</button>: Aqui você encontrará vários exemplos de códigos em Python e modelos estatísticos. 
 
-<button onclick="window.open('https://github.com/Jonathan-geo');">DATABASES</button>: Em databases você encontrará tutoriais sobres vários tipos de banco de dados. 
+<button onclick="window.open('https://jonathan-geo.github.io/mkdocs/DATABASES/mysql/');">DATABASES</button>: Em databases você encontrará tutoriais sobres vários tipos de banco de dados. 
 
-<button onclick="window.open('https://github.com/Jonathan-geo');">RESUMOS</button>: Aqui estão tutoriais resumos de várias áreas de TI. (Ruby, Python, Node, Linux, etc.)
+<button onclick="window.open('https://jonathan-geo.github.io/mkdocs/RESUMOS/ruby/');">RESUMOS</button>: Aqui estão tutoriais resumos de várias áreas de TI. (Ruby, Python, Node, Linux, etc.)
 
 
 ## Identificação
