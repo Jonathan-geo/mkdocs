@@ -53,3 +53,10 @@ Possui um grande interesse pela área de TI, em especial pelas áreas relacionad
 dados. Tem um relativo domínio de python e seus principais frameworks para análise de dados como
 pandas, numpy e matplotlib. O principal objetivo é atuar como analista de dados (com foco em modelagem
 estatística/matemática e gerenciamento/tratamento de bancos de dados). <br/>
+
+
+## DOWNLOADS
+
+- DataSet: Modelo PMML - KNN
+
+<a href="downloads/petala.csv" download="petala.csv">Download CSV</a>
