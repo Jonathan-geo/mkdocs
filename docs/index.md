@@ -59,4 +59,6 @@ estatística/matemática e gerenciamento/tratamento de bancos de dados). <br/>
 
 - DataSet: Modelo PMML - KNN
 
-<a href="downloads/petala.csv" download="petala.csv">Download CSV</a>
+<a href="downloads/petala.csv" download="petala.csv">Download CSV - DataSet Iris</a>
+
+<a href="downloads/arq_casco_comp.csv" download="arq_casco_comp.csv">Download CSV - DataSet Seguro</a>
