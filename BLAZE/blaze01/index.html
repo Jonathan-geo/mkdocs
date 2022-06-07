@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Blaze - Instalações - JONATHAN</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../css/extra_css.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">JONATHAN</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BLAZE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Blaze - Instalações</a>
+</li>
+                                    
+<li>
+    <a href="../blaze02/" class="dropdown-item">Blaze - Utilização</a>
+</li>
+                                    
+<li>
+    <a href="../blaze03/" class="dropdown-item">Blaze - Deploy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DMPS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DMPS/dmps01/" class="dropdown-item">TUTORIAL 01</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATA-SCIENCE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pythonDados/" class="dropdown-item">PythonDados</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pyScrap4/" class="dropdown-item">Web Screping</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/perceptron/" class="dropdown-item">Perceptron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATABASES <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATABASES/mysql/" class="dropdown-item">MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../DATABASES/mongoDB/" class="dropdown-item">MongoDB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">RESUMOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../RESUMOS/nodeJS/" class="dropdown-item">NodeJS</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/ruby/" class="dropdown-item">Ruby</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/css/" class="dropdown-item">CSS</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../blaze02/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#blaze-advisor-fico" class="nav-link">Blaze Advisor FICO</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#criando-repositorio" class="nav-link">Criando Repositório</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#criando-um-projeto" class="nav-link">Criando um projeto</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#business-object-model-bom" class="nav-link">Business Object Model (BOM)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#usando-o-bom-carro3jar" class="nav-link">Usando o bom-Carro3.jar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#criando-projetos-partes" class="nav-link">Criando Projetos [Partes]</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#conectando-os-projetos" class="nav-link">Conectando os Projetos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#rma-rule-maintenance-application" class="nav-link">RMA [Rule Maintenance Application]</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#funcao-entrypoint" class="nav-link">Função EntryPoint</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#variavel-global-input" class="nav-link">Variavel Global Input</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gerar-rma-embarcado" class="nav-link">Gerar RMA [Embarcado]</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mais-utoriais-blaze" class="nav-link">Mais utoriais - Blaze</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="blaze-advisor-fico">Blaze Advisor <button onclick="window.open('https://www.fico.com/br/products/fico-blaze-advisor-decision-rules-management-system');">FICO</button></h1>
+<p>O Blaze Advisor é um software da empresa FICO que busca tornar as tarefas de decisões de negócios mais eficientes. Em sua página oficial, a FICO caracteriza o Blaze como: </p>
+<blockquote>
+<p>"[...] uma solução escalável que proporciona agilidade e capacidade de ação sem precedentes a empresas de vários setores para tomadas de decisão mais inteligentes, transparentes e justificáveis". </p>
+</blockquote>
+<p>Ainda em sua caracterização:</p>
+<blockquote>
+<p>"[...] com diversos métodos para o desenvolvimento, criação e teste de regras, incluindo árvores de decisões, scorecards, tabelas de decisões, fluxos gráficos de decisões e templates personalizados". </p>
+</blockquote>
+<h3 id="instalacoes">Instalações</h3>
+<p>Os arquivos para instalação se encontram no seguinte repositório: <button onclick="window.open('https://drive.google.com/drive/folders/1XjpXLq40dpZurVS4NesaBRvp3_zAlgFl?usp=sharing');">REPOSITÓRIO</button></p>
+<p>Instale o arquivo: </p>
+<blockquote>
+<p>jdk-8u221-windows-x64 (JAVA)</p>
+</blockquote>
+<p>Obs: fique atento ao local em que o programa está sendo instalado. No meu caso, ele está na seguinte pasta: <strong>C:\Program Files\Java</strong></p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/01.png" /></p>
+<hr />
+<p>Instale o arquivo: <button onclick="window.open('https://marketplace.ficoanalyticcloud.com/apps/134263#!overview');">BLAZE PARA DOWNLOAD</button> <button onclick="window.open('https://drive.google.com/drive/folders/1XjpXLq40dpZurVS4NesaBRvp3_zAlgFl?usp=sharing');">REPOSITÓRIO NO GDRIVE</button></p>
+<blockquote>
+<p>blaze-advisor_7.5.7500.v11760_Windows (Blaze)</p>
+</blockquote>
+<p>Obs: novamente fique atento ao local onde o programa está sendo instalado. No meu caso, ele está na seguinte pasta: C:\Blaze. </p>
+<p>Criar uma pasta <strong>projetos</strong> em C:\Blaze e copiar(Desempacotar) o arquivo <strong>eclipse-jee-oxygen-3a-win32-x86_64.zip</strong> para dentro desta pasta.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/02.png" /></p>
+<hr />
+<p>Renomear a pasta <strong>eclipse-jee-oxygen-3a-win32-x86_64</strong> para <strong>eclipse01</strong> para facilitar a localização.        </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/04.png" /></p>
+<hr />
+<p>Executar, com um duplo clique, o arquivo <strong>eclipse.exe</strong> que está dentro da pasta eclipse01 (pasta renomeada). </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/03.png" />       </p>
+<hr />
+<p><strong>IMPORTANTE:</strong> escolher o workspace do eclipse. Você deverá escolher um workspace fácil de lembrar. 
+No meu caso, escolhi a própria pasta do eclipse. <strong>C:\Blaze\projetos\eclipse01\eclipse-workspace</strong></p>
+<p>Instalar o plug-in do Blaze: após abrir o eclipse e escolher o workspace, devemos preparar o eclipse para suportar o Blaze. </p>
+<ul>
+<li>No eclipse, ir em: Help - Install new software.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/05.png" /></p>
+<hr />
+<ul>
+<li>Add - local.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/06.png" /></p>
+<hr />
+<ul>
+<li>Ir na pasta C:\Blaze\Advisor75\EclipsePluginUpdateSite </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/07.png" /></p>
+<hr />
+<ul>
+<li>Depois de selecionar a pasta, digitar <strong>Blaze Advisor</strong> e clicar em ok.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/08.png" /></p>
+<hr />
+<ul>
+<li>Selecionar <strong>Blaze Adivisor</strong> e <strong>Blaze Advisor Optional</strong>. Ir clicando em next até terminar a instalação e reiniciar o eclipse. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/09.png" /></p>
+<hr />
+<p>Para utilizar o plug-in do Blaze:</p>
+<ul>
+<li>
+<p>Ao reiniciar, o blaze irá pedir uma licença que pode ser adquirida com a FICO. <button onclick="window.open('https://marketplace.ficoanalyticcloud.com/apps/134263#!overview');">FICO</button></p>
+</li>
+<li>
+<p>Após colocar a licença, basta ir em: Window - Perspective - Open Perspective - Other.</p>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/10.png" /></p>
+<hr />
+<ul>
+<li>Blaze Advisor - Open.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/11.png" /></p>
+<hr />
+<h2 id="criando-repositorio">Criando Repositório</h2>
+<p>Todo nosso ambiente será preparado na pasta </p>
+<blockquote>
+<p>C:\Blaze\projetos</p>
+</blockquote>
+<p>Crie uma pasta com o nome <strong>repositorio01</strong> em C:\Blaze\projetos</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/12.png" /></p>
+<hr />
+<p>O repositório no Blaze pode ser versionado ou não versionado. 
+Neste tutorial, iremos utilizar o sistema de versionamento do Blaze (bvs). 
+Este sistema de versionamento funciona com base em duas partes, uma denominada Central e outra Admin. 
+A parte central mantém um histórico de tudo que for feito no Blaze e a parte Admin é o usuário criado para gerenciar o repositório/projeto. </p>
+<p>Crie, dentro da pasta repositório, as seguintes pastas:</p>
+<ul>
+<li>bvs-central</li>
+<li>bvs-admin </li>
+<li>workspaces</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/13.png" /></p>
+<hr />
+<p>Iniciando o repositório no eclipse:</p>
+<ul>
+<li>
+<p>Após criar as pastas necessárias para o início do nosso projeto, iremos voltar ao eclipse e fazer o seguinte:</p>
+<ul>
+<li>Ir na aba Repository - New Repository [Novo Repositório] </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/14.png" /></p>
+<hr />
+<ul>
+<li>
+<p>Escolher um nick name [Apelido] para o repositório. No meu caso escolhi: <strong>RepositorioCarro</strong></p>
+</li>
+<li>
+<p>Escolher um Repository Type [Tipo de Repositório]: repositório de Arquivos <strong>(Controle de Versão de BVS - Privado)</strong>.</p>
+</li>
+<li>
+<p>Ainda nesta janela, você deverá referenciar as pastas bvs-admin e bvs-central que você criou.</p>
+</li>
+<li>
+<p>Como nas imagens abaixo, você deverá referenciar a pasta bvs-central primeiro e logo abaixo referenciar a pasta bvs-admin.</p>
+</li>
+<li>
+<p>Colocar admin como usuário nas duas opções. Para este tutorial não será necessário utilizar senha. </p>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/15.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/16.png" /></p>
+<hr />
+<h2 id="criando-um-projeto">Criando um projeto</h2>
+<p>Iremos trabalhar com um projeto dividido de acordo com a seguinte estrutura: </p>
+<pre><code>&gt; Technical - Business - Testing - Decision Services
+</code></pre>
+<p>Cada parte será um subprojeto e terá funções específicas que serão discutidas mais a frente. </p>
+<p>Para iniciar, iremos criar a parte Technical do projeto:</p>
+<ul>
+<li>Ir na aba File - New - Project</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/17.png" /></p>
+<hr />
+<ul>
+<li>Blaze Advisor - Rule Project - Next </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/18.png" /></p>
+<hr />
+<ul>
+<li>Escolher o repositório que criamos - next</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/19.png" /></p>
+<hr />
+<ul>
+<li>Selecionar o repositório e colocar o nome do projeto: Technical Library</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/20.png" /></p>
+<hr />
+<ul>
+<li>Finish.</li>
+</ul>
+<h2 id="business-object-model-bom">Business Object Model (BOM)</h2>
+<p>Neste tutorial iremos utilizar um arquivo.jar para importar as classes e as variáveis que iremos utilizar. 
+Em um projeto Blaze você deve preparar com antecedência um rol de variáveis que irá trabalhar. 
+Neste projeto iremos trabalhar com as seguintes variáveis:</p>
+<hr />
+<ul>
+<li>Variáveis de Entrada:<ul>
+<li>RENDA</li>
+<li>SEXO</li>
+<li>IDADE</li>
+<li>ESTADO_CIVIL</li>
+<li>NUMERO_CONDUTORES</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Variáveis de Saída:<ul>
+<li>DIARIA</li>
+<li>VALOR_AUTOMOVEL</li>
+<li>VALOR_CAUCAO</li>
+<li>CLIENT_TYPE</li>
+<li>DECISION</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>Em um turorial à parte, ensino a criar um arquivo.jar e a modificar este arquivo para o seu projeto, conforme suas necessidades. Porém, para este tutorial, iremos utilizar um arquivo.jar pronto. </p>
+<hr />
+<ul>
+<li>
+<p>Favor baixar o arquivo <strong>bom-Carro3.jar</strong> no drive:</p>
+<ul>
+<li>Baixar o arquivo e colocar na pasta C:\Blaze\projetos.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>Importando o BOM.jar no projeto (eclipse):</p>
+<ul>
+<li>
+<p>Ir na aba Window - Preferences</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/21.png" /></p>
+<hr />
+</li>
+<li>
+<p>Clicar em Blaze Advisor e ir em add library [Adicionar Biblioteca]. </p>
+</li>
+<li>
+<p>Procurar pelo arquivo que salvamos na pasta projetos <strong>bom-Carro3.jar</strong></p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/22.png" /></p>
+<hr />
+</li>
+<li>
+<p>Após selecioado, o arquivo aparecerá na caixa de texto localizada no canto inferior esquerdo da tela. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/23.png" /></p>
+<hr />
+</li>
+<li>
+<p>Apply and Close.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="usando-o-bom-carro3jar">Usando o bom-Carro3.jar</h2>
+<ul>
+<li>
+<p>Clicar com o botão direito do mouse sobre a pasta Technical Library.</p>
+<ul>
+<li>
+<p>New - Folder [Pasta].</p>
+</li>
+<li>
+<p>Dar o nome de BOM.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/24.png" /></p>
+<hr />
+</li>
+<li>
+<p>Clicar com o botão direito do mouse sobre a pasta BOM.</p>
+</li>
+<li>
+<p>New - Business Object Model - Modelo Java</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/25.png" /></p>
+<hr />
+</li>
+<li>
+<p>Selecionar a classe input e adicionar [Add]. </p>
+</li>
+<li>
+<p>Selecionar a classe output e adicionar [Add]. </p>
+</li>
+<li>
+<p>next - Finish[Concluir]. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/26.png" /></p>
+<hr />
+</li>
+<li>
+<p>Nota-se que dentro da pasta BOM, no editor eclipse, foi criado um arquivo [Java]. Podemos renomeá-lo para <strong>JavaBOM</strong> para facilitar nossa compreensão. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/27.png" /></p>
+<hr />
+</li>
+<li>
+<p>Clicar com o botão direito do mouse sobre a pasta BOM.</p>
+</li>
+<li>
+<p>Team - Check-in.</p>
+</li>
+<li>
+<p>Adicionar um comentário e fazer o Check-in.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/28.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/29.png" /></p>
+<hr />
+</li>
+</ul>
+</li>
+</ul>
+<p>Obs: o tempo todo iremos utilizar as funções Check-in e Check-out.</p>
+<blockquote>
+<p><strong>Check-in:</strong>  pode ser entendido como [SALVAR]</p>
+<p><strong>Check-out:</strong>  pode ser entendido como [EDITAR]</p>
+</blockquote>
+<h2 id="criando-projetos-partes">Criando Projetos [Partes]</h2>
+<ul>
+<li>Business Library<ul>
+<li>File - New - Project - Blaze Advisor - Rule Project - Next - RepositorioCarro - Next - RepositorioCarro - name: Business Library - Finish.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/30.png" /></p>
+<hr />
+<ul>
+<li>Testing<ul>
+<li>File - New - Project - Blaze Advisor - Rule Project - Next - RepositorioCarro - Next - RepositorioCarro - name: Testing - Finish.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Decision Services<ul>
+<li>Obs: a pasta Decision Services irá ganhar o nome [RegrasAluguelCarros] para tornar o projeto mais intuitivo e facilitar a identificação.  </li>
+<li>File - New - Project - Blaze Advisor - Rule Project - Next - RepositorioCarro - Next - RepositorioCarro - name: RegrasAluguelCarros - Finish.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>Após criar os projetos nosso eclipse ficará assim:</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/31.png" /></p>
+<hr />
+<h2 id="conectando-os-projetos">Conectando os Projetos</h2>
+<p>Para conectar todos os projetos em apenas um, basta fazer o seguinte:</p>
+<ul>
+<li>
+<p>Clicar com o botão direito do mouse sobre o projeto RegrasAluguelCarros - open project editor [Abrir Editor de Projetos]</p>
+<ul>
+<li>
+<p>Na área de edição do projeto, clicar no ícone, como mostrado na imagem a seguir:</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/32.png" /></p>
+<hr />
+</li>
+<li>
+<p>Incluir os projetos Business Library e Technical</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/33.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/34.png" /></p>
+<hr />
+</li>
+<li>
+<p>Clicar no ícone Salvar, na barra superior e fazer o Check-in clicando com o botão direito sobre o projeto RegrasAluguelCarros e indo na opção team. </p>
+</li>
+<li>
+<p>Nota-se que agora os projetos estão conectados com o projeto RegrasAluguelCarros. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/35.png" /></p>
+<hr />
+</li>
+<li>
+<p>Agora podemos fechar os projetos que estão conectados ao projeto principal, pois qualquer alteração feita no projeto principal será recursiva nos projetos que estarão fechados. </p>
+</li>
+<li>
+<p>Para fechar os projetos conectados ao principal basta clicar com o botão direito do mouse sobre o projeto que deseja fechar e ir na opção Close Project.
+Obs: fechar todos os projetos, deixar somente o RegrasAluguelCarros aberto. </p>
+</li>
+<li>
+<p>Após fechar os projetos, clicar com o botão direito sobre o projeto RegrasAluguelCarros e fazer o check-in.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/36.png" /></p>
+<hr />
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="rma-rule-maintenance-application">RMA [Rule Maintenance Application]</h2>
+<p>Antes de iniciar as configurações, vá em:</p>
+<blockquote>
+<p>C:\Blaze\projetos e crie um pasta chamada adb.</p>
+</blockquote>
+<ul>
+<li>
+<p>Configurações de Deploy Inicial</p>
+<ul>
+<li>
+<p>Criar uma pasta com o nome de Deploy dentro do projeto Technical. Clicar com o botão direito sobre a pasta Technical dentro do projeto principal [RegrasAluguelCarros].</p>
+<ul>
+<li>New - Folder - Name: Deploy. </li>
+</ul>
+<hr />
+</li>
+<li>
+<p>Clicar com o botão direito do mouse sobre a pasta criada [Deploy]. </p>
+<ul>
+<li>New - Deployment Entities - Rule Maintenance Application Definition - Entity Name: RMADefinition - Finish.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/37.png" /></p>
+<hr />
+</li>
+</ul>
+</li>
+<li>
+<p>Na aba RMADefinition: </p>
+<ul>
+<li>
+<p>Application Title [Título do Aplicativo]: Regras de Aluguel de Carros</p>
+</li>
+<li>
+<p>Habilitar as seguintes opções:</p>
+<ul>
+<li>Download Rules Command</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/38.png" /></p>
+<hr />
+<ul>
+<li>Ir na aba navigate [Navegação], escolher as pastas que irão aparecer no RMA. As pastas que não vão aparecer devem ficar do lado direito. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/39.png" /></p>
+<hr />
+<ul>
+<li>
+<p>Ir na aba applets e marcar as opções:</p>
+<ul>
+<li>Allow Editing of Table Name.</li>
+<li>Display Branch Condition.</li>
+</ul>
+</li>
+<li>
+<p>Ir na aba Life Cycle Management, marcar todas as opções e referenciar a pasta adb criada no início deste tópico, como mostra a imagem a seguir.</p>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/40.png" /></p>
+<hr />
+<ul>
+<li>Ir no ícone SALVAR ALL na barra superior do eclipse e fazer o check-in clicando com o botão direito sobre o arquivo RMADefinition que está dentro da pasta Deploy. </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="funcao-entrypoint">Função EntryPoint</h2>
+<p>Criando uma função que irá "startar" o uso do fluxo de decisão no nosso RMA.</p>
+<ul>
+<li>
+<p>No eclipse, clicar com o botão direito do mouse sobre a pasta Technical Library - New - Folder - Name: Entrypoint.</p>
+</li>
+<li>
+<p>Clicar com o botão direito do mouse sobre a pasta Entrypoint - New - SRL Decision Entities - Function - Name: entrypoint - Finish.</p>
+<ul>
+<li>Name: entrypoint</li>
+<li>Type: Decisioninput</li>
+<li>Criar um parâmetro e o corpo de uma função.</li>
+</ul>
+</li>
+<li>
+<p>Obs: faça como na imagem a seguir:</p>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/41.png" /></p>
+<hr />
+<ul>
+<li>Ir no ícone SALVAR e fazer o check-in neste arquivo. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/42.png" /></p>
+<hr />
+<h2 id="variavel-global-input">Variavel Global Input</h2>
+<p>Criando uma variável global input. </p>
+<ul>
+<li>
+<p>No eclipse, clicar com o botão direito sobre a pasta Technical [Lembrando que esta pasta está dentro de RegrasAluguelCarros].</p>
+</li>
+<li>
+<p>New - Object Model Entities - Variable</p>
+<ul>
+<li>Nome: input</li>
+</ul>
+</li>
+<li>
+<p>Na tela de edição da variável:</p>
+<ul>
+<li>Type: DecisionInput</li>
+</ul>
+</li>
+<li>
+<p>Fazer check-in.</p>
+</li>
+</ul>
+<h2 id="gerar-rma-embarcado">Gerar RMA [Embarcado]</h2>
+<ul>
+<li>
+<p>Clicar no projeto principal [RegrasAluguelCarros] e ir em:</p>
+<ul>
+<li>
+<p>Project - Rule Maintenance Application - Generate Rule Maintenance Application.</p>
+</li>
+<li>
+<p>Este comando irá abrir uma janela pop-up chamada Gerador de Aplicativo.</p>
+</li>
+<li>
+<p>Nota-se que o Blaze (eclipse) já reconhece o arquivo de configurações que criamos, o RMADefinition. Este arquivo configura o deploy do projeto para o RMA WEB.</p>
+</li>
+<li>
+<p>Podemos observar também que o Blaze já reconheceu a pasta workspaces que criamos no início deste tutorial, no tópico [Criando Repositório].</p>
+</li>
+<li>
+<p>Deixar a opção de Deploy como: </p>
+<ul>
+<li>Web Application.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/43.png" /></p>
+<hr />
+</li>
+<li>
+<p>Ao clicar em next, devemos selecionar o arquivo <strong>bom-Carro3.jar</strong> que criamos e anexamos ao nosso projeto e, por fim, clicar em concluir. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/44.png" /></p>
+<hr />
+</li>
+<li>
+<p>O RMA irá abrir automaticamente no navegador Internet Explorer e irá utilizar o local host [http://127.0.0.1:8080] para gerar a interface. </p>
+</li>
+<li>
+<p>A sugestão é que você copie o link e cole em um navegador mais moderno e atualizado.</p>
+</li>
+<li>
+<p>Se você seguiu todos os passos até aqui, basta digitar <strong>admin</strong> e <strong>admin</strong> na senha para que você acesse a interface do RMA. </p>
+</li>
+<li>
+<p>Clicando sobre o projeto, você estará na interface do RMA. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/45.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/46.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/47.png" /></p>
+<hr />
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="mais-utoriais-blaze">Mais utoriais - Blaze</h2>
+<ul>
+<li>
+<p>2 Utilizando o RMA - <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze02/');">Blaze - Utilização</button></p>
+</li>
+<li>
+<p>3 Deploy no Tomcat - <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze02/');">Blaze - Deploy</button></p>
+</li>
+<li>
+<p>4 Tópicos Avançados - Em construção</p>
+</li>
+</ul>
+<p>Elaborado por:
+<br/>
+Jonathan Cardoso Lopes Domingos
+<br/>
+21/10/2019</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

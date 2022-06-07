@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Web Screping - JONATHAN</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../css/extra_css.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">JONATHAN</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BLAZE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../BLAZE/blaze01/" class="dropdown-item">Blaze - Instalações</a>
+</li>
+                                    
+<li>
+    <a href="../../BLAZE/blaze02/" class="dropdown-item">Blaze - Utilização</a>
+</li>
+                                    
+<li>
+    <a href="../../BLAZE/blaze03/" class="dropdown-item">Blaze - Deploy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DMPS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DMPS/dmps01/" class="dropdown-item">TUTORIAL 01</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATA-SCIENCE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../pythonDados/" class="dropdown-item">PythonDados</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Web Screping</a>
+</li>
+                                    
+<li>
+    <a href="../perceptron/" class="dropdown-item">Perceptron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATABASES <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATABASES/mysql/" class="dropdown-item">MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../DATABASES/mongoDB/" class="dropdown-item">MongoDB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">RESUMOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../RESUMOS/nodeJS/" class="dropdown-item">NodeJS</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/ruby/" class="dropdown-item">Ruby</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/css/" class="dropdown-item">CSS</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../pythonDados/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../perceptron/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#web-scraping-com-python-acoes-do-bradesco" class="nav-link">Web Scraping com Python - Ações do Bradesco</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#munipulacao-de-data" class="nav-link">Munipulação de Data</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#dashboard-acoes-do-bradesco" class="nav-link">Dashboard - Ações do Bradesco</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#coluna-data-para-series-temporais" class="nav-link">Coluna Data para Séries Temporais</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#graficos-com-series-temporais" class="nav-link">Gráficos com Séries Temporais</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#referencias" class="nav-link">Referências:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="web-scraping-com-python-acoes-do-bradesco">Web Scraping com Python - Ações do Bradesco</h1>
+<p>Elaborado por:
+<br/>
+Jonathan Cardoso Lopes Domingos
+<br/>
+02/01/2020</p>
+<blockquote>
+<p>O seguinte web screping é apenas um material de consulta rápida, aqui não apresenta nenhuma análise aprofundade sobre o assunto. 
+Neste material apresento um scraping das ações do Bradesco. </p>
+</blockquote>
+<p>Ambientando Selenium no Windows. Baixar e instalar os programas/pacotes abaixo:</p>
+<p>Selenium:</p>
+<blockquote>
+<p>pip install -U selenium</p>
+</blockquote>
+<p>Drivers para browsers:</p>
+<blockquote>
+<p>Firefox: https://github.com/mozilla/geckodriver/releases</p>
+</blockquote>
+<p>Depois de baixar o arquivo, copie <strong>geckodriver.exe</strong> para o diretório C: ele ficará assim: “C:\geckodriver.exe”.
+Ir em <strong>Configurações Avançadas do Sistema</strong> =&gt; propriedades do sistema =&gt; <strong>Variáveis de ambiente</strong> =&gt; <strong>Variáveis de Sistema</strong> =&gt; Editar =&gt; Novo =&gt; preencha o caminho do arquivo “C:\geckodriver.exe” no path. (OBS: path do sistema e não do usuário).</p>
+<p align="center">
+<img src="https://i.imgur.com/KroffOk.jpg">
+</p>
+
+<p>Em todos os scripts Selenium incluir o código abaixo:</p>
+<pre><code class="language-Python">from selenium import webdriver
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+binary = FirefoxBinary(‘C:\\Program Files\\Mozilla Firefox\\firefox.exe’)
+driver = webdriver.Firefox(firefox_binary=binary, executable_path=r’C:\\geckodriver.exe’)
+
+driver.get(‘https://www.google.com')
+</code></pre>
+<pre><code class="language-python"># O modulo time aqui foi utilizado para esperar o carregamento das paginas atraves do firefox
+# Este módulo não é necessário no jupyter lab
+#import time
+
+# o modulo Select sera utilizado para interagir com a caixa de selecao
+In [1]: from selenium.webdriver.support.ui import Select
+
+# modulo utilizado para webScreping Python
+In [2]: from bs4 import BeautifulSoup
+
+# o modulo webdriver e necessario para definir qual navegador sera utilizado para fazer a automacao
+In [3]: from selenium import webdriver
+</code></pre>
+<h3 id="executa-o-navegador">Executa o Navegador</h3>
+<pre><code class="language-python">In [4]: from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+In [5]: binary = FirefoxBinary(&quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot;)
+
+# a linha abaixo define qual e o navegador que queremos utilizar.
+In [6]: driver = webdriver.Firefox(firefox_binary=binary, executable_path=r'C:\\geckodriver.exe')
+</code></pre>
+<h3 id="insere-o-endereco-web">Insere o endereço WEB</h3>
+<pre><code class="language-python"># abaixo foi definido qual e o site que quero acessar
+In [7]: driver.get(&quot;https://economia.uol.com.br/cotacoes/bolsas/acoes/bvsp-bovespa/bbdc4-sa&quot;)
+</code></pre>
+<h3 id="manipulando-a-pagina">Manipulando a Página</h3>
+<pre><code class="language-python"># Selecionando o botão que iremos clicar - (Listagem de dados)
+In [8]: btn10 = driver.find_element_by_css_selector(&quot;.btn-mode &gt; span:nth-child(2)&quot;)
+</code></pre>
+<pre><code class="language-python"># Clicando no botão da página
+In [9]: btn10.click()
+</code></pre>
+<pre><code class="language-python"># Selecionando o botão que iremos clicar - (Histórico)
+In [10]: btn20 = driver.find_element_by_css_selector(&quot;.btn-day &gt; span:nth-child(2)&quot;)
+</code></pre>
+<pre><code class="language-python"># Clicando no botão da página
+In [11]: btn20.click()
+</code></pre>
+<pre><code class="language-python"># Selecionando o botão que iremos clicar - (Ações/Ano)
+In [12]: btn30 = driver.find_element_by_css_selector(&quot;.btn-day-table &gt; span:nth-child(4)&quot;)
+</code></pre>
+<pre><code class="language-python"># Clicando no botão da página
+In [13]: btn30.click()
+</code></pre>
+<h3 id="raspando-os-dados">Raspando os dados</h3>
+<pre><code class="language-python">#Armazenando, por um &quot;id&quot;, a tabela de dados da página em uma variável.
+#.chart-body
+In [14]: dados = driver.find_element_by_css_selector(&quot;.mod-table&quot;)
+In [15]: dados
+Out[15]:   
+        &lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session=&quot;52a04cdd-5f82-4051-927e-1ded929cbb24&quot;, element=&quot;748f7f99-dc8d-4f17-a9b6-c01dc555ea76&quot;)&gt;
+</code></pre>
+<pre><code class="language-python">#Pegando os atributos HTML do objeto armazenado na variavel dados.
+In [16]: html = dados.get_attribute(&quot;innerHTML&quot;)
+
+# Amostra dos atributos
+In [17]: html
+Out[17]:  
+        '&lt;div class=&quot;box-scroll&quot;&gt;&lt;div class=&quot;scroll&quot; data-scroll=&quot;{&amp;quot;breakpoints&amp;quot;:[&amp;quot;xs&amp;quot;, &amp;quot;sm&amp;quot;, &amp;quot;md&amp;quot;, &amp;quot;lg&amp;quot;]}&quot; uolbpack-initialized=&quot;true&quot; tabindex=&quot;0&quot; style=&quot;height: 428px;&quot;&gt;&lt;div class=&quot;scroll-content scroll-animate&quot;&gt;&lt;span class=&quot;scrollReset&quot;&gt;&lt;/span&gt;&lt;!-- ngIf: !error --&gt;&lt;div class=&quot;charts-mod-table ng-scope&quot; ng-if=&quot;!error&quot; style=&quot;display: inline;&quot;&gt;  &lt;div class=&quot;chart-loading loading-history&quot; style=&quot;display: none;&quot;&gt;&lt;div class=&quot;loading&quot;&gt; &lt;svg width=&quot;100px&quot; height=&quot;100px&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 100&quot; preserveAspectRatio=&quot;xMidYMid&quot; class=&quot;loading uil-ring&quot;&gt;&lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;100&quot; fill=&quot;none&quot; class=&quot;bk&quot;&gt;&lt;/rect&gt;&lt;defs&gt;&lt;filter id=&quot;uil-ring-shadow&quot; x=&quot;-100%&quot; y=&quot;-100%&quot; width=&quot;300%&quot; height=&quot;300%&quot;&gt;&lt;feOffset result=&quot;offOut&quot; in=&quot;SourceGraphic&quot; dx=&quot;0&quot; dy=&quot;0&quot;&gt;&lt;/feOffset&gt;&lt;feGaussianBlur result=&quot;blurOut&quot; in=&quot;offOut&quot; stdDeviation=&quot;0&quot;&gt;&lt;/feGaussianBlur&gt;&lt;feBlend in=&quot;SourceGraphic&quot; in2=&quot;blurOut&quot; mode=&quot;normal&quot;&gt;&lt;/feBlend&gt;&lt;/filter&gt;&lt;/defs&gt;&lt;path d=&quot;M10,50c0,0,0,0.5,0.1,1.4c0,0.5,0.1,1,0.2,1.7c0,0.3,0.1,0.7,0.1,1.1c0.1,0.4,0.1,0.8,0.2,1.2c0.2,0.8,0.3,1.8,0.5,2.8 c0.3,1,0.6,2.1,0.9,3.2c0.3,1.1,0.9,2.3,1.4,3.5c0.5,1.2,1.2,2.4,1.8,3.7c0.3,0.6,0.8,1.2,1.2,1.9c0.4,0.6,0.8,1.3,1.3,1.9 c1,1.2,1.9,2.6,3.1,3.7c2.2,2.5,5,4.7,7.9,6.7c3,2,6.5,3.4,10.1,4.6c3.6,1.1,7.5,1.5,11.2,1.6c4-0.1,7.7-0.6,11.3-1.6 c3.6-1.2,7-2.6,10-4.6c3-2,5.8-4.2,7.9-6.7c1.2-1.2,2.1-2.5,3.1-3.7c0.5-0.6,0.9-1.3,1.3-1.9c0.4-0.6,0.8-1.3,1.2-1.9 c0.6-1.3,1.3-2.5,1.8-3.7c0.5-1.2,1-2.4,1.4-3.5c0.3-1.1,0.6-2.2,0.9-3.2c0.2-1,0.4-1.9,0.5-2.8c0.1-0.4,0.1-0.8,0.2-1.2 c0-0.4,0.1-0.7,0.1-1.1c0.........etc...
+</code></pre>
+<pre><code class="language-python">#Transformando em objeto html para BS4. 
+In [18]: soup = BeautifulSoup(html, &quot;html.parser&quot;)
+
+# Amostra dos atributos
+In [19]: soup
+Out[19]:
+        &lt;div class=&quot;box-scroll&quot;&gt;&lt;div class=&quot;scroll&quot; data-scroll='{&quot;breakpoints&quot;:[&quot;xs&quot;, &quot;sm&quot;, &quot;md&quot;, &quot;lg&quot;]}' style=&quot;height: 428px;&quot; tabindex=&quot;0&quot;uolbpack-initialized=&quot;true&quot;&gt;&lt;div class=&quot;scroll-content scroll-animate&quot;&gt;&lt;span class=&quot;scrollReset&quot;&gt;&lt;/span&gt;&lt;!-- ngIf: !error --&gt;&lt;div class=&quot;charts-mod-table ng-scope&quot; ng-if=&quot;!error&quot; style=&quot;display: inline;&quot;&gt; &lt;div class=&quot;chart-loading loading-history&quot; style=&quot;display: none;&quot;&gt;&lt;div class=&quot;loading&quot;&gt; &lt;svg class=&quot;loading uil-ring&quot; height=&quot;100px&quot; preserveaspectratio=&quot;xMidYMid&quot; viewbox=&quot;0 0 100 100&quot; width=&quot;100px&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;rect class=&quot;bk&quot; fill=&quot;none&quot; height=&quot;100&quot; width=&quot;100&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;/rect&gt;&lt;defs&gt;&lt;filter height=&quot;300%&quot; id=&quot;uil-ring-shadow&quot; width=&quot;300%&quot; x=&quot;-100%&quot; y=&quot;-100%&quot;&gt;&lt;feoffset dx=&quot;0&quot; dy=&quot;0&quot; in=&quot;SourceGraphic&quot; result=&quot;offOut&quot;&gt;&lt;/feoffset&gt;&lt;fegaussianblur in=&quot;offOut&quot; result=&quot;blurOut&quot; stddeviation=&quot;0&quot;&gt;&lt;/fegaussianblur&gt;&lt;feblend in=&quot;SourceGraphic&quot; in2=&quot;blurOut&quot; mode=&quot;normal&quot;&gt;&lt;/feblend&gt;&lt;/filter&gt;&lt;/defs&gt;&lt;path d=&quot;M10,50c0,0,0,0.5,0.1,1.4c0,0.5,0.1,,0.2,1.7c0,0.3,0.1,0.7,0.1,1.1c0.1,0.4,0.1,0.8,0.2,1.2c0.2,0.8,0.3,1.8,0.5,2.8 c0.3,1,0.6,2.1,0.9,3.2c0.3,1.1,0.9,2.3,1.4,3.5c0.51.2,1.2,2.4,1.8,3.7c0.3,0.6,0.8,1.2,1.2,1.9c0.4,0.6,0.8,1.3,1.3,1.9 c1,1.2,1.9,2.6,3.1,3.7c2.2,2.5,5,4.7,7.9,6.7c3,2,6.5,3.4,10.14.6c3.6,1.1,7.5,1.5,11.2,1.6c4-0.1,7.7-0.6,11.3-1.6 c3.6-1.2,7-2.6,10-4.6c3-2,5.8-4.2,7.9-6.7c1.2-1.2,2.1-2.5,3.1-3.7c0.5-0.6,0.9-1.3,1.3-1.9c0.4-0.6,0.8-1.3,1.2-1.9 c0.6-1.3,1.3-2.5,1.8-3.7c0.5-1.2..................etc............
+</code></pre>
+<pre><code class="language-python">#Filtrando os dados, deixando somente os dados que estão na tabela. 
+In [20]: table = soup.select_one(&quot;table&quot;)
+
+# Amostra dos atributos
+In [21]: table
+Out[21]:
+        &lt;table class=&quot;tabela-historic&quot;&gt;&lt;thead&gt; &lt;tr&gt;&lt;th class=&quot;data&quot;&gt;DATA&lt;/th&gt;&lt;th class=&quot;compra&quot;&gt;COTAÇÃO&lt;/th&gt;&lt;th class=&quot;venda hidden-xs&quot;&gt;VOLUME&lt;/th&gt;&lt;th class=&quot;ultimapct hidden-xs&quot;&gt; &lt;/th&gt;&lt;th class=&quot;ultima&quot; colspan=&quot;2&quot;&gt;VARIAÇÃO&lt;/th&gt;&lt;th class=&quot;max hidden-xs hidden-sm hidden-md&quot;&gt;MÁXIMO&lt;/th&gt;&lt;th class=&quot;min hidden-xs hidden-sm hidden-md&quot;&gt;MÍNIMO&lt;/th&gt;&lt;/tr&gt; &lt;/thead&gt;&lt;tbody&gt;&lt;!-- ngRepeat: item in dataHistory.docs --&gt;&lt;tr class=&quot;ng-scope&quot; ng-repeat=&quot;item in dataHistory.docs&quot;&gt;&lt;td class=&quot;data ng-binding&quot; ng-bind=&quot;item.date&quot;&gt;26/12/2019 00:00&lt;/td&gt;&lt;td class=&quot;compra ng-binding&quot; ng-bind=&quot;item.bidvalue&quot;&gt;36,36&lt;/td&gt;&lt;td class=&quot;venda hidden-xs ng-binding&quot; ng-bind=&quot;item.askvalue&quot;&gt;10.453.500&lt;/td&gt;&lt;td class=&quot;ultimapct ng-binding alta&quot; ng-bind=&quot;(item.variationpercentbidView) + '%'&quot; ng-class=&quot;{'alta': item.variationpercentbid &amp;gt;= 0, 'baixa': item.variationpercentbid &amp;lt; 0}&quot;&gt;1,25%&lt;/td&gt;&lt;td class=&quot;ultima hidden-xs ng-binding alta&quot; ng-bind=&quot;item.variationbidView&quot; ng-class=&quot;{'alta': item.variationbid &amp;gt;= 0, 'baixa': item.variationbid &amp;lt; 0}&quot;&gt;0,45&lt;/td&gt;&lt;td class=&quot;max hidden-xs hidden-sm hidden-md ng-binding&quot; ng-bind=&quot;item.maxbid&quot;&gt;36,49&lt;/td&gt;&lt;td class=&quot;min hidden-xs hidden-sm hidden-md ng-binding&quot; ng-bind=&quot;item.minbid&quot;&gt;35,82&lt;/td&gt;&lt;/tr&gt;&lt;!-- end ngRepeat: item in dataHistory.docs --&gt;&lt;tr class=&quot;ng-scope&quot; ng-repeat=&quot;item in dataHistory.docs&quot;&gt;&lt;td class=&quot;data ng-binding&quot; ng-bind=&quot;item.date&quot;&gt;23/12/2019 00:00&lt;/td&gt;&lt;td class=&quot;compra ng-binding&quot; ng-bind=&quot;item.bidvalue&quot;&gt;35,91&lt;/td&gt;&lt;td class=&quot;venda hidden-xs ng-binding&quot; ng-bind=&quot;item.askvalue&quot;&gt;10.267.900&lt;/td&gt;&lt;td class=&quot;ultimapct ng-binding alta&quot; ng-bind=&quot;(item.variationpercentbidView) + '%'&quot; ng-class=&quot;{'alta': item.variationpercentbid &amp;gt;= 0, 'baixa': item.var...................etc...............
+</code></pre>
+<h3 id="cabecalho-da-tabela">Cabeçalho da Tabela</h3>
+<p><strong>O objetivo é retirar os itens que fazem parte do header</strong></p>
+<pre><code class="language-html">&lt;table class=&quot;tabela-historic&quot;&gt;
+&lt;thead&gt; 
+&lt;tr&gt;
+&lt;th class=&quot;data&quot;&gt;DATA&lt;/th&gt;
+&lt;th class=&quot;compra&quot;&gt;COTAÇÃO&lt;/th&gt;
+&lt;th class=&quot;venda hidden-xs&quot;&gt;VOLUME&lt;/th&gt;
+&lt;th class=&quot;ultimapct hidden-xs&quot;&gt; &lt;/th&gt;
+&lt;th class=&quot;ultima&quot; colspan=&quot;2&quot;&gt;VARIAÇÃO&lt;/th&gt;
+&lt;th class=&quot;max hidden-xs hidden-sm hidden-md&quot;&gt;MÁXIMO&lt;/th&gt;
+&lt;th class=&quot;min hidden-xs hidden-sm hidden-md&quot;&gt;MÍNIMO&lt;/th&gt;
+&lt;/tr&gt; 
+&lt;/thead
+</code></pre>
+<pre><code class="language-python">#Armazenando os títulos das colunas da tabela em uma variável headers
+In [22]: headers = [header.text for header in table.select(&quot;th&quot;)]
+In [23]: headers
+Out[23]:
+        ['DATA', 'COTAÇÃO', 'VOLUME', '\xa0', 'VARIAÇÃO', 'MÁXIMO', 'MÍNIMO']
+
+</code></pre>
+<h3 id="corpo-da-tabela">Corpo da Tabela</h3>
+<p><strong>O objetivo é retirar os itens que fazem parte do corpo da tabela</strong></p>
+<pre><code class="language-python">#Armazenando os dados da tabela em uma variável data1
+In [24]: data1 = [d.text for d in table.select (&quot;tbody &gt; tr &gt; td&quot;)]
+
+#Imprimindo uma amostra dos primeiros 20 dados
+#Descobrindo o padrão de 7
+#A cada 7 dados a data se repete
+In [25]: data1[:20]
+Out[25]:
+        ['27/12/2019 00:00',
+         '36,22',
+         '10.404.000',
+         '-0,39%',
+         '-0,14',
+         '36,65',
+         '36,10',
+         '26/12/2019 00:00',
+         '36,36',
+         '10.453.500',
+         '1,25%',
+         '0,45',
+         '36,49',
+         '35,82',
+         '23/12/2019 00:00',
+         '35,91',
+         '10.267.900',
+         '0,62%',
+         '0,22',
+         '35,92']
+</code></pre>
+<pre><code class="language-python">#Imprimindo o total de dados
+In [26]: len(data1)
+Out[26]: 1729
+
+#Achando o número de grupo(linhas) do dataset
+In [27]: len(data1)/7
+Out[27]: 247.0
+
+In [28]: print(data1[0])
+Out[28]: 27/12/2019 00:00
+
+In [29]: print(data1[1])
+Out[29]: 36,22 
+
+</code></pre>
+<h3 id="organizando-a-matriz">Organizando a Matriz</h3>
+<p><strong>O objetivo é organizar os dados para transformar uma matriz em um dataFrame(Tabela Python)</strong></p>
+<pre><code class="language-python">#Dividindo a lista de dados extraídos da tabela em sublistas
+In [30]:    n = 247
+            splited = []
+            len_l = len(data1)
+            for i in range(n):
+                start = int(i*len_l/n)
+                end = int((i+1)*len_l/n)
+                splited.append(data1[start:end])
+</code></pre>
+<pre><code class="language-python">#Imprimindo os 5 primeiros conjuntos. 
+#Observar se o grupo corresponde a primeira linha do dataset no site.
+In [31]: splited[:5]
+Out[31]:
+        [['27/12/2019 00:00',
+              '36,22',
+              '10.404.000',
+              '-0,39%',
+              '-0,14',
+              '36,65',
+              '36,10'],
+             ['26/12/2019 00:00',
+              '36,36',
+              '10.453.500',
+              '1,25%',
+              '0,45',
+              '36,49',
+              '35,82'],
+             ['23/12/2019 00:00',
+              '35,91',
+              '10.267.900',
+              '0,62%',
+              '0,22',
+              '35,92',
+              '35,48'],
+             ['20/12/2019 00:00',
+              '35,69',
+              '22.379.200',
+              '-0,78%',
+              '-0,28',
+              '35,93',
+              '35,46'],
+             ['19/12/2019 00:00',
+              '36,45',
+              '32.951.700',
+              '1,84%',
+              '0,66',
+              '36,45',
+              '35,68']]
+
+</code></pre>
+<pre><code class="language-python">#Fazer alteração no array de header
+In [32]: headers
+Out[32]:
+        ['DATA', 'COTAÇÃO', 'VOLUME', '\xa0', 'VARIAÇÃO', 'MÁXIMO', 'MÍNIMO']
+
+#Corrigindo o título da tabela '\xa0' --&gt; VARIAÇÃO-%
+In [33]: headers[3]=&quot;VARIAÇÃO(%)&quot;
+In [34]: headers
+Out[34]:
+        ['DATA', 'COTAÇÃO', 'VOLUME', 'VARIAÇÃO(%)', 'VARIAÇÃO', 'MÁXIMO', 'MÍNIMO']
+
+</code></pre>
+<h3 id="matriz-para-dataframe">Matriz para DataFrame</h3>
+<pre><code class="language-python">In [35]: import pandas as pd
+In [36]: import numpy as np
+</code></pre>
+<pre><code class="language-python"># Transformando a lista de dados e títulos em um dataFrame. 
+In [37]: df = pd.DataFrame(np.array(splited).reshape(247,7), columns = list(headers))
+In [37]: df
+Out[37]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/01.png" /></p>
+<hr />
+<h3 id="preperando-os-dados">Preperando os dados</h3>
+<pre><code class="language-python">In [38]: df.shape
+Out[38]:(247, 7)
+
+In [39]: df.dtypes
+Out[39]:
+        DATA           object
+        COTAÇÃO        object
+        VOLUME         object
+        VARIAÇÃO(%)    object
+        VARIAÇÃO       object
+        MÁXIMO         object
+        MÍNIMO         object
+        dtype: object
+
+
+In [40]: df['MÁXIMO']
+Out[40]:
+        0      36,65
+        1      36,49
+        2      35,92
+        3      35,93
+        4      36,45
+               ...  
+        242    41,20
+        243    41,29
+        244    41,27
+        245    40,89
+        246    40,79
+        Name: MÁXIMO, Length: 247, dtype: object
+</code></pre>
+<p><strong>Alguns modelos que podem transformar object em numeric.</strong></p>
+<pre><code class="language-python">#Valores faltantes completados com NaN (float64)
+pd.to_numeric(dataName, errors='coerce')
+
+#Valores faltantes completados com 0 (float64)
+pd.to_numeric(dataName, errors='coerce').fillna(0, downcast='infer')
+
+
+#Valores transformados em (inteiro32)
+pd.to_numeric(s, errors='coerce').astype('Int32')
+
+#Valores faltantes completados com NaN (float64)
+#Só altera valores objetos, valores que são int permanecem.
+df2 = dataName.apply(pd.to_numeric, errors='coerce')
+
+#Alterando a coluna maximo 
+bradesco02 = df.MÁXIMO.astype('int64')
+
+#Outras Formas
+df.transform(pd.to_numeric, errors='coerce')
+df[cols] = df[cols].apply(pd.to_numeric, errors='coerce')
+pd.Series([1,2,3,4,'.']).convert_objects(convert_numeric=True)
+</code></pre>
+<h3 id="object-to-numeric">Object to Numeric</h3>
+<pre><code class="language-python">#Primeira tentaiva de transformar os dados que estão em objeto.
+#Transformar em float
+In [41]: bradesco = df.apply(pd.to_numeric, errors='coerce')
+
+#Dados transformados
+In [42]: bradesco.dtypes
+Out[42]:
+        DATA           float64
+            COTAÇÃO        float64
+            VOLUME         float64
+            VARIAÇÃO(%)    float64
+            VARIAÇÃO       float64
+            MÁXIMO         float64
+            MÍNIMO         float64
+            dtype: object
+
+#Não deu certo pois existem caracteres especiais que precisam ser tratados
+In [43]: bradesco
+Out[43]:
+
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/02.png" /></p>
+<hr />
+<h3 id="tratando-caracteres-especiais">Tratando Caracteres Especiais</h3>
+<pre><code class="language-python">In [44]: df
+Out[44]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/03.png" /></p>
+<hr />
+<pre><code class="language-python">In [45]: bradescoData = df.copy()
+Out[45]: bradescoData
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/03.png" /></p>
+<hr />
+<p><strong>exemplo de utilização do método extract</strong></p>
+<pre><code class="language-python">Evento:
+    COLUNA
+    [14729–15236]
+    [14823–?]
+    [14618–15145]
+Usando Regex:
+    # remover os colchetes
+    removColch = data['COLUNA'].str.extract('\[(.*?)\]', expand=False)
+
+    #Manter apenas os 5 primeiros números
+    extrNume = removColch.str.extract('(\d{5})', expand=False)
+
+    #Adicionar a nova coluna no data
+    data['COLUNA'] = pd.to_numeric(extrNume)
+
+#Removendo valores duplicados 
+data.duplicated()
+data.drop_duplicates()
+</code></pre>
+<h3 id="metodo-replace">Método Replace</h3>
+<pre><code class="language-python">In [46]: bradescoData[&quot;COTAÇÃO&quot;] = [x.replace(&quot;,&quot;, &quot;.&quot;) for x in bradescoData[&quot;COTAÇÃO&quot;]]
+In [47]: bradescoData[&quot;COTAÇÃO&quot;] = bradescoData[&quot;COTAÇÃO&quot;].astype(float)
+</code></pre>
+<pre><code class="language-python">In [48]: bradescoData[&quot;VARIAÇÃO&quot;] = [x.replace(&quot;,&quot;, &quot;.&quot;) for x in bradescoData[&quot;VARIAÇÃO&quot;]]
+In [49]: bradescoData[&quot;VARIAÇÃO&quot;] = bradescoData[&quot;VARIAÇÃO&quot;].astype(float)
+</code></pre>
+<pre><code class="language-python">In [50]: bradescoData[&quot;MÁXIMO&quot;] = [x.replace(&quot;,&quot;, &quot;.&quot;) for x in bradescoData[&quot;MÁXIMO&quot;]]
+In [51]: bradescoData[&quot;MÁXIMO&quot;] = bradescoData[&quot;MÁXIMO&quot;].astype(float)
+</code></pre>
+<pre><code class="language-python">In [52]: bradescoData[&quot;MÍNIMO&quot;] = [x.replace(&quot;,&quot;, &quot;.&quot;) for x in bradescoData[&quot;MÍNIMO&quot;]]
+In [53]: bradescoData[&quot;MÍNIMO&quot;] = bradescoData[&quot;MÍNIMO&quot;].astype(float)
+</code></pre>
+<pre><code class="language-python">In [54]: bradescoData[&quot;VOLUME&quot;] = [x.replace(&quot;.&quot;, &quot;&quot;) for x in bradescoData[&quot;VOLUME&quot;]]
+In [55]: bradescoData[&quot;VOLUME&quot;] = bradescoData[&quot;VOLUME&quot;].astype(int)
+</code></pre>
+<pre><code class="language-python">In [56]: bradescoData[&quot;VARIAÇÃO(%)&quot;] = [x.replace(&quot;,&quot;, &quot;.&quot;) for x in bradescoData[&quot;VARIAÇÃO(%)&quot;]]
+</code></pre>
+<pre><code class="language-python">In [57]: bradescoData[&quot;VARIAÇÃO(%)&quot;] = [x.replace(&quot;%&quot;, &quot;&quot;) for x in bradescoData[&quot;VARIAÇÃO(%)&quot;]]
+In [58]: bradescoData[&quot;VARIAÇÃO(%)&quot;] = bradescoData[&quot;VARIAÇÃO(%)&quot;].astype(float)
+</code></pre>
+<h2 id="munipulacao-de-data">Munipulação de Data</h2>
+<pre><code class="language-python">#Tive problema com ordem e formato da data. A hora também. (mas foi corrigido)
+#time data '27/12/2019 10:33' does not match format '%d%b%Y:%H:%M:%S.%f' (match) --&gt; '%m/%d/%Y  %H:%M:%S.%f'
+In [59]: bradescoData['DATA'] =  pd.to_datetime(bradescoData['DATA'], format='%d/%m/%Y %H:%M')
+</code></pre>
+<pre><code class="language-python">#DataFrame após o tratamento dos dados
+In [60]: bradescoData
+Out[60]: 
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/04.png" /></p>
+<hr />
+<pre><code class="language-python">In [61]: bradescoData.dtypes
+Out[61]: 
+        DATA           datetime64[ns]
+        COTAÇÃO               float64
+        VOLUME                  int32
+        VARIAÇÃO(%)           float64
+        VARIAÇÃO              float64
+        MÁXIMO                float64
+        MÍNIMO                float64
+        dtype: object
+</code></pre>
+<h1 id="dashboard-acoes-do-bradesco">Dashboard - Ações do Bradesco</h1>
+<pre><code class="language-python">In [62]: import seaborn as sns
+In [63]: import matplotlib.pyplot as plt
+In [64]: %matplotlib inline
+</code></pre>
+<pre><code class="language-python">In [65]: bradescoData.plot(x ='DATA', y = ['MÁXIMO', 'MÍNIMO'], figsize=(15, 3), 
+                            title='Ações - Bradesco', grid=True)
+         plt.ylabel('Variação')
+         plt.xlabel('Data')
+         plt.legend(loc='best')
+Out[65]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_60_1.png" /></p>
+<hr />
+<pre><code class="language-python">In [66]: columns = ['MÁXIMO','MÍNIMO', 'COTAÇÃO']
+In [67]: bradescoData.plot(x ='DATA', y = columns, figsize=(15, 4), title='Ações - Bradesco', grid=True)
+Out[67]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_61_1.png" /></p>
+<hr />
+<pre><code class="language-python">In [68]: columns = ['VARIAÇÃO', 'VARIAÇÃO(%)']
+In [69]: bradescoData.plot(x ='DATA', y = columns, figsize=(15, 4), title='Ações - Bradesco', grid=True)
+Out[69]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_62_1.png" /></p>
+<hr />
+<pre><code class="language-python">In [70]: fig, ax1 = plt.subplots(1, 1, figsize=(12, 6))
+         sns.distplot(bradescoData.COTAÇÃO.dropna(), bins=100, ax=ax1)
+         #fig.savefig('graph2.png')
+Out[70]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_63_1.png" /></p>
+<hr />
+<p><strong>Exemplos Práticos</strong></p>
+<pre><code class="language-python">#Deletando um coluna
+dataName.drop('ColumName', inplace=True, axis=1)
+
+
+#Ver dados faltantes 
+data.isnull()
+data.isnull().sum()
+
+
+#Preenchendo valores nulos com média
+data.fillna(data.mean(0))
+
+
+#Alterando o índice do dataFrame
+data.set_index('Código', inplace=True)
+
+
+#Acessar por rótulos
+data.loc['001']
+</code></pre>
+<h2 id="coluna-data-para-series-temporais">Coluna Data para Séries Temporais</h2>
+<pre><code class="language-python">#Removendo o index antigo e colocando a coluna data como index.
+In [71]: bradescoData.set_index('DATA', inplace=True)
+In [72]: bradescoData
+Out[72]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/05.png" /></p>
+<hr />
+<h2 id="graficos-com-series-temporais">Gráficos com Séries Temporais</h2>
+<pre><code class="language-python">In [73]: fig, ax1 = plt.subplots(1, 1, figsize=(15, 4))
+         bradescoData['Month'] = bradescoData.index.to_period('m')
+         sns.boxplot('Month', 'COTAÇÃO', data=bradescoData, ax=ax1)
+Out[73]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_67_1.png" /></p>
+<hr />
+<pre><code class="language-python">In [74]: fig, ax1 = plt.subplots(1, 1, figsize=(25, 8))
+         bradescoData['Day'] = bradescoData.index.to_period('d')
+         sns.boxplot('Day', 'COTAÇÃO', data=bradescoData, ax=ax1)
+Out[74]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_68_1.png" /></p>
+<hr />
+<p><strong> Manipulando a Coluna data </strong></p>
+<pre><code class="language-python"># year = bradescoData.index.to_period('Y')
+# month = bradescoData.index.to_period('m')
+# day = bradescoData.index.to_period('d')
+# hour = bradescoData.index.to_period('h')
+# minute = bradescoData.index.to_period('T')
+# second = bradescoData.index.to_period('s')
+#'T' represents minute based frequency
+# 'H' represents hourly frequency 
+# 'S' represents secondly frequency 
+# M month
+#YYYY-MM-DD[*HH[:MM[:SS[.fff[fff]]]][+HH:MM[:SS[.ffffff]]]]
+</code></pre>
+<pre><code class="language-python">In [75]: lm = sns.lmplot('VARIAÇÃO', 'COTAÇÃO', data=bradescoData, aspect=2.5, order=3)
+         #lm.ax.xaxis.set_major_formatter(mdates.DateFormatter('%y-%m-%d'))
+         lm.ax.set_xlabel('Variação')
+Out[75]:  
+        Text(0.5, 6.79999999999999, 'Variação')
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_72_1.png" /></p>
+<hr />
+<pre><code class="language-python">In [76]: corr = bradescoData.corr()
+In [77]: corr
+Out[77]: 
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/06.png" /></p>
+<hr />
+<pre><code class="language-python">In [78]: def plot_corr(corr):
+            # Cortaremos a metade de cima pois é o espelho da metade de baixo
+            mask = np.zeros_like(corr, dtype=np.bool)
+            mask[np.triu_indices_from(mask, 1)] = True    
+            # Calculando a correlação
+            sns.heatmap(corr, mask=mask, cmap='RdBu', square=True, linewidths=.5)
+
+In [79]: plot_corr(corr)
+Out[79]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_76_0.png" /></p>
+<hr />
+<p><strong> Algumas dicas </strong></p>
+<pre><code class="language-python"># Com Pandas - gráfico (pie)
+# bradescoData.VARIAÇÃO.value_counts().plot(kind='pie', autopct='%.2f%%')
+# plt.axis('equal')
+</code></pre>
+<pre><code class="language-python">In [80]: sns.factorplot('VARIAÇÃO', data=bradescoData, kind='count')
+Out[80]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_78_2.png" /></p>
+<hr />
+<pre><code class="language-python"># Com Pandas
+In [81]: df.COTAÇÃO.value_counts().plot(kind='pie', autopct='%.2f%%')
+         plt.axis('equal')
+Out[81]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_79_1.png" /></p>
+<hr />
+<pre><code class="language-python"># Com Seaborn
+In [82]: sns.factorplot('COTAÇÃO', data=df, kind='count')
+Out[82]:
+</code></pre>
+<hr />
+<p><img alt="Screenshot" src="../../img/webScreping/output_79_2.png" /></p>
+<hr />
+<h1 id="referencias">Referências:</h1>
+<ul>
+<li>https://medium.com/@carlosbaia/visualiza%C3%A7%C3%A3o-e-an%C3%A1lise-de-dados-811780fd0e9f</li>
+<li>https://seaborn.pydata.org/</li>
+<li>https://matplotlib.org/</li>
+<li>https://www.vooo.pro/insights/biblioteca-seaborn-com-o-matplotlib/</li>
+<li>https://blog.4linux.com.br/web-scraping-python-selenium-e-beautifulsoup/</li>
+<li>https://towardsdatascience.com/web-scraping-using-selenium-and-beautifulsoup-99195cd70a58</li>
+<li>https://selenium-python.readthedocs.io/api.html</li>
+<li>https://pt.stackoverflow.com/questions/337093/problema-click-botao-python-selenium</li>
+<li>https://datatofish.com/plot-dataframe-pandas/</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

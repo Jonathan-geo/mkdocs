@@ -1,0 +1,25 @@
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+button {
+    padding: 5px 5px;
+    border-radius: 8px;
+    border: 0;
+    background: #1e1833;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+a {
+    font-size: 11px;
+    color: #100438
+}
+
+img {
+	
+	border: 2px solid #dbdbdb
+	
+}

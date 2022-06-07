@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Blaze - Utilização - JONATHAN</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../css/extra_css.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">JONATHAN</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BLAZE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../blaze01/" class="dropdown-item">Blaze - Instalações</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Blaze - Utilização</a>
+</li>
+                                    
+<li>
+    <a href="../blaze03/" class="dropdown-item">Blaze - Deploy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DMPS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DMPS/dmps01/" class="dropdown-item">TUTORIAL 01</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATA-SCIENCE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pythonDados/" class="dropdown-item">PythonDados</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pyScrap4/" class="dropdown-item">Web Screping</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/perceptron/" class="dropdown-item">Perceptron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATABASES <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATABASES/mysql/" class="dropdown-item">MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../DATABASES/mongoDB/" class="dropdown-item">MongoDB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">RESUMOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../RESUMOS/nodeJS/" class="dropdown-item">NodeJS</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/ruby/" class="dropdown-item">Ruby</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/css/" class="dropdown-item">CSS</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../blaze01/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../blaze03/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#utilizando-o-rma" class="nav-link">Utilizando o RMA</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introducao" class="nav-link">Introdução:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#decision-flow" class="nav-link">Decision Flow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#organizando-o-projeto-em-pastas" class="nav-link">Organizando o projeto em pastas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#decision-tree" class="nav-link">Decision Tree</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#function" class="nav-link">Function</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#testing" class="nav-link">Testing</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mais-utoriais-blaze" class="nav-link">Mais utoriais - Blaze</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="utilizando-o-rma">Utilizando o RMA</h1>
+<h2 id="introducao">Introdução:</h2>
+<p>Interface inicial: </p>
+<ul>
+<li>
+<p>Funções importantes que iremos utilizar:</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/48.png" /></p>
+<hr />
+<ul>
+<li>No ícone adminitrador [A], você pode gerenciar os usuários que estão trabalhando neste projeto.</li>
+<li>Também há os ícones senha [B] e log off [C] que, de certa forma, fazem parte do gerenciamento de usuários. </li>
+<li>Outros ícones importantes são: Atualizar[D], Atualizar/Update[E] e Compilar[F]. </li>
+</ul>
+</li>
+</ul>
+<p>Funcionalidade/Nomenclaturas:</p>
+<ul>
+<li>Decision flow = Fluxo de decisões</li>
+<li>Decision table = Tabela de decisão</li>
+<li>Decision tree = Árvore de decisão</li>
+<li>Function = Função </li>
+<li>ScoreCard = Sistem de scoragem </li>
+<li>Business Term Set = Variáveis que os usuários podem criar</li>
+<li>Ruleset (Rulebuilder) = Regras "simples" de negócios</li>
+</ul>
+<p>Saindo e entrando no projeto RMA</p>
+<ul>
+<li>Ao ligar o PC, como nosso RMA está embarcado no eclipse, devemos abrir o eclipse e startar o projeto: <ul>
+<li>Clicar no projeto - Ir na aba Project - Rule Maintenance Application - Start [Iniciar] - Finish. </li>
+</ul>
+</li>
+<li>Após startar o projeto devemos abrir o RMA:<ul>
+<li>Clicar no projeto - Ir na aba Project - Rule Maintenance Application - Open [Abrir].</li>
+</ul>
+</li>
+</ul>
+<h2 id="decision-flow">Decision Flow</h2>
+<p>Criando um fluxo principal </p>
+<ul>
+<li>Com o projeto rodando no local host (RMA), clicar com o botão direito sobre a pasta <strong>Business Library Folder</strong> </li>
+<li>
+<p>Ir em New - Decision Flow - dar o nome de Fluxo_Principal. Lembre-se que o nome deve ser o mesmo que você atribuiu no tutorial anterior.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/49.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/50.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/51.png" /></p>
+<hr />
+</li>
+</ul>
+<h2 id="organizando-o-projeto-em-pastas">Organizando o projeto em pastas</h2>
+<p>Para ter um bom projeto é necessário estar bem organizado. Iremos, neste tópico, organizar o nosso projeto em pastas que serão utilizadas conforme o projeto ganhe maiores proporções. </p>
+<ul>
+<li>Clicar na pasta principal <strong>Business Library Folder</strong> e ir na aba NEW - FOLDER<ul>
+<li>Nome: Ruleset</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Clicar na pasta principal <strong>Business Library Folder</strong> e ir na aba NEW - FOLDER<ul>
+<li>Nome: BusinessTerm</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Clicar na pasta principal <strong>Business Library Folder</strong> e ir na aba NEW - FOLDER<ul>
+<li>Nome: DecisionTable</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Clicar na pasta principal <strong>Business Library Folder</strong> e ir na aba NEW - FOLDER<ul>
+<li>Nome: DecisionTree</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Clicar na pasta principal <strong>Business Library Folder</strong> e ir na aba NEW - FOLDER<ul>
+<li>Nome: Function</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Clicar na pasta principal <strong>Business Library Folder</strong> e ir na aba NEW - FOLDER<ul>
+<li>Nome: Scorecard</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>OBS: Não é necessário criar todas as pastas agora. Você pode ir criando conforme necessidade. Estou criando todas agora para fins didáticos. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/52.png" /></p>
+<hr />
+<h2 id="decision-tree">Decision Tree</h2>
+<p>Iremos criar nossa primeira Task de decisão do Fluxo_Principal. Será uma Decision Tree que utilizará os dados de idade e renda para dividir grupos de clientes em aprovados ou reprovados. </p>
+<ol>
+<li>
+<p>Criando um modelo de Variável de Negócio [BusinessTerm]</p>
+<ul>
+<li>Clicar na pasta BusinessTerm - New - Business Term Set</li>
+<li>Dar o nome de <strong>VariaveisNegocio</strong></li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/53.png" /></p>
+<hr />
+</li>
+<li>
+<p>Criando um Value List</p>
+<ul>
+<li>Clicar no segundo sinal de + e depois clicar no <strong>Value List 1</strong> que irá aparecer.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/55.png" /></p>
+<hr />
+<ul>
+<li>Na nova tela, você deverá dar o nome de <strong>NegadoAprovado</strong> e atribuir os valores de negado e aprovado, conforme a imagem abaixo. </li>
+<li>Por fim, clicar em check-in para que as alterações tenham efeito.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/56.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/57.png" /></p>
+<hr />
+<ul>
+<li>Após o check-in, voltar na tela anterior. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/58.png" /></p>
+<hr />
+</li>
+<li>
+<p>Criando um Business Term</p>
+<ul>
+<li>Ao acessar novamente a aba <strong>VariaveisNegocio</strong> você deverá clicar na opção check-in. </li>
+<li>Clicar no primeiro sinal de + e depois clicar no <strong>term1</strong> que irá aparecer. Observe a imagem.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/54.png" /></p>
+<hr />
+<ul>
+<li>Dar o nome de: NegadoAprovadoAtributo, deixar o tipo como String e atribuir o Value List como NegadoAprovado.</li>
+<li>Fazer o check-in.</li>
+</ul>
+<hr />
+</li>
+<li>
+<p>Criando de fato a Decision Tree</p>
+<ul>
+<li>Clicar na pasta DecisionTree - ir na aba New - opção Decision Tree.</li>
+<li>Colocar o nome de: TreeNegadosAprovados, adicionar uma descrição, deixar o tipo como Void e clicar em Next.  </li>
+<li>Nesta janela você deve selecionar as variáveis (Idade e Renda) que vai usar e clicar em Next. Observe a imagem. (Lembre-se, estas variáveis são definidas no arquivo.jar que está no drive e você já deve ter importado no tutorial anterior).</li>
+<li>O mesmo se repete na proóxima janela (Action). (Na ação iremos usar a variável que acabamos de criar).</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/59.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/60.png" /></p>
+<hr />
+<ul>
+<li>Após configurar as variáveis, a janela de criação de árvores de decisão irá aparecer. </li>
+<li>Basta clicar com o botão direito do mouse sobre o ícone do Start para iniciar a construção da Decision Tree.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/61.png" /></p>
+<hr />
+<ul>
+<li>Após clicar com o botão direito do mouse sobre o ícone Start, ir na opção <strong>Insert Split</strong></li>
+<li>Selecionar a primeira variável que irá segmentar nossos clientes: Idade (AGE). </li>
+<li>Neste momento, iremos segmentar da seguinte forma: Clientes menores de 18 (Negado) e clientes maiores que 18 (Aprovado).<ul>
+<li>Basta digitar 18 e clicar em Add. Depois clicar em Apply. </li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/62.png" /></p>
+<hr />
+<ul>
+<li>Iremos criar nossa segunda segmentação: clientes com renda inferior a R$ 1000 serão considerados Negado. <ul>
+<li>Basta clicar com o botão direito do mouse sobre a próxima área que queremos segmentar e ir na opção <strong>Insert Split</strong> </li>
+<li>Neste caso, queremos segmentar os clientes que têm 18 anos ou mais, pois os menores de idade já foram classificados como Negado. </li>
+<li>Observe a imagem a seguir:</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/63.png" /></p>
+<hr />
+<ul>
+<li>Na tela de Insert Split, selecione a variável renda.</li>
+<li>Coloque o valor de 1000 e clique em ADD. Depois clique em Apply.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/64.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/65.png" /></p>
+<hr />
+<ul>
+<li>Por fim, iremos atribuir os valores de Negado e Aprovado à nossa árvore de decisão. <ul>
+<li>Clicar com o botão direito do mouse sobre o primeiro valor a ser acionado. </li>
+<li>Selecionar a opção Assign Value e ecolher a ação Negado. </li>
+<li>Repetir o processo para os outros três pontos. </li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/66.png" /></p>
+<hr />
+<ul>
+<li>Sua Decision Tree deverá ficar como na imagem abaixo. Agora basta fazer o <strong>check-in</strong> para salvar as alterações.</li>
+<li>Clicar em Fluxo_Principal para acrescentar nossa árvore de decisão.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/67.png" /></p>
+<hr />
+</li>
+<li>
+<p>Adicionando a Decision Tree no Fluxo.</p>
+<ul>
+<li>Após clicar no Fluxo_Principal, você deve clicar em check-out e adicionar um Task, como ilustrado na imagem abaixo.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/68.png" /></p>
+<hr />
+<ul>
+<li>Após adicionar a Task, você deve escolher um nome, chamar a Decision Tree que acabamos de criar e clicar em Apply. (Fazer o <strong>check-in</strong>)</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/69.png" /></p>
+<hr />
+</li>
+</ol>
+<h2 id="function">Function</h2>
+<p>Neste tópico, iremos criar uma função para que de fato nossa Decision Tree criada no tópico anterior tenha um efeito de output. </p>
+<p>Até o momento, nossa Decision Tree divide o grupo de clientes em Aprovados e Negados, conforme sua Idade e Renda.</p>
+<p>Agora iremos criar uma função que recebe estes valores (Aprovado ou Reprovado) e armazena na variável DECISION. Lembrando que esta variável foi criada no arquivo.jar. (Em breve farei mais tutoriais sobre este arquivo).</p>
+<ol>
+<li>
+<p>Criando a função.</p>
+<ul>
+<li>Clicar na pasta Function que criamos e em seguida ir em NEW - Function.</li>
+<li>Colocar o nome de FunctionNegadosAprovados.</li>
+<li>Nota-se que o nome da função é semelhante ao da árvore de decisão (TreeNegadosAprovados). Isso facilita a compreensão das partes. </li>
+<li>Clique na opção [Switch to Rule Builder] para acionar o modo de edição simples de código. Depois clique no editor de código. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/70.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/71.png" /></p>
+<hr />
+<ul>
+<li>No editor de código, escolha a variável que deseja armazenar os outputs da árvore de decisão. </li>
+<li>Para este tutorial, utilizaremos a variável Decision. </li>
+<li>Escolher a variável que vai armazenar no nosso output.</li>
+<li>O editor funciona no modo de arrasta e solta. Você clica na variável, arrasta até o lugar e solta. </li>
+<li>Clique em Done para finalizar. </li>
+<li>Faça o <strong>check-in</strong></li>
+<li>Observe as imagens abaixo como exemplo:</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/72.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/73.png" /></p>
+<hr />
+</li>
+<li>
+<p>Adicionando a função ao Fluxo_Principal:</p>
+<ul>
+<li>O processo é semelhante ao adicionar a árvore de decisão no fluxo. </li>
+<li>Após clicar no Fluxo_Principal, você deve clicar em check-out e adicionar uma Task.</li>
+<li>Após adicionar a Task (depois da Task de árvore de decisão) você deve Escolher um nome, chamar a Decision Tree que acabamos de criar e clicar em Apply. (Fazer o <strong>check-in</strong>)</li>
+<li>Observe a imagem a seguir:</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/74.png" /></p>
+<hr />
+</li>
+</ol>
+<h2 id="testing">Testing</h2>
+<p>Até o momento, criamos apenas uma regra de negócio. Nosso programa deve analisar a idade e renda do cliente e retornar a sua aprovação ou reprovação. </p>
+<p>Para saber se tudo está correto até o momento, iremos fazer um teste. </p>
+<ol>
+<li>
+<p>Gerando arquivo de teste. </p>
+<ul>
+<li>Clicar na aba Testar e ir em Decision Testing. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/75.png" /></p>
+<hr />
+<ul>
+<li>Selecionar a opção Test.</li>
+<li>Selecionar a opção Entrypoint(DecisionInput): DecisionInput</li>
+<li>Ir em <strong>CONFIGURE DATA</strong> para gerar um modelo de teste. </li>
+<li>Para gerar o modelo de teste, iremos utilizar as variáveis Age e Renda no input e Decision no Result. </li>
+<li>Clicar em Download para concluir. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/76.png" /></p>
+<hr />
+<ul>
+<li>Ir na sua pasta de Downloads e abrir, no notepad++, o arquivo (inputdata.csv) que foi gerado.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/77.png" /></p>
+<hr />
+<ul>
+<li>Você deve inserir as informações para testar:<ul>
+<li>Obs: os valores Result-State e Result-Detail não devem ser preenchidos, mas as vírgulas devem ser mantidas. O valor de result:DECISION também não deve ser preenchido. </li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Seguir o exemplo abaixo:</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/78.png" /></p>
+<hr />
+<ul>
+<li>Salvar o arquivo na pasta <strong>C:\Blaze\projetos\unit-tests</strong>.</li>
+<li>Caso não tenha esta pasta, basta criá-la e mover o arquivo para dentro dela. </li>
+</ul>
+<hr />
+</li>
+<li>
+<p>Testando a aplicação.</p>
+<ul>
+<li>Agora que você tem o arquivo de teste com os dados a serem testados, basta clicar em UPLOAD DATA FILE e selecionar o arquivo de teste que criamos.</li>
+<li>Lembrando que o arquivo deve estar na pasta C:\Blaze\projetos\unit-tests. O arquivo se chama <strong>inputdata.csv</strong></li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/79.png" /></p>
+<hr />
+<ul>
+<li>Ao carregar o arquivo, basta clicar em RUN TEST e esperar pelos resultados.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/80.png" /></p>
+<hr />
+</li>
+<li>
+<p>Resultados do teste.</p>
+<ul>
+<li>Como podemos observar, todos os testes foram bem sucedidos. Todos os clientes que tinham menos de 18 anos e/ou renda inferior a R$ 1000 foram taxados como Negados e os demais como Aprovados. </li>
+<li>Esta foi uma simulação simples de aprovação para alugar carros. Muitas variáveis podem ser levadas em consideração. Modelos de decisão mais avançados serão discutidos nas próximas publicações. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/81.png" /></p>
+<hr />
+</li>
+</ol>
+<h2 id="mais-utoriais-blaze">Mais utoriais - Blaze</h2>
+<ul>
+<li>
+<p>1 Introdução ao Blaze <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze01/');">Blaze - Instalações</button></p>
+</li>
+<li>
+<p>3 Deploy no Tomcat - <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze02/');">Blaze - Deploy</button></p>
+</li>
+<li>
+<p>4 Tópicos avançados - Em construção.</p>
+</li>
+</ul>
+<p>Elaborado por:
+<br/>
+Jonathan Cardoso Lopes Domingos
+<br/>
+21/10/2019</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

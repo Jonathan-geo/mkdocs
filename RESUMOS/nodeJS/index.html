@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>NodeJS - JONATHAN</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../css/extra_css.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">JONATHAN</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BLAZE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../BLAZE/blaze01/" class="dropdown-item">Blaze - Instalações</a>
+</li>
+                                    
+<li>
+    <a href="../../BLAZE/blaze02/" class="dropdown-item">Blaze - Utilização</a>
+</li>
+                                    
+<li>
+    <a href="../../BLAZE/blaze03/" class="dropdown-item">Blaze - Deploy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DMPS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DMPS/dmps01/" class="dropdown-item">TUTORIAL 01</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATA-SCIENCE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pythonDados/" class="dropdown-item">PythonDados</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pyScrap4/" class="dropdown-item">Web Screping</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/perceptron/" class="dropdown-item">Perceptron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATABASES <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATABASES/mysql/" class="dropdown-item">MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../DATABASES/mongoDB/" class="dropdown-item">MongoDB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">RESUMOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">NodeJS</a>
+</li>
+                                    
+<li>
+    <a href="../ruby/" class="dropdown-item">Ruby</a>
+</li>
+                                    
+<li>
+    <a href="../css/" class="dropdown-item">CSS</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../DATABASES/mongoDB/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../ruby/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#nodejs" class="nav-link">NodeJS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#instalacao-e-configuracoes" class="nav-link">Instalação e Configurações</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#iniciando-o-projeto-node" class="nav-link">Iniciando o projeto NODE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mongo-db-online" class="nav-link">MONGO DB online</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#testarmetodos" class="nav-link">TestarMétodos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="nodejs">NodeJS</h1>
+<div class="panel panel-info">
+AINDA EM CONSTRUÇÃO
+</div>
+
+<p>Documentação pessoal de consulta rápida ao NodeJs.</p>
+<h1 id="instalacao-e-configuracoes">Instalação e Configurações</h1>
+<p>Estas configurações foram utilizadas para criar um app no modelo rest, foi utilizado: o NodeJs, o Gerenciador de pacotes Yarn e o sistema operacional Ubuntu.</p>
+<h3>1. NodeJs</h3>
+
+<p>a) Installing Node.js via package manager </p>
+<p>https://github.com/nodesource/distributions/blob/master/README.md</p>
+<p>b) Install</p>
+<pre><code class="language-bash"># Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+</code></pre>
+<pre><code>&gt; node -v = v10.16.0
+</code></pre>
+<h3>2. NVM</h3>
+<p>Node Version Manager: Controlador de versões Node</p>
+<p>a) https://github.com/nvm-sh/nvm</p>
+<pre><code>&gt; source ~/.profile
+
+&gt; nvm ls-remote
+
+&gt; nvm install 10.15.1
+
+&gt; node -v
+</code></pre>
+<h3>3. NPM</h3>
+<p>Node Package Manager: Controlador de pacotes Node</p>
+<p>a) https://www.npmjs.com/</p>
+<pre><code>&gt; npm -v = 6.9.0
+</code></pre>
+<h3>4. Yarn</h3>
+<p>Controlador de pacotes Node (substituto do NPM)</p>
+<p>a)  Install</p>
+<pre><code>curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update
+sudo apt-get install --no-install-recommends yarn (Caso já tenha instalado o node)
+</code></pre>
+<pre><code>&gt; yarn -v = 1.16.0
+</code></pre>
+<p>c) Ironicamente podemos instalar o yarn usando o npm</p>
+<pre><code>&gt; npm install -g yarn
+</code></pre>
+<p>d) Usando o yarn </p>
+<pre><code>&gt; yarn init (Logo abaixo descrevo melhor como iniciar um projeto)
+</code></pre>
+<p><strong>DependenciasYarn</strong></p>
+<p>Segue logo abaixo algumas dependencias do yarn e seus respctivos modos de instalação.</p>
+<pre><code>  },
+  &quot;dependencies&quot;: {
+    &quot;cors&quot;: &quot;^2.8.5&quot;,
+    &quot;express&quot;: &quot;^4.17.1&quot;,
+    &quot;mongoose&quot;: &quot;^5.6.0&quot;,
+    &quot;multer&quot;: &quot;^1.4.1&quot;,
+    &quot;nodemon&quot;: &quot;^1.19.1&quot;,
+    &quot;sharp&quot;: &quot;^0.22.1&quot;,
+    &quot;socket.io&quot;: &quot;^2.2.0&quot;
+  }
+
+</code></pre>
+<p><strong>Express</strong></p>
+<p>O Express é um framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto robusto de recursos para aplicativos web e móvel.</p>
+<pre><code>$yarn add express
+</code></pre>
+<p><strong>Multer</strong></p>
+<p>Multer: biblioteca que lida com corpos multPartForm-data (images) e já automatiza o processo de upload de arquivos.
+cd backend(Pasta que esta meu package.json)</p>
+<pre><code>$yarn add multer
+</code></pre>
+<p><strong>Sharp</strong></p>
+<p>Sharp: Permite manipular imagens size.</p>
+<pre><code>$yarn add sharp
+</code></pre>
+<p><strong>Nodemon</strong></p>
+<pre><code>$yarn add nodemon
+</code></pre>
+<p>Com o nodemon, posso criar um script dev no meu arquivo package.json.</p>
+<pre><code>{
+  &quot;name&quot;: &quot;backend&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;nodemon src/index.js&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;express&quot;: &quot;^4.17.1&quot;,
+    &quot;nodemon&quot;: &quot;^1.19.1&quot;
+  }
+}
+</code></pre>
+<p>Isso permite o reload do servidor.
+Agora passo a digitar( $yarn dev )no terminal.</p>
+<p><strong>Mongoose</strong></p>
+<p>Esta bibllioteca permite utilizar o mongoDb em nossa aplicação com base em node. </p>
+<pre><code>$yarn add mongoose
+</code></pre>
+<p><strong>cors</strong></p>
+<p>Permite que meu backend seja acessível pelo frontend react, 
+mesmo estando em domínios diferentes.</p>
+<pre><code>$yarn add cors
+</code></pre>
+<p><strong>Socket io</strong></p>
+<p>Para usar outro protocolo. O protocolo web socket. </p>
+<pre><code>$yarn add socket.io
+</code></pre>
+<h2 id="iniciando-o-projeto-node">Iniciando o projeto NODE</h2>
+<p>No terminal executar o Yarn para dar "um start" no projeto. Este comando ira criar um package.json</p>
+<pre><code>$yarn init -y
+</code></pre>
+<p><strong>Rodar o projeto</strong></p>
+<p>No terminal digitar:</p>
+<pre><code>$node src/index.js
+</code></pre>
+<p>Caso tenha instalado o Nodemon, basta digitar:</p>
+<pre><code>$yarn dev
+</code></pre>
+<h2 id="mongo-db-online">MONGO DB online</h2>
+<p>https://www.mongodb.com/cloud/atlas</p>
+<p>a) create cluster </p>
+<p>b) clicar em conect</p>
+<p>c) conect you aplication</p>
+<p>d) copiar o link de conecção.</p>
+<h2 id="testarmetodos">TestarMétodos</h2>
+<p>insomnia:
+https://insomnia.rest/</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

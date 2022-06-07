@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Ruby - JONATHAN</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../css/extra_css.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">JONATHAN</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BLAZE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../BLAZE/blaze01/" class="dropdown-item">Blaze - Instalações</a>
+</li>
+                                    
+<li>
+    <a href="../../BLAZE/blaze02/" class="dropdown-item">Blaze - Utilização</a>
+</li>
+                                    
+<li>
+    <a href="../../BLAZE/blaze03/" class="dropdown-item">Blaze - Deploy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DMPS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DMPS/dmps01/" class="dropdown-item">TUTORIAL 01</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATA-SCIENCE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pythonDados/" class="dropdown-item">PythonDados</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pyScrap4/" class="dropdown-item">Web Screping</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/perceptron/" class="dropdown-item">Perceptron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATABASES <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATABASES/mysql/" class="dropdown-item">MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../DATABASES/mongoDB/" class="dropdown-item">MongoDB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">RESUMOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../nodeJS/" class="dropdown-item">NodeJS</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Ruby</a>
+</li>
+                                    
+<li>
+    <a href="../css/" class="dropdown-item">CSS</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../nodeJS/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../css/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#ruby" class="nav-link">Ruby</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#gem" class="nav-link">GEM</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#require" class="nav-link">Require</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#my-ruby-cheat-sheet" class="nav-link">My Ruby Cheat Sheet</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#strings" class="nav-link">STRINGS</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#operador-ternario" class="nav-link">Operador Ternário</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#get" class="nav-link">GET</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#chomp-puts" class="nav-link">CHOMP PUTS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#interpolacao" class="nav-link">Interpolação</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#array-metodos" class="nav-link">Array + Métodos</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#detect-select-grep-reject-uniq" class="nav-link">Detect - Select - Grep - Reject - Uniq</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#hash" class="nav-link">Hash</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#funcao" class="nav-link">Função</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#blocos-e-iteracoes" class="nav-link">Blocos e Iterações</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#classe" class="nav-link">Classe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="ruby">Ruby</h1>
+<blockquote>
+<p>O Ruby é simples na aparência, mas muito complexo no interior, tal como o corpo humano - Yukihiro Matsumoto</p>
+</blockquote>
+<p>Ruby é uma linguagem de programação interpretada multiparadigma, de tipagem dinâmica e forte, com gerenciamento de memória automático, originalmente planejada e desenvolvida no Japão em 1995, por Yukihiro "Matz" Matsumoto, para ser usada como linguagem de script. Matz queria uma linguagem de script que fosse mais poderosa do que Perl, e mais orientada a objetos do que Python. Ruby suporta programação funcional, orientada a objetos, imperativa e reflexiva.</p>
+<p><strong>Instalando o Ruby</strong></p>
+<p>Em sistemas Unix como Ubuntu, você pode abrir o Terminal e digitar o comando ​</p>
+<pre><code>apt-get install ruby​
+</code></pre>
+<p>Ou pode usar um gerenciador de versão para a instalação como o ​ RVM​. Para isso recomento utilizar o tutorial da própria documentação do <a href="https://www.ruby-lang.org/en/downloads/" target="_blank">[RUBY]</a> ou utilizar a documentação do <a href="https://rvm.io/" target="_blank">[RMV]</a>. </p>
+<h1 id="gem">GEM</h1>
+<pre><code class="language-Ruby">gem install os
+gem uninstall os
+gem list
+</code></pre>
+<p><strong>Instalando gem com o Bundle</strong></p>
+<ol>
+<li>Instalar o Bundle</li>
+</ol>
+<pre><code class="language-Ruby">gem install bundler #(bundler é tipo um estalador de gens)
+</code></pre>
+<ol>
+<li>Criar um aquivo GemFile sem extenção e colocar a lista de gens que quero.</li>
+</ol>
+<pre><code>source 'https://rubygems.org'
+
+gem 'os'
+gem 'http', '-&gt; 3.3'
+</code></pre>
+<ol>
+<li>Depois rodar bundle no terminal, na pasta que esta a lista criada.</li>
+</ol>
+<blockquote>
+<p>$bundle</p>
+</blockquote>
+<p>Este comando ira procurar por uma lista de gem e instala-las.</p>
+<h1 id="require">Require</h1>
+<pre><code class="language-Ruby">require 'os'
+
+def myOS
+  if OS.windows?
+    &quot;seu sistema é windows&quot;
+  elsif OS.linux?
+    &quot;seu sistema é linux&quot;
+  else
+    &quot;não identificamos seu OS&quot;
+  end
+end
+
+puts &quot;O seu PC possui #{OS.cpu_count} cores, é #{OS.bits} bits e #{myOS}&quot;
+</code></pre>
+<h1 id="my-ruby-cheat-sheet">My Ruby Cheat Sheet</h1>
+<p>[Ainda em construção]</p>
+<p>Esta é minha documentação para consulta de comandos em Ruby. Foi elaborada com base em comandos criados por mim e com base em consulta nos seguintes endereços:</p>
+<p>https://www.devmedia.com.br/introducao-ao-recursos-basicos-da-linguagem-ruby/31504</p>
+<p>https://github.com/albertoleal/prazer--ruby/blob/master/trabalhando-com-strings.mkdn</p>
+<p>https://www.ruby-lang.org/pt/documentation/quickstart/</p>
+<p>http://www.akitaonrails.com/2012/06/29/algumas-dicas-da-linguagem-ruby</p>
+<p>https://medium.com/trainingcenter/ruby-101-o-b%C3%A1sico-260e8605962</p>
+<pre><code class="language-Ruby">#Shell Interativo
+$ irb
+</code></pre>
+<h1 id="strings">STRINGS</h1>
+<p>Exemplo de utilização do comando puts com aspas simples e aspas duplas (strings)</p>
+<pre><code class="language-Ruby">In:  puts 'Hoje o sol\n\não apareceu\né o fim!'
+Out: Hoje o sol\n\não apareceu\né o fim!
+</code></pre>
+<pre><code class="language-Ruby">In:  puts &quot;Hoje o sol\n\tnão apareceu\né o fim!&quot;
+Out: hoje o sol
+        não apareceu
+     é o fim!
+</code></pre>
+<pre><code class="language-Ruby">#Gerando Strings 
+
+In: s1 = &quot;Isso é uma string&quot;
+out: &quot;Isso é uma string&quot; 
+
+In: s2 = 'Isso, também, é uma string'
+out: &quot;Isso, também, é uma string&quot; 
+
+In: s3 = %q[Mais uma forma de se criar uma string]
+Out: &quot;Mais uma forma de se criar uma string&quot; 
+
+In: s4 = %Q[Outra forma de se criar uma string]
+Out: &quot;Outra forma de se criar uma string&quot; 
+
+#Substituindo Strings
+
+#sub
+In: str = &quot;Olá, meu nome é Jonathan&quot;
+In: str.sub(/Jonathan/, &quot;Leda&quot;)
+Out: &quot;Olá, meu nome é Leda&quot;
+
+#gsub
+In: str = &quot;Olá, meu nome é Jonathan, caro amigo Jonathan&quot;
+In: str.gsub(/Jonathan/, &quot;Leda&quot;)
+Out: &quot;Olá, meu nome é Leda, caro amigo Leda&quot;
+
+#Pesquisando Strings
+In: str = &quot;Hoje o sol não apareceu, é o fim!&quot;
+In: str[7,3]
+Out: &quot;sol&quot;
+
+#Buscando a posição da String
+#o i foi usado para tornar a busca não case-sensitive
+In: str = &quot;Hoje o Sol não Apareceu, é o fim!&quot;
+In: str.index(/apareceu/i)
+Out: 15
+
+#Scam
+In: str = &quot;Hoje a noite não tem luar&quot;
+In: str.scan(/\w/)
+Out: [&quot;H&quot;, &quot;o&quot;, &quot;j&quot;, &quot;e&quot;, &quot;a&quot;, &quot;n&quot;, &quot;o&quot;, &quot;i&quot;, &quot;t&quot;, &quot;e&quot;, &quot;n&quot;, &quot;o&quot;, &quot;t&quot;, &quot;e&quot;, &quot;m&quot;, &quot;l&quot;, &quot;u&quot;, &quot;a&quot;, &quot;r&quot;] 
+
+In: str.scan(/\w+/)
+Out: [&quot;Hoje&quot;, &quot;a&quot;, &quot;noite&quot;, &quot;n&quot;, &quot;o&quot;, &quot;tem&quot;, &quot;luar&quot;] 
+
+#Split
+In: str.split
+Out: [&quot;Hoje&quot;, &quot;a&quot;, &quot;noite&quot;, &quot;não&quot;, &quot;tem&quot;, &quot;luar&quot;] 
+
+#Espaços em Strings
+In: str = 'Jonathan Cardoso'
+In: str.ljust(20)
+Out: &quot;Jonathan Cardoso    &quot;
+
+In :str.rjust(20)
+Out:&quot;    Jonathan Cardoso&quot;
+
+In: str.center(20)
+Out: &quot;  Jonathan Cardoso  &quot;
+
+
+#Métodos em Strings
+In: 'jonathan'.upcase
+Out: &quot;JONATHAN&quot;
+
+In:'JoNaThan'.capitalize
+Out: &quot;Jonathan&quot; 
+
+In: 'JONATHAN'.downcase
+Out: &quot;jonathan&quot;
+
+In: 'JoNaThaN'.swapcase
+Out: &quot;jOnAtHAn&quot;
+
+In: 'JONATHAN'.length  #'JONATHAN'.size
+Out: 8 
+
+In: 'JJooNnaTTthan'.squeeze
+ =&gt; &quot;JoNnaTthan&quot; #Remove caracters duplicados
+
+In: 'Jonathan'.reverse
+Out: &quot;nahtanoJ&quot;
+
+In: 'Jonathan Cardoso'.split(&quot;&quot;).reverse.join(&quot;&quot;)
+Out: &quot;osodraC nahtanoJ&quot;
+
+In: 'Jonathan'.count('a')
+Out: 2
+
+In: &quot;I have white space&quot;.delete(' ') #deletar os espaços
+Out: &quot;Ihavewhitespace&quot;
+</code></pre>
+<p>Para converter tipos, devemos usar os métodos to_i, to_f e to_s.</p>
+<pre><code class="language-Ruby">In: &quot;10&quot;.to_i   #Transforma em Integer
+Out: 10
+
+In: &quot;10.23&quot;.to_F   #Transforma em Float
+Out: 10.23
+
+In: 12.to_s   #Transforma em String
+Out: &quot;12&quot;
+
+</code></pre>
+<h2 id="operador-ternario">Operador Ternário</h2>
+<pre><code class="language-Ruby">def no_limite?
+  saldo == saldo + limite ? false : true
+end
+p no_limite?
+
+</code></pre>
+<h2 id="get">GET</h2>
+<pre><code class="language-Ruby">puts &quot;Qual é o seu nome?&quot;
+nome = gets
+print &quot;Seja bem vindo {nome}&quot;
+</code></pre>
+<h2 id="chomp-puts">CHOMP PUTS</h2>
+<pre><code class="language-Ruby">In: gets  # Testo digitado: Um texto qualquer
+Out: &quot;Um texto qualquer\n&quot;
+
+In: gets.chomp # Testo digitado: Um texto qualquer
+Out: &quot;Um texto qualquer&quot;
+</code></pre>
+<h2 id="interpolacao">Interpolação</h2>
+<p>Nos exemplos abaixo foi utilizado o construtor #{}, que serve para substituições de varáveis. Essa técnica é conhecida como interpolation. Note que em ambos os exemplos foram utilizados as aspas duplas. </p>
+<pre><code class="language-Ruby">In: &quot;Agora é #{Time.now}&quot;
+Out: &quot;Agora é 2019-06-27 19:24:27 -0300&quot; 
+
+In: nome = 'jonathan'
+In: puts &quot;Meu nome é:  #{nome}&quot;
+Out: &quot;Meu nome é:  jonathan&quot; 
+</code></pre>
+<h1 id="array-metodos">Array + Métodos</h1>
+<pre><code class="language-Ruby"># array vazio
+var1 = []
+
+# um array armazenando três strings
+var1 = ['casa', 'cavalo', 15]
+var1[0] #retorna casa
+var1[2] #retorno 15
+
+# Tipos de objetos no Array, inclusive array
+var2 = [80.5, 'lua', 10 ,[true, false]]
+var2[3][1] #retorno false
+
+#Adicionar objetos
+var2[4] = 'sol'
+var2 &lt;&lt; 'casa'
+var2 + ['vento']
+
+#métodos da classe array
+var3 = [15, 24, 189, 1]
+var3.sort #orden a matrix
+var3.length #retorno 4
+var3.first ou .first 3 #retorno 15 e no caso do .first 3 retorna os 3 primeiros valores.
+var3.last #retorno 1
+var3.pop #retorno 1 porém o array perde este valor var3 = [15, 24, 189]
+var3.push(15) #Adiciona o 15 no final do array
+var3.take 3 #retorna os 3 primeiros valores
+
+-----------------------------------------------------------------
+
+string1 = [&quot;some&quot;, &quot;thing&quot;]
+string2 = [&quot;another&quot;, &quot;thing&quot;]
+integer1 = [1, 2, 3, 4]
+integer2 = [5, 8, 11, 15]
+mix1 = [1, 2, ['foo', 'bar']]
+mix2 = [[1, 2], ['foo', 'bar']]
+m10 = [[&quot;a&quot;, &quot;b&quot;], [&quot;c&quot;, &quot;d&quot;]]
+m20 = [[1], [2]]
+
+
+
+print integer1.insert(integer1.length, *integer2)
+[1, 2, 3, 4, 5, 8, 11, 15]
+
+
+print mix1.flatten!
+[1, 2, &quot;foo&quot;, &quot;bar&quot;]
+
+print mix2.flatten!
+[1, 2, &quot;foo&quot;, &quot;bar&quot;]
+
+print (mix1 &lt;&lt; mix2).flatten!
+[1, 2, &quot;foo&quot;, &quot;bar&quot;, 1, 2, &quot;foo&quot;, &quot;bar&quot;]
+
+
+print string1.push(string2.flatten!)
+[&quot;some&quot;, &quot;thing&quot;, nil]
+
+---------------------------------------
+print string1 + string2
+print string1.concat string2
+[&quot;some&quot;, &quot;thing&quot;, &quot;another&quot;, &quot;thing&quot;]
+
+print string1|integer1
+[&quot;some&quot;, &quot;thing&quot;, 1, 2, 3, 4]
+
+print integer1 |= string1
+[1, 2, 3, 4, &quot;some&quot;, &quot;thing&quot;]
+
+print integer1 += string1
+[1, 2, 3, 4, &quot;some&quot;, &quot;thing&quot;]
+
+--------------------------------------------
+
+print string1.push(*mix1)
+[&quot;some&quot;, &quot;thing&quot;, 1, 2, [&quot;foo&quot;, &quot;bar&quot;]]
+print string1.unshift(*mix1)
+[1, 2, [&quot;foo&quot;, &quot;bar&quot;], &quot;some&quot;, &quot;thing&quot;]
+
+</code></pre>
+<h2 id="detect-select-grep-reject-uniq">Detect - Select - Grep - Reject - Uniq</h2>
+<pre><code class="language-Ruby">numbers = [1, 2, 3, 4, 5, 6]
+
+# detect é o mesmo que find
+#recupera um elemento com base em um critério
+detectEle = numbers.detect {|elem| elem % 2 == 0} #retorno o 2 (primeiro divisivel)
+
+# select é o mesmo que find_all
+# recupera todos os elementos com base em um critério
+selectEle = numbers.select {|elem| elem % 2 == 0} #retorna os divisiveis por 2
+divTresCinco = numbers.select {|elem| elem % valor1 == 0 and elem % valor2 == 0} #com operador lógico
+
+# grep
+# recupera todos os elementos encontrados para o pattern passado
+# em outras palavras recupera os elementos em um intervalo (range)
+grepEle = numbers.grep(4..6) #retorna do 4 ao 6.
+
+# Reject
+# retira os elementos de um array, segundo uma condição
+rejectEle = numbers.reject {|elem| elem % 2 == 0} #retira os divisiveis por 2
+
+
+# Uniq
+# removo elementos duplicados de um array
+num = [1, 2, 3, 3, 4, 5, 2, 6]
+uniqEle = num.uniq
+</code></pre>
+<h1 id="hash">Hash</h1>
+<pre><code class="language-Ruby">meu_hash = {nome: &quot;Jonathan&quot;, idade: 31, curso: &quot;Mat&quot;}
+
+meu_hash[:nome] #&quot;Jonathan&quot;
+meu_hash.first  #[:nome, &quot;Jonathan&quot;]
+meu_hash.keys   #[:nome, :idade, :curso]
+meu_hash [:curso] = &quot;Geo&quot; #substitui Mat
+
+</code></pre>
+<h1 id="funcao">Função</h1>
+<pre><code class="language-Ruby">
+#Divisão
+def divisao (primeiro_numero, segundo_numero)
+    if segundo_numero == 0 
+        return 'Não é possível dividir por zero'
+    else 
+        return primeiro_numero / segundo_numero
+    end
+end
+
+divisao(10, 5)
+
+
+
+#Retornar a soma das vogais
+
+def vowels_count(frase)
+    vogais = frase.downcase.count &quot;aãeiou&quot;
+    puts vogais
+end
+
+vowels_count('A casa não tem teto')
+
+#Retornar a soma das consoantes
+
+def consonants_count(frase)
+    texto = frase.delete(' ')
+    txt = texto.downcase.count &quot;aãeiou&quot;
+    result = texto.length - txt
+    puts result
+end
+
+consonants_count(&quot;A lua nao&quot;)
+
+</code></pre>
+<h1 id="blocos-e-iteracoes">Blocos e Iterações</h1>
+<pre><code class="language-Ruby">#Each
+
+#(do end): é um bloco de código. A variável lang se refere a cada item no array a medida que ele é iterado.
+
+--------------------------------------------
+
+itens = ['Espada', 'Cajado', 'Machado']
+
+itens.each do |lang|
+   puts 'Eu uso ' + lang + '!'
+   puts 'E você?'
+end
+
+'''
+Eu uso Espada!
+E você?
+Eu uso Cajado!
+E você?
+Eu uso Machado!
+E você?
+'''
+
+In: 3.times { puts &quot;Olá!&quot; }
+Out: Olá!
+Out: Olá!
+Out: Olá!
+
+--------------------------------------------
+
+In: numeros = [1, 2, 3] 
+In: numeros.each {|numero| puts numero} 
+Out:
+1 
+2 
+3 
+=&gt; [1, 2, 3] 
+
+--------------------------------------------
+
+In: numeros = [1, 2, 3] 
+In: numeros.each do |numero| 
+        puts numero 
+    end 
+Out:
+1 
+2 
+3 
+ =&gt; [1, 2, 3]  
+
+--------------------------------------------
+
+In: numeros = [1, 2, 3] 
+In: numeros.each_with_index do |numero, index| 
+        puts &quot;Valor: #{numero}, Índice: #{index}&quot;  
+    end 
+Out:
+Valor: 1, Índice: 0 
+Valor: 2, Índice: 1 
+Valor: 3, Índice: 2 
+ =&gt; [1, 2, 3]
+
+--------------------------------------------
+
+def self.multiplica_indices(array)
+  array.collect!.with_index { |x, i| x * i }
+  return array
+end
+
+--------------------------------------------
+
+def tabuada(arg1)
+  total = []
+  (1..arg1).map do |i|
+    valores = []
+    (1..10).map do |e|
+      valores &lt;&lt; e * i
+    end
+    total &lt;&lt; valores
+  end
+  total
+end
+
+</code></pre>
+<h1 id="classe">Classe</h1>
+<pre><code class="language-Ruby">class Monstro
+  attr_accessor :energia, :ataque, :vivo
+
+  def initialize
+    self.energia = Random.rand(10) + 6
+    self.vivo = true
+  end
+
+  def bater(alvo)
+    if alvo.esta_vivo?
+      self.ataque = Random.rand(5)
+      puts &quot;O dano do monstro foi #{self.ataque}&quot;
+      alvo.energia -= self.ataque
+    else
+      puts &quot;Você está morto!&quot;
+    end
+  end
+
+  def esta_vivo?
+    true if self.energia &gt; 0
+  end
+end
+
+
+
+
+
+class Heroi
+  attr_accessor :energia, :ataque, :vivo, :numero_de_mortos
+
+  def initialize
+    self.energia = 30
+    self.vivo = true
+    self.numero_de_mortos = 0
+  end
+
+
+
+  def bater(alvo)
+    if alvo.esta_vivo?
+      self.ataque = Random.rand(5) + 3
+      puts &quot;O dano do heroi foi #{self.ataque}&quot;
+      alvo.energia -= self.ataque
+    else
+      puts &quot;O monstro está morto!\n\n&quot;
+    end
+    unless alvo.esta_vivo?
+      puts &quot;O monstro está morto!\n\n&quot;
+      self.numero_de_mortos += 1
+    end
+  end
+
+  def esta_vivo?
+    true if self.energia &gt; 0
+  end
+
+end
+
+--------------------------------------------
+
+class Conta
+  attr_accessor :titular, :limite, :saldo, :numero
+
+  def initialize(numero, titular, saldo, limite)
+    @numero = numero
+    @titular = titular
+    @saldo = saldo
+    @limite = limite
+  end
+
+  def sacar(valor)
+    return false if valor &gt; (@saldo + @limite)
+
+    @saldo -= valor
+    true
+  end
+
+  def depositar(valor)
+    @saldo += valor
+  end
+
+  def no_limite?
+    @saldo &lt; 0
+  end
+
+  def ==(conta)
+    conta.titular == titular &amp;&amp;
+      conta.limite == limite &amp;&amp;
+      conta.saldo == saldo &amp;&amp;
+      conta.numero == numero
+  end
+
+  def transfere(conta_destino, valor_transferencia)
+    return false unless sacar(valor_transferencia)
+
+    conta_destino.depositar(valor_transferencia)
+  end
+end
+
+
+
+
+
+
+</code></pre>
+<pre><code class="language-Ruby">
+
+</code></pre>
+<pre><code class="language-Ruby">
+
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

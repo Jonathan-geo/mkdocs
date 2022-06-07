@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>TUTORIAL 01 - JONATHAN</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../css/extra_css.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">JONATHAN</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BLAZE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../BLAZE/blaze01/" class="dropdown-item">Blaze - Instalações</a>
+</li>
+                                    
+<li>
+    <a href="../../BLAZE/blaze02/" class="dropdown-item">Blaze - Utilização</a>
+</li>
+                                    
+<li>
+    <a href="../../BLAZE/blaze03/" class="dropdown-item">Blaze - Deploy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DMPS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">TUTORIAL 01</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATA-SCIENCE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pythonDados/" class="dropdown-item">PythonDados</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pyScrap4/" class="dropdown-item">Web Screping</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/perceptron/" class="dropdown-item">Perceptron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATABASES <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATABASES/mysql/" class="dropdown-item">MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../DATABASES/mongoDB/" class="dropdown-item">MongoDB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">RESUMOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../RESUMOS/nodeJS/" class="dropdown-item">NodeJS</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/ruby/" class="dropdown-item">Ruby</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/css/" class="dropdown-item">CSS</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../BLAZE/blaze03/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../DATA-SCIENCE/pythonDados/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#dmps-tutorial-01" class="nav-link">DMPS - TUTORIAL 01</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#importando-csv-via-http" class="nav-link">Importando CSV via http.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#job-step-http-inbound" class="nav-link">Job Step: http-inbound</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#job-step-csv-unpack" class="nav-link">Job Step: csv-unpack</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#job-step-csv-normalization" class="nav-link">Job Step: csv-normalization</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#job-step-script" class="nav-link">Job Step: Script</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#job-step-visualization-store" class="nav-link">Job Step: Visualization-Store</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#job-step-visualization-store-erro" class="nav-link">Job Step: Visualization-Store (Erro)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#testando-o-fluxo" class="nav-link">Testando o Fluxo:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#visualizando-resultados" class="nav-link">Visualizando Resultados</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#corrigindo-o-erro" class="nav-link">Corrigindo o ERRO</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="dmps-tutorial-01">DMPS - TUTORIAL 01</h1>
+<p>Elaborado por:
+<br/>
+Jonathan Cardoso Lopes Domingos
+<br/>
+02/01/2020</p>
+<p>Neste exemplo iremos importar um CSV via http. O csv pertence ao site do <button onclick="window.open('http://dados.turismo.gov.br/');">Ministério do Turismo</button>. Este csv contém, dentre outras, as informações
+sobre emendas parlamentares destinadas a alguns municípios brasileiros. </p>
+<h2 id="importando-csv-via-http">Importando CSV via http.</h2>
+<p>Obs: para esta série de atividades, estarei utilizando o DMPS em uma máquina virtual na AWS.</p>
+<blockquote>
+<p>Tela inicial do login do DMPS</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/01.jpg" /></p>
+<hr />
+<blockquote>
+<p>Plataforma de Trabalho do DMPS</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/02.jpg" /></p>
+<hr />
+<blockquote>
+<p>Iniciando um novo Job</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/03.jpg" /></p>
+<hr />
+<blockquote>
+<p>Adicionar nome e descrição</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/04.jpg" /></p>
+<hr />
+<blockquote>
+<p>No lado esquerdo temos os job steps, que são estapas do nosso fluxo de decisão. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/05.jpg" /></p>
+<hr />
+<h2 id="job-step-http-inbound">Job Step: http-inbound</h2>
+<blockquote>
+<p>Para importar um CSV de um link HTTP usaremos o job step <strong>http-inbound</strong>. Basta segurar e arrastar o job para o centro da mesa de trabalho. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/06.jpg" /></p>
+<hr />
+<blockquote>
+<p>Dando um duplo clique sobre o job step, você pode começar a configurá-lo. Siga o passo das imagens abaixo. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/07.jpg" /></p>
+<hr />
+<p>Obs: O DMPS obriga você a escolher uma autenticação, mesmo que o link seja livre. 
+No nosso caso usaremos um link livre. Logo em Username e Password você poderá colocar qualquer caractere. 
+Eu optei por colocar admin no Username e admin no Password. </p>
+<p>Link para o arquivo csv:  </p>
+<blockquote>
+<p>http://dados.turismo.gov.br/images/csv/emendas/2017-emendas.csv</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/08.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/09.jpg" /></p>
+<hr />
+<blockquote>
+<p>Antes de colocar nosso próximo job step, observe o nosso dataset:</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/01tab.jpg" /></p>
+<hr />
+<blockquote>
+<p>Nossa tabela apresenta algumas inconsistências nos dados que, à medida que avançamos com
+os tutoriais, iremos corrigindo. </p>
+</blockquote>
+<h2 id="job-step-csv-unpack">Job Step: csv-unpack</h2>
+<blockquote>
+<p>Este job faz um "reconhecimento" de uma linha do nosso dataset. Assim podemos trabalhar com índices. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/10.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/11.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/11Ver.jpg" /></p>
+<hr />
+<h2 id="job-step-csv-normalization">Job Step: csv-normalization</h2>
+<blockquote>
+<p>Este job nos mostra quais coluna(dados) iremos utilizar em nosso fluxo. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/12.jpg" /></p>
+<hr />
+<p>Obs: sempre ver qual é o delimitador do seu CSV.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/13.jpg" /></p>
+<hr />
+<blockquote>
+<p>Pegando os dados da coluna 0 (Nº Convênio) do nosso dataset e atribuindo o nome de numeroConvenio.
+Neste caso, estamos dizendo para o nosso fluxo utilizar a coluna zero do nosso dataset, porém ela receberá dentro do DMPS o nome de numeroConvenio.</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/14.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/15.jpg" /></p>
+<hr />
+<blockquote>
+<p>Como vamos trabalhar com mais dados do nosso csv, iremos adicionar quantas iterações forem necessárias. Cada iteração corresponde a uma coluna que iremos trabalhar. 
+Para este job, iremos utilizar as seguintes colunas com os seguintes nomes:</p>
+</blockquote>
+<p>iterations:</p>
+<ul>
+<li>0 = numeroConvenio</li>
+<li>1 = modalidade</li>
+<li>2 = uf </li>
+<li>3 = local</li>
+<li>4 = valorGlobal</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/16.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/17.jpg" /></p>
+<hr />
+<blockquote>
+<p>Lembre-se de salvar seu progresso com frequência:</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/18.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/19.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/20.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/21.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/22.jpg" /></p>
+<hr />
+<blockquote>
+<p>Observe que no exemplo a seguir, o valorGlobal receberá o tipo de string. 
+Isso acontece por que a notação da coluna Valor Global está com um ponto 
+como separador do número (295.500). Neste caso, teremos que tratar este dado (o que faremos mais
+adiante) para que ele se torne um número inteiro. 
+Se você tentar converter sem tratar, o DMPS irá mantê-lo como string. Ele não 
+irá transformar o arquivo em Float pois tem dados que possuem dois pontos (1.239.346).</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/23.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/24.jpg" /></p>
+<hr />
+<h2 id="job-step-script">Job Step: Script</h2>
+<blockquote>
+<p>Neste job step iremos tratar o problema com os dados valorGlobal. Iremos retirar o ponto e transformar 
+o tipo de string para integer. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/25.jpg" /></p>
+<hr />
+<blockquote>
+<p>Você pode escolher entre Python e JavaScript. Eu recomendo utilizar o Python, 
+reza a lenda que ele é infinitas vezes melhor que JS. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/26.jpg" /></p>
+<hr />
+<blockquote>
+<p>Selecione a variável que iremos tratar.</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/27.jpg" /></p>
+<hr />
+<blockquote>
+<p>Nomeie uma nova variável de saída. 
+Neste caso, a variável valorGlobal do tipo 
+string irá sair como novoValorGlobal do tipo
+integer. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/28.jpg" /></p>
+<hr />
+<blockquote>
+<p>Criando um código python para retirar as inconsistências dos dados. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/29.jpg" /></p>
+<hr />
+<blockquote>
+<p>Lembre-se: SALVAR</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/30.jpg" /></p>
+<hr />
+<h2 id="job-step-visualization-store">Job Step: Visualization-Store</h2>
+<blockquote>
+<p>Agora iremos colocar um job step que permite visualizar os
+resultados do nosso processo de streaming de dados. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/31.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/32.jpg" /></p>
+<hr />
+<h2 id="job-step-visualization-store-erro">Job Step: Visualization-Store (Erro)</h2>
+<blockquote>
+<p>Iremos adicionar outro visualization-store para as saídas de erros. 
+Todo job que possui códigos está sujeito a uma série de erros, logo
+a visualization de erro nos permite ter um log de erros. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/33.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/34.jpg" /></p>
+<hr />
+<blockquote>
+<p>Antes de testar nosso job, iremos fazer um filtro das variáveis que
+queremos que siga o nosso fluxo. </p>
+<p>Dê um duplo clique no fluxo (SHUFFLE) que está entre tratamentoDados e resultados
+e desmarque as seguintes opções.  </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/37.jpg" /></p>
+<hr />
+<h2 id="testando-o-fluxo">Testando o Fluxo:</h2>
+<blockquote>
+<p>Após todo o processo de construção do fluxo, faremos um teste: 
+clicar em salvar, verificar o código e por fim clicar em enviar. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/35.jpg" /></p>
+<hr />
+<blockquote>
+<p>Após enviar, você poderá verificar que o seu job estará em situação de 
+configurado. Agora basta rodar o job e esperar que esteja tudo pronto. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/36.jpg" /></p>
+<hr />
+<blockquote>
+<p>Algumas informações podem indicar que seu job está funcionando. Observe as imagens a seguir:</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/38.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/39.jpg" /></p>
+<hr />
+<h2 id="visualizando-resultados">Visualizando Resultados</h2>
+<blockquote>
+<p>Vá na aba visualization e clique em jobs</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/40.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/41.jpg" /></p>
+<hr />
+<blockquote>
+<p>Selecione o nome do seu Job</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/42.jpg" /></p>
+<hr />
+<blockquote>
+<p>Os resultados das suas variáveis irão aparecer.</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/43.jpg" /></p>
+<hr />
+<blockquote>
+<p>Podemos observar que o novoValorGlobal foi alterado para inteiro. Podemos observar, também, que um valor não está correto.
+A variável local está recebendo o valor da coluna Valor Global do nosso csv. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/44.jpg" /></p>
+<hr />
+<h2 id="corrigindo-o-erro">Corrigindo o ERRO</h2>
+<blockquote>
+<p>Para corrigir o erro devemos voltar ao job step que pega as colunas do csv. 
+Mas para isso devemos parar o nosso job. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/45.jpg" /></p>
+<hr />
+<blockquote>
+<p>Ir em configure job</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/46.jpg" /></p>
+<hr />
+<blockquote>
+<p>Dar um duplo clique no job extrairColunas e procurar a iteration que está com problema. 
+Neste caso, é a iteration 4. Você deverá mudar o field position para 3. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/47.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/48.jpg" /></p>
+<hr />
+<blockquote>
+<p>Por que isso ocorre?</p>
+</blockquote>
+<p>Observe a imagem a seguir:</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/49.jpg" /></p>
+<hr />
+<p>A nossa iteration 4 é a variavél local e no nosso csv a variável 
+local está com 3. Isso ocorre por que no csv a primeira coluna é 
+a coluna 0 e as iterações começam do 1. 
+Após a alteração, devemos salvar o que foi feito. Para que as alterações sejam de 
+fato visualizadas no nosso visualization job, devemos deletar o cash. 
+Ir na aba visualization e clicar em jobs. Ir na opção <strong>stores</strong></p>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/50.jpg" /></p>
+<hr />
+<blockquote>
+<p>Em stores clique em atualizar, digite o nome do seu job, clique nos três pontinhos e, por fim, clique em deletar. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/51.jpg" /></p>
+<hr />
+<blockquote>
+<p>Após deletar o cash do seu job, vá na aba JOBS, clique em All, 
+digite o nome do seu job e clique sobre ele. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/52.jpg" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/53.jpg" /></p>
+<hr />
+<blockquote>
+<p>Agora basta ir em rodar. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/54.jpg" /></p>
+<hr />
+<blockquote>
+<p>Se tudo deu certo, seu job apresentará os comportamentos normais, como já visualizado anteriormente. </p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/dmps1/55.jpg" /></p>
+<hr />
+<blockquote>
+<p>Agora basta ir em visualization - jobs - discover e selecionar o seu job.
+Podemos observar que a variável local está corrigida. Agora ela apresenta
+o nome do município.  </p>
+</blockquote></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

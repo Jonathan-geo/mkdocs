@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>MongoDB - JONATHAN</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../css/extra_css.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">JONATHAN</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BLAZE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../BLAZE/blaze01/" class="dropdown-item">Blaze - Instalações</a>
+</li>
+                                    
+<li>
+    <a href="../../BLAZE/blaze02/" class="dropdown-item">Blaze - Utilização</a>
+</li>
+                                    
+<li>
+    <a href="../../BLAZE/blaze03/" class="dropdown-item">Blaze - Deploy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DMPS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DMPS/dmps01/" class="dropdown-item">TUTORIAL 01</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATA-SCIENCE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pythonDados/" class="dropdown-item">PythonDados</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pyScrap4/" class="dropdown-item">Web Screping</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/perceptron/" class="dropdown-item">Perceptron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATABASES <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../mysql/" class="dropdown-item">MySQL</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">MongoDB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">RESUMOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../RESUMOS/nodeJS/" class="dropdown-item">NodeJS</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/ruby/" class="dropdown-item">Ruby</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/css/" class="dropdown-item">CSS</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../mysql/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../RESUMOS/nodeJS/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#mongo_db" class="nav-link">MONGO_DB</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="mongo_db">MONGO_DB</h1>
+<p>MongoDB é um banco de dados orientado a documentos, é de código aberto, gratuito e de alta performance. Foi escrito na linguagem de programação C++, o que o torna multiplataforma. Classificado como um programa de banco de dados NoSQL, o MongoDB usa documentos semelhantes a JSON com esquemas. É desenvolvido pela MongoDB Inc. e publicado sob uma combinação da GNU Affero General Public License e Licença Apache. Suas características permitem com que as aplicações modelem informações de modo muito mais natural, pois os dados podem ser aninhados em hierarquias complexas e continuar a ser indexáveis e fáceis de buscar.</p>
+<p><button onclick="window.open('https://www.mongodb.com/');">MONGO - LOGIN</button>
+<button onclick="window.open('https://cloud.mongodb.com/user#/atlas/login');">MONGO - HOME</button></p>
+<p>Acesse meu github para consultar a documentação completa, lá você encontrará, além desta documentação, alguns exemplos de python funcional utilizando o mongoDB e a pymongo. </p>
+<p><button onclick="window.open('https://github.com/Jonathan-geo');">GITHUB</button></p>
+<p>OBS: Para esta documentação foi utilizado um cluster no mongodb cloud.</p>
+<h3 id="install">Install</h3>
+<pre><code class="language-bash">
+#  No terminal 
+
+$ python -m pip install pymongo
+$ python -m pip install pymongo[srv]
+
+</code></pre>
+<h3 id="import">Import</h3>
+<pre><code class="language-python">from pymongo import MongoClient
+from pprint import pprint
+</code></pre>
+<p>OBS: A biblioteca pprint foi utilizada para que o outputs fossem estilizados semelhantes formato json. </p>
+<h3 id="connect">Connect</h3>
+<pre><code class="language-python">connection = MongoClient(&quot;mongodb+srv://login:senha@cluster0-5ueib.mongodb.net/test?retryWrites=true&amp;w=majority&quot;)
+</code></pre>
+<h3 id="create-db">Create - DB</h3>
+<p>Criando o banco de dados "moonlightDB" e instanciando uma variavel de mesmo nome a ele.</p>
+<pre><code class="language-python">#Estabelecendo a conexão 
+connection = MongoClient(&quot;mongodb+srv://login:senha@cluster0-5ueib.mongodb.net/test?retryWrites=true&amp;w=majority&quot;)
+
+#Criando um DB
+moonlightDB = connection[&quot;moonlightDB&quot;]
+</code></pre>
+<h3 id="create-collection">Create - Collection</h3>
+<p>Criando uma coleção (Tabela) "heroes" e instanciando uma variavel de mesmo nome a esta coleção.</p>
+<pre><code class="language-python">
+#Estabelecendo a conexão 
+connection = MongoClient(&quot;mongodb+srv://login:senha@cluster0-5ueib.mongodb.net/test?retryWrites=true&amp;w=majority&quot;)
+
+#Criando um DB
+moonlightDB = connection[&quot;moonlightDB&quot;]
+
+#Criando uma colection
+heroes = moonlightDB[&quot;heroes&quot;]
+
+</code></pre>
+<p>OBS: No MongoDB, um banco de dados e uma coleção não é criada até obter conteúdo! 
+O MongoDB aguarda até que você tenha inserido um documento antes que ele realmente crie a coleção.</p>
+<h3 id="create-document">Create - document</h3>
+<p>Criando um documento (Paladino) e inserindo ele em uma coleção (heroes):</p>
+<pre><code class="language-python">
+#Estabelecendo a conexão 
+connection = MongoClient(&quot;mongodb+srv://login:senha@cluster0-5ueib.mongodb.net/test?retryWrites=true&amp;w=majority&quot;)
+
+#Criando um DB
+moonlightDB = connection[&quot;moonlightDB&quot;]
+
+#Criando uma colection
+heroes = moonlightDB[&quot;heroes&quot;]
+
+#Criando um documento
+Paladino = { &quot;name&quot;: &quot;Jonathan&quot;, 
+            &quot;Classe&quot;: &quot;paladino&quot;,
+            &quot;força&quot;: 21, 
+            &quot;defesa&quot;: 19, 
+            &quot;arma&quot;: &quot;espada longa&quot;,
+            &quot;poder1&quot;: &quot;ataque divino&quot;,
+            &quot;poder2&quot;: &quot;cura pelas mãos&quot; }
+
+inserColeçao = heroes.insert_one(Paladino)
+print(inserColeçao.inserted_id)
+</code></pre>
+<p><strong>Criando vários documentos e inserindo eles em uma coleção (Tabela):</strong></p>
+<pre><code class="language-python">variosHerois = [{ &quot;name&quot;: &quot;Leda&quot;, 
+                &quot;Classe&quot;: &quot;mago de fogo&quot;,
+                &quot;força&quot;: 18, 
+                &quot;defesa&quot;: 13, 
+                &quot;arma&quot;: &quot;cajado&quot;,
+                &quot;poder1&quot;: &quot;bola de fogo&quot;,
+                &quot;poder2&quot;: &quot;chuva de meteoro&quot; },
+
+                { &quot;name&quot;: &quot;Anny&quot;, 
+                &quot;Classe&quot;: &quot;animal&quot;,
+                &quot;força&quot;: 11, 
+                &quot;defesa&quot;: 15, 
+                &quot;arma&quot;: &quot;guarra&quot;,
+                &quot;poder1&quot;: &quot;furtividade&quot;,
+                &quot;poder2&quot;: &quot;guarras afiadas&quot; },
+
+                { &quot;name&quot;: &quot;Nick&quot;, 
+                &quot;Classe&quot;: &quot;animal&quot;,
+                &quot;força&quot;: 15, 
+                &quot;defesa&quot;: 14, 
+                &quot;arma&quot;: &quot;mordida&quot;,
+                &quot;poder1&quot;: &quot;velocidade&quot;,
+                &quot;poder2&quot;: &quot;mordida frontal&quot; },
+]
+
+inserindoTudo = heroes.insert_many(variosHerois)
+
+print(inserindoTudo.inserted_ids)
+</code></pre>
+<p><strong>Criando um documento com ID. Lembre-se, dois documentos NÃO podem ter o mesmo ID.</strong></p>
+<pre><code class="language-python"># Paladino = { &quot;_id&quot;: 1,
+#             &quot;name&quot;: &quot;Jonathan&quot;,
+#             &quot;Classe&quot;: &quot;paladino&quot;,
+#             &quot;força&quot;: 24,
+#             &quot;defesa&quot;: 19,
+#             &quot;arma&quot;: &quot;espada longa&quot;,
+#             &quot;poder1&quot;: &quot;ataque divino&quot;,
+#             &quot;poder2&quot;: &quot;cura pelas mãos&quot; }
+
+# inserColeçao = heroes.insert_one(Paladino)
+# print(inserColeçao.inserted_id)
+</code></pre>
+<p><strong>Posso criar documentos com mais {chave: valor} em uma mesma colection.</strong></p>
+<pre><code class="language-python">Paladino = { &quot;_id&quot;: 2,
+            &quot;name&quot;: &quot;Trevor&quot;,
+            &quot;Classe&quot;: &quot;Knight&quot;,
+            &quot;força&quot;: 24,
+            &quot;defesa&quot;: 19,
+            &quot;arma&quot;: &quot;espada longa&quot;,
+            &quot;poder1&quot;: &quot;ataque divino&quot;,
+            &quot;poder2&quot;: &quot;cura pelas mãos&quot;,
+            &quot;poder3&quot;: &quot;Espada da noite&quot; }
+
+inserColeçao = heroes.insert_one(Paladino)
+print(inserColeçao.inserted_id)
+</code></pre>
+<h3 id="select-data-base">Select - Data Base</h3>
+<p>Listando e buscando banco de dados em minha conta mongoDB. Lembrando que minha conexão está com o nome de "coonection"</p>
+<pre><code class="language-python">pprint (connection.list_database_names())
+</code></pre>
+<pre><code class="language-python">dblist = connection.list_database_names()
+if &quot;moonlightDB&quot; in dblist:
+  print(&quot;O banco de dados existe.&quot;)
+else:
+    print (&quot;O banco de dados não existe.&quot;)
+</code></pre>
+<h3 id="select-collection">Select - Collection</h3>
+<p>Listando e buscando coleções (Tabelas) no meu banco de dados "moonlight".</p>
+<pre><code class="language-python">pprint (moonlightDB.list_collection_names())
+</code></pre>
+<pre><code class="language-python">collist = moonlightDB.list_collection_names()
+if &quot;heroes&quot; in collist:
+  print(&quot;A coleção existe.&quot;)
+</code></pre>
+<p>Contando o número de documentos dentro da minha colection</p>
+<pre><code class="language-python">pprint(heroes.count_documents({}))
+</code></pre>
+<h3 id="select-docment">Select - Docment</h3>
+<p>Selecionando o primeiro documento da coleção (heroes)</p>
+<pre><code class="language-python">pprint(heroes.find_one())
+</code></pre>
+<p>Selecionando um documento por {chave: Valor}:</p>
+<pre><code class="language-python">pprint(heroes.find_one({&quot;arma&quot;: &quot;mordida&quot;}))
+</code></pre>
+<p>Selecionando todos os documentos da minha coleção:</p>
+<pre><code class="language-python">for personagens in heroes.find():
+    pprint(personagens)
+</code></pre>
+<p>Selecionando todos os documentos da minha coleção (Número limitado)</p>
+<pre><code class="language-python">selLimite = heroes.find().limit(5)
+</code></pre>
+<pre><code class="language-python">for x in selLimite:
+  pprint(x)
+</code></pre>
+<p>Selecionando todos os documentos que possuem uma mesma {chave:valor} selecionada:</p>
+<pre><code class="language-python">for animais in heroes.find({&quot;classe&quot;: &quot;animal&quot;}):
+    pprint(animais)
+</code></pre>
+<p>Selecionando o nome e a arma de todos os documentos.
+Só posso atribuir falso (0) para o id, pois ele é o unico que aparece mesmo quando não mensionado. </p>
+<pre><code class="language-python">for nomes in heroes.find({},{ &quot;_id&quot;: 0, &quot;name&quot;: 1, &quot;arma&quot;: 1 }):
+  pprint(nomes)
+
+
+#Neste caso o ID, aparecerá também. 
+for armas in heroes.find({},{ &quot;name&quot;: 1, &quot;arma&quot;: 1 }):
+  pprint(armas)
+
+#Neste caso o id não aparecerá.
+for classes in heroes.find({},{ &quot;_id&quot;: 0, &quot;classe&quot;: 1, &quot;name&quot;: 1, &quot;arma&quot;: 1 }):
+  pprint(classes)
+
+</code></pre>
+<p>Instanciando uma busca. </p>
+<pre><code class="language-python">cajado = { &quot;arma&quot;: &quot;cajado&quot; }
+busca = heroes.find(cajado)
+
+for x in busca:
+  pprint(x)
+</code></pre>
+<p>Buscar os documento em que o valor da chave nome comessem com a 
+letra T ou posterior no alfabeto. (T, U, V, ...). Lembrando que os nomes estão em maiúscula.
+A mesma busca pode ser feita por regex: letraJ = { "name": { "$regex": "^S" } }</p>
+<pre><code class="language-python">
+letraJ = { &quot;name&quot;: { &quot;$gt&quot;: &quot;T&quot; } }
+busca = heroes.find(letraJ)
+
+for x in busca:
+  pprint(x)
+
+
+
+# &gt;&gt;&gt;&gt;&gt;&gt; Selecionando os documentos por ordem alfabética (nome):
+nomePorOredem = heroes.find().sort(&quot;name&quot;)
+
+for x in nomePorOredem:
+  pprint(x)
+
+
+# &gt;&gt;&gt;&gt;&gt;&gt; Selecionando por ordem decrescente. Para o caso de ordem crescente substituir o -1 por 1.
+ordemDecrescente = heroes.find().sort(&quot;name&quot;, -1)
+
+for x in ordemDecrescente:
+  pprint(x)
+</code></pre>
+<h3 id="delete-document">Delete - Document</h3>
+<p>Deleta o primeiro documento com o nome selecionado </p>
+<pre><code class="language-python">delNome = { &quot;name&quot;: &quot;Jonathan&quot; }
+
+heroes.delete_one(delNome)
+</code></pre>
+<p>Deletando vários documentos e retornando o número de documentos deletados. </p>
+<pre><code class="language-python">delVarios = { &quot;name&quot;: {&quot;$regex&quot;: &quot;^N&quot;} }
+deletados = heroes.delete_many(delVarios)
+print(deletados.deleted_count)
+</code></pre>
+<p>Deletando todos os documentos de uma coleção:</p>
+<pre><code class="language-python">delTodos = heroes.delete_many({})
+print(delTodos.deleted_count)
+</code></pre>
+<h3 id="delete-collection">Delete - Collection</h3>
+<pre><code class="language-python">heores.drop()
+</code></pre>
+<h3 id="update-values">Update - Values</h3>
+<p>Alterando valores de um documento:</p>
+<pre><code class="language-python">valorAntigo = { &quot;name&quot;: &quot;Trevor&quot; }
+novoValor = { &quot;$set&quot;: { &quot;name&quot;: &quot;Belmont&quot; } }
+heroes.update_one(valorAntigo, novoValor)
+</code></pre>
+<p>Referências:</p>
+<ul>
+<li>https://pt.wikipedia.org/wiki/MongoDB</li>
+<li>https://docs.mongodb.com/manual/reference/method/db.collection.updateOne/</li>
+<li>https://codehandbook.org/pymongo-tutorial-crud-operation-mongodb/</li>
+<li>https://www.w3schools.com/python/python_mongodb_getstarted.asp</li>
+<li>https://imasters.com.br/banco-de-dados/mongodb-para-iniciantes-em-nosql</li>
+<li>https://api.mongodb.com/python/current/tutorial.html</li>
+<li>https://pypi.org/project/pymongo/</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

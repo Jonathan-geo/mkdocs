@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Blaze - Deploy - JONATHAN</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link href="../../css/extra_css.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">JONATHAN</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">BLAZE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../blaze01/" class="dropdown-item">Blaze - Instalações</a>
+</li>
+                                    
+<li>
+    <a href="../blaze02/" class="dropdown-item">Blaze - Utilização</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Blaze - Deploy</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DMPS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DMPS/dmps01/" class="dropdown-item">TUTORIAL 01</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATA-SCIENCE <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pythonDados/" class="dropdown-item">PythonDados</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/pyScrap4/" class="dropdown-item">Web Screping</a>
+</li>
+                                    
+<li>
+    <a href="../../DATA-SCIENCE/perceptron/" class="dropdown-item">Perceptron</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DATABASES <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../DATABASES/mysql/" class="dropdown-item">MySQL</a>
+</li>
+                                    
+<li>
+    <a href="../../DATABASES/mongoDB/" class="dropdown-item">MongoDB</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">RESUMOS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../RESUMOS/nodeJS/" class="dropdown-item">NodeJS</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/ruby/" class="dropdown-item">Ruby</a>
+</li>
+                                    
+<li>
+    <a href="../../RESUMOS/css/" class="dropdown-item">CSS</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../blaze02/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../DMPS/dmps01/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#deploy-toncat7" class="nav-link">Deploy Toncat7</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#configurando-o-startserverbat" class="nav-link">Configurando o StartServer.bat</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gerar-um-war-eclipse" class="nav-link">Gerar um .WAR [Eclipse]</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#executar-o-projeto-war-toncat7" class="nav-link">Executar o projeto .WAR [Toncat7]</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deploy-rule-server-configuracoes" class="nav-link">Deploy [Rule Server] - Configurações</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deploy-rule-server-gerando-arquivos" class="nav-link">Deploy [Rule Server] - Gerando Arquivos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#deploy-rule-server" class="nav-link">Deploy [Rule Server]</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gerando-uma-aplicacao-toncat" class="nav-link">Gerando uma aplicação Toncat</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#testando-a-aplicacao-no-soapui" class="nav-link">Testando a Aplicação no SoapUI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#consideracoes-finais" class="nav-link">Considerações finais</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mais-utoriais-blaze" class="nav-link">Mais utoriais - Blaze</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="deploy-toncat7">Deploy Toncat7</h1>
+<p>Assim como nos tutoriais anteriores, os arquivos para instalação se encontram no seguinte repositório: <button onclick="window.open('https://drive.google.com/drive/folders/1XjpXLq40dpZurVS4NesaBRvp3_zAlgFl?usp=sharing');">REPOSITÓRIO</button></p>
+<p>Para iniciar este tutorial, você precisará baixar uma pasta em formato zip que está no drive.</p>
+<blockquote>
+<p>tomcat7.zip</p>
+</blockquote>
+<p>Após o download, você deverá descompactar os arquivos dentro da pasta <strong>C:\Blaze\projetos</strong> que criamos em tutoriais anteriores. Seus arquivos descompactados devem ficar assim:</p>
+<blockquote>
+<p>C:\Blaze\projetos\tomcat7</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/82.png" /></p>
+<hr />
+<h2 id="configurando-o-startserverbat">Configurando o StartServer.bat</h2>
+<p>Este arquivo serve para facilitar o serviço de deploy no tomcat. </p>
+<ul>
+<li>Abrir o arquivo startServer.bat com o notepad++.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/83.png" /></p>
+<hr />
+<ul>
+<li>
+<p>O comando <strong>set JAVA_HOME=C:\Progra~1\Java\jdk1.8.0_211</strong> deve estar apontando para o jdk que está no seu pc. No caso do meu pc, o jdk está no endereço: <strong>C:\Program Files\Java\jdk1.8.0_221</strong>.</p>
+<ul>
+<li>Substituir o endereço no arquivo StartServer.</li>
+</ul>
+</li>
+<li>
+<p>O comando <strong>set CATALINA_HOME=C:\Blaze\training\tomcat7</strong> também deve ser alterado. Ele deve estar apontando para a pasta tomcat7 que você acabou de descompactar na pasta projetos. </p>
+<ul>
+<li>
+<p>Obs: a pasta tomcat7 pode estar dentro de outra pasta tomcat7, a depender do modo como foi descompactada. </p>
+</li>
+<li>
+<p>Substituir o endereço no arquivo StartServer.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>O comando <strong>start C:\Blaze\training\tomcat7\bin\startup.bat</strong> também deve estar referenciado corretamente. Referenciar como: <strong>start C:\Blaze\projetos\tomcat7\tomcat7\bin\startup.bat</strong>.</p>
+</li>
+<li>
+<p>A imagem a seguir mostra como ficaram as alterações.</p>
+</li>
+<li>
+<p>Não se esqueça de salvar estas alterações.</p>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/84.png" /></p>
+<hr />
+<ul>
+<li>Após as alterações de endereço, dê um duplo clique sobre o arquivo startServer e o tomcat7 irá rodar no http://localhost:8081/ </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/85.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/86.png" /></p>
+<hr />
+<h2 id="gerar-um-war-eclipse">Gerar um .WAR [Eclipse]</h2>
+<p>Agora iremos gerar um arquivo WAR (<strong>W</strong>eb Application <strong>AR</strong>chive). Este é um arquivo que permite a aplicação WEB do nosso projeto. </p>
+<ul>
+<li>Primeiro você deve criar uma pasta chamada RMA dentro da pasta projetos. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/87.png" /></p>
+<hr />
+<ul>
+<li>
+<p>Abrir o Eclipse.</p>
+<ul>
+<li>Selecionar o nosso projeto (RegrasAluguelCarros).</li>
+<li>
+<p>Ir na aba Project.</p>
+<ul>
+<li>Generate Rule Maintenance Application.</li>
+<li>Mudar o RMA Deployment para Eclipse Web Project and WAR.</li>
+<li>Eclipse Web Project name:<ul>
+<li>RegrasRMA (ou pode deixar o nome que o Blaze recomenda).</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Marcar a opção: Generate War.</li>
+<li>
+<p>O caminho do War:</p>
+<ul>
+<li>War File Location:<ul>
+<li>Pasta RMA que criamos. No meu caso, ficou assim: C:\Blaze\projetos\rma.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/88.png" /></p>
+<hr />
+</li>
+<li>
+<p>Next - Selecionar o projeto - Next - Selecionar o .jar - Finish.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/88.png" /></p>
+<hr />
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Após concluir estes passos, o Blaze (Eclipse) irá gerar um arquivo .WAR [<strong>RegrasRMA.war</strong>] na sua pasta RMA. (Isso pode levar algum tempo, dependendo de seu computador). </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/89.png" /></p>
+<hr />
+</li>
+<li>
+<p>Além do arquivo .WAR, será gerado também um projeto no seu Eclipse. </p>
+<ul>
+<li>Clicar com o botão direito do mouse e fechar este projeto. (Close Project)</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/90.png" /></p>
+<hr />
+</li>
+</ul>
+<h2 id="executar-o-projeto-war-toncat7">Executar o projeto .WAR [Toncat7]</h2>
+<p>Agora iremos executar, no tomcat, o projeto <strong>RegrasRMA.war</strong> que está dentro da pasta RMA.</p>
+<ul>
+<li>
+<p>Rodar o servidor tomcat (caso não esteja rodando).</p>
+<ul>
+<li>Duplo clique sobre o arquivo StartServer.bat que está na pasta C:\Blaze\projetos\tomcat7.</li>
+<li>O tomcat7 irá rodar no http://localhost:8081/ </li>
+</ul>
+</li>
+<li>
+<p>Após certificar-se de que o servidor tomcat está ativo no localhost 8081, basta ir na pasta RMA e copiar o arquivo <strong>RegrasRMA.war</strong> para a pasta webapps [<strong>C:\Blaze\projetos\tomcat7\tomcat7\webapps</strong>]</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/91.png" /></p>
+<hr />
+</li>
+<li>
+<p>Se o servidor tomcat estiver ativo, o arquivo <strong>RegrasRMA.war</strong> será descompactado automaticamente (isso pode levar algum tempo, a depender do seu computador).</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/92.png" /></p>
+<hr />
+</li>
+<li>
+<p>Após executar todo o processo de gerar o arquivo.WAR e descompactá-lo na pasta webapps do tomcat, basta ir no navegador que o tomcat está rodando, digitar o nome do projeto [<strong>RegrasRMA</strong>] após a porta 8081 e apertar enter para carregar a página, como na imagem abaixo. </p>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/93.png" /></p>
+<hr />
+<ul>
+<li>Isso irá gerar o RMA do Blaze no tomcat7, sem a necessidade de estar embarcado no Eclipse. Basta logar e começar a criar suas regras de negócio. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/94.png" /></p>
+<hr />
+<h2 id="deploy-rule-server-configuracoes">Deploy [Rule Server] - Configurações</h2>
+<p>Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos gerar uma aplicação pronta para ser executada. </p>
+<ul>
+<li>
+<p>Primeiro, você deverá criar uma pasta com o nome de RuleServer dentro da pasta projetos. </p>
+</li>
+<li>
+<p>Ir no Eclipse:</p>
+<ul>
+<li>Pasta Deploy (você deverá criar três arquivos de configuração).</li>
+</ul>
+</li>
+<li>
+<p>Primeiro arquivo de configuração: [<strong>Rule Service Definition</strong>]</p>
+<ul>
+<li>Clicar com o botão direito do mouse sobre a pasta Deploy.</li>
+<li>
+<p>New - Deployment Entities - Rule Service Definition.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/95.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/96.png" /></p>
+<hr />
+</li>
+<li>
+<p>Manter o mesmo nome, porém sem os espaços e caracteres especiais. Observe o exemplo abaixo:</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/97.png" /></p>
+<hr />
+</li>
+<li>
+<p>Na aba de DefinicaoDoServicoDeRegras, vá em Add... [adicionar...] </p>
+<ul>
+<li>Em Functional Item [Item Funcional], escolha a opção <strong>entrypoint(decisionInput):DecisionInput</strong></li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/98.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/99.png" /></p>
+<hr />
+<ul>
+<li>Salvar e fazer o Check-in. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Segundo arquivo de configuração: [<strong>Deployment Definition</strong>]</p>
+<ul>
+<li>Clicar com o botão direito do mouse sobre a pasta Deploy.</li>
+<li>
+<p>New - Deployment Entities - Deployment Definition.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/100.png" /></p>
+<hr />
+</li>
+<li>
+<p>Manter o mesmo nome, porém sem os espaços e caracteres especiais. Observe o exemplo abaixo:</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/101.png" /></p>
+<hr />
+</li>
+<li>
+<p>Na aba de DefinicaoDeImplementacao, em Plataforma de Destino, escolha a opção <strong>Java POJO Web Service</strong>.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/102.png" /></p>
+<hr />
+</li>
+<li>
+<p>Salvar e fazer o Check-in.    </p>
+</li>
+</ul>
+</li>
+<li>
+<p>Terceiro arquivo de configuração:</p>
+<ul>
+<li>Clicar com o botão direito do mouse sobre a pasta Deploy.</li>
+<li>
+<p>New - Deployment Entities - System Definition.
+    -------------------------
+    <img alt="Screenshot" src="../../img/blaze/103.png" /></p>
+<hr />
+</li>
+<li>
+<p>Manter o mesmo nome, porém sem os espaços e caracteres especiais [DefinicaoDoSistema].</p>
+</li>
+<li>
+<p>Na aba de DefinicaoDoSistema:</p>
+<ul>
+<li>Em Plataforma de Destino, escolha a opção <strong>Java POJO Web Service</strong>.</li>
+<li>Em Fornecedor, escolha a opção <strong>Tomcat8 and later</strong>.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/104.png" /></p>
+<hr />
+</li>
+<li>
+<p>Salvar e fazer o Check-in.    </p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="deploy-rule-server-gerando-arquivos">Deploy [Rule Server] - Gerando Arquivos</h2>
+<ul>
+<li>Copiar o caminho da pasta ruleserver que você criou. No meu caso, a pasta está em: C:\Blaze\projetos\ruleserver.</li>
+<li>
+<p>Ir no Eclipse, selecionar o projeto principal e ir na aba Project:</p>
+<ul>
+<li>Generate Rule Service Deployment [Gerar Implementação de Serviço de Regras]</li>
+<li>Obs: o Eclipse irá encontrar as configurações que acabamos de fazer. [Tópico - Deploy [Rule Server] - Configurações].</li>
+<li>Next - Next - Selecionar ou colar o caminho da pasta ruleserver - Next.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/105.png" /></p>
+<hr />
+<ul>
+<li>
+<p>Nesta parte, basta observar se os arquivos selecionados são do tipo aquivo.bat</p>
+<ul>
+<li>Para deploy em Linux, os arquivos devem ser arquivo.sh</li>
+<li>Finish.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/106.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/107.png" /></p>
+<hr />
+</li>
+<li>
+<p>Ao abrir a pasta ruleserver, você poderá observar alguns arquivos lá. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/108.png" /></p>
+<hr />
+</li>
+<li>
+<p>Obs: o arquivo DeploymentDocumentation.html é uma documentação que guia o processo de deploy. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="deploy-rule-server">Deploy [Rule Server]</h2>
+<p>Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior, na pasta Server. Lembrando que esta pasta se encontra dentro da pasta ruleserver. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/109.png" /></p>
+<hr />
+<ol>
+<li>
+<p>Configurando o Script [Setenv].</p>
+<ul>
+<li>Ir na pasta ruleserver/server.</li>
+<li>Abrir o arquivo Setenv.bat com o notepad++<ul>
+<li>
+<p>Você deve referenciar corretamente os caminhos de:</p>
+<ul>
+<li><strong>TOMCAT_HOME=C:\apache-tomcat-8.5.24</strong> e <strong>JAVA_HOME=C:\Java\jdk</strong></li>
+<li>
+<p>Observe a imagem a seguir:</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/110.png" /></p>
+<hr />
+</li>
+<li>
+<p>Acrescentar o seguinte código na linha 99 [<strong>set CLASSPATH=%CLASSPATH%;C:\Blaze\projetos\bom-Carro3.jar;</strong>]</p>
+</li>
+<li>OBS: Este (C:\Blaze\projetos\bom-Carro3.jar) é o caminho do meu arquivo.jar</li>
+<li>
+<p>Salvar as alterações</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/111.png" /></p>
+<hr />
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Configurando o Script [War.bat]</p>
+<ul>
+<li>Abrir o arquivo War.bat no notepad++</li>
+<li>Na linha 58, adicionar o código descrito na imagem abaixo. Atenção: o caminho que digitei é o caminho do meu arquivo bom-Carro3.jar</li>
+<li>
+<p>Salvar as alterações.
+    -------------------------
+    <img alt="Screenshot" src="../../img/blaze/116.png" /></p>
+<hr />
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>Não se esqueça de salvar as alterações!</p>
+</blockquote>
+<ol>
+<li>
+<p>Rodando o Script [Setenv]</p>
+<ul>
+<li>Ir na pasta ruleserver/server.</li>
+<li>
+<p>Digitar cmd na barra de caminhos e apertar enter.</p>
+<ul>
+<li>
+<p>Isso irá abrir o cmd na pasta server.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/112.png" /></p>
+<hr />
+</li>
+<li>
+<p>Basta digitar Setenv.bat e pressionar enter para executar o arquivo que acabamos de configurar. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/113.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/114.png" /></p>
+<hr />
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Rodando o Script [Build.bat]</p>
+<ul>
+<li>Ainda no cmd do windows (deve ser na mesma janela que você digitou o Server.bat)<ul>
+<li>Digite Build.bat e aperte enter.</li>
+<li>
+<p>Este comando irá compilar algumas classes. 
+    -------------------------
+    <img alt="Screenshot" src="../../img/blaze/115.png" /></p>
+<hr />
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Rodando o arquivo [War.bat]</p>
+<ul>
+<li>
+<p>Ainda no cmd do windows (Deve ser na mesma janela que você digitou o Server.bat e Build.bat)</p>
+<ul>
+<li>
+<p>Digite War.bat e aperte enter.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/117.png" /></p>
+<hr />
+</li>
+</ul>
+</li>
+<li>
+<p>Este comando irá gerar uma série de arquivos, inclusive um arquivo.war dentro da pasta C:\Blaze\projetos\ruleserver\server\build. Para este projeto, o nome do arquivo ficou como: <strong>DefinicaoDoServicoDeRegrasServer.war</strong></p>
+</li>
+<li>Este .war é o nosso ruleserver. Ele que vai gerar um up server no tomcat. </li>
+<li>Fechar o cmd.</li>
+</ul>
+</li>
+</ol>
+<h2 id="gerando-uma-aplicacao-toncat">Gerando uma aplicação Toncat</h2>
+<ul>
+<li>
+<p>Startar o Toncat7 pelo arquivo <strong>startServer.bat</strong> (dando um duplo clique) que está na pasta <strong>C:\Blaze\projetos\tomcat7</strong></p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/118.png" /></p>
+<hr />
+<ul>
+<li>Copiar o arquivo.war [<strong>DefinicaoDoServicoDeRegrasServer.war</strong>] da pasta <strong>C:\Blaze\projetos\ruleserver\server\build</strong> para a pasta <strong>C:\Blaze\projetos\tomcat7\tomcat7\webapps</strong></li>
+<li>
+<p>Se tudo estiver correto, o arquivo <strong>DefinicaoDoServicoDeRegrasServer.war</strong> irá se descompactar automaticamente gerando uma pasta de mesmo nome. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/119.png" /></p>
+<hr />
+</li>
+<li>
+<p>Ir na pasta C:\Blaze\projetos\ruleserver e abrir o arquivo DeploymentDocumentation.html dando um duplo clique sobre ele. </p>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/120.png" /></p>
+<hr />
+<ul>
+<li>Procurar e copiar o seguinte link WSDL: </li>
+</ul>
+<blockquote>
+<p>http://localhost:8080/DefinicaoDoServicoDeRegrasServer/DefinicaoDoServicoDeRegrasService?wsdl</p>
+</blockquote>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/121.png" /></p>
+<hr />
+<ul>
+<li>Colar o link em seu navegador. </li>
+<li>Obs: trocar a porta 8080 por 8081. </li>
+<li>O link ficará assim: </li>
+</ul>
+<blockquote>
+<p>http://localhost:8081/DefinicaoDoServicoDeRegrasServer/DefinicaoDoServicoDeRegrasService?wsdl</p>
+</blockquote>
+<ul>
+<li>Se tudo ocorreu bem, sua aplicação retornará um XML assim:</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/122.png" /></p>
+<hr />
+</li>
+</ul>
+<h2 id="testando-a-aplicacao-no-soapui">Testando a Aplicação no SoapUI</h2>
+<ul>
+<li>
+<p>Criar uma pasta [workspaceSoap] dentro da pasta Projetos.</p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/125.png" /></p>
+<hr />
+</li>
+<li>
+<p>Instalar o SoapUI</p>
+<ul>
+<li>Baixe o SoapUI [SoapUI-x32-5.5.0.exe] do Repositório que disponibilizei: <button onclick="window.open('https://drive.google.com/drive/folders/1XjpXLq40dpZurVS4NesaBRvp3_zAlgFl?usp=sharing');">REPOSITÓRIO</button></li>
+<li>Duplo clique sobre o executável e ir dando next. </li>
+<li>O SoapUI abrirá sua janela inicial.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/123.png" /></p>
+<hr />
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/124.png" /></p>
+<hr />
+</li>
+<li>
+<p>No SoapUI, vá em:</p>
+<ul>
+<li>File - New Workspace - dar o nome de workspaceSoap </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/126.png" /></p>
+<hr />
+<ul>
+<li>Escolher a pasta workspaceSoap que criamos dentro da pasta Projetos.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/127.png" /></p>
+<hr />
+<ul>
+<li>Salvar.</li>
+</ul>
+<hr />
+</li>
+<li>
+<p>Ainda no SoapUI:</p>
+<ul>
+<li>File - New Soap Project.</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/128.png" /></p>
+<hr />
+<ul>
+<li>Atenção: colar o link WSDL que geramos para o tomcat anteriormente: </li>
+</ul>
+<blockquote>
+<p>http://localhost:8081/DefinicaoDoServicoDeRegrasServer/DefinicaoDoServicoDeRegrasService?wsdl</p>
+</blockquote>
+<ul>
+<li>O nome do projeto será gerado automaticamente. </li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/129.png" /></p>
+<hr />
+</li>
+<li>
+<p>O Soap importará o serviço e gerará um request. [entrypoint]
+        - Clicando no arquivo: entrypoint/Request1 teremos uma comunicação com a aplicação. Basta digitar os dados do cliente no lugar das interrogações (?) e teremos o output dos dados inseridos. 
+        - Para isso, basta digitar os dados e ir no ícone Rodar. </p>
+</li>
+</ul>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/130.png" /></p>
+<hr />
+<h2 id="consideracoes-finais">Considerações finais</h2>
+<p>Como você podê ver, nossa aplicação é bem simples e apresenta várias inconsistências como, por exemplo, possuir dados que não estão sendo utilizados. 
+Mas nosso objetivo era apenas introduzir o Blaze. </p>
+<p>Esta aplicação recebe dois valores principais (idade e renda) e retorna Negado caso a idade seja menor do que 18 ou a renda menor do que R$ 1000. Ou seja, não estão aptos a alugar um carro. 
+No exemplo acima, a idade é de 22 anos e a renda é de R$ 5420, ou seja, é um cliente apto a alugar um carro.  <br />
+Já no exemplo abaixo, a idade é de 16 e a renda de R$ 5420. Mesmo a renda sendo maior do que R$ 1000, o resultado é Negado, pois a idade é menor do que 18. </p>
+<hr />
+<p><img alt="Screenshot" src="../../img/blaze/131.png" /></p>
+<hr />
+<h2 id="mais-utoriais-blaze">Mais utoriais - Blaze</h2>
+<ul>
+<li>
+<p>1 Introdução ao Blaze <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze01/');">Blaze - Instalações</button></p>
+</li>
+<li>
+<p>2 Utilizando o RMA - <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze02/');">Blaze - Utilização</button></p>
+</li>
+<li>
+<p>4 Tópicos avançados - Em construção.</p>
+</li>
+</ul>
+<p>Elaborado por:
+<br/>
+Jonathan Cardoso Lopes Domingos
+<br/>
+21/10/2019      </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
