@@ -12,13 +12,10 @@
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/docco.min.css">
         <link href="../../css/extra_css.css" rel="stylesheet">
-
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
@@ -196,7 +193,7 @@ Neste material apresento um scraping das ações do Bradesco. </p>
 <p>Depois de baixar o arquivo, copie <strong>geckodriver.exe</strong> para o diretório C: ele ficará assim: “C:\geckodriver.exe”.
 Ir em <strong>Configurações Avançadas do Sistema</strong> =&gt; propriedades do sistema =&gt; <strong>Variáveis de ambiente</strong> =&gt; <strong>Variáveis de Sistema</strong> =&gt; Editar =&gt; Novo =&gt; preencha o caminho do arquivo “C:\geckodriver.exe” no path. (OBS: path do sistema e não do usuário).</p>
 <p align="center">
-<img src="https://i.imgur.com/KroffOk.jpg">
+    <img src="../../img/webScreping/00.jpg">
 </p>
 
 <p>Em todos os scripts Selenium incluir o código abaixo:</p>
@@ -666,7 +663,7 @@ Out[74]:
 <hr />
 <p><img alt="Screenshot" src="../../img/webScreping/output_68_1.png" /></p>
 <hr />
-<p><strong> Manipulando a Coluna data </strong></p>
+<p>** Manipulando a Coluna data **</p>
 <pre><code class="language-python"># year = bradescoData.index.to_period('Y')
 # month = bradescoData.index.to_period('m')
 # day = bradescoData.index.to_period('d')
@@ -708,7 +705,7 @@ Out[79]:
 <hr />
 <p><img alt="Screenshot" src="../../img/webScreping/output_76_0.png" /></p>
 <hr />
-<p><strong> Algumas dicas </strong></p>
+<p>** Algumas dicas **</p>
 <pre><code class="language-python"># Com Pandas - gráfico (pie)
 # bradescoData.VARIAÇÃO.value_counts().plot(kind='pie', autopct='%.2f%%')
 # plt.axis('equal')
@@ -753,12 +750,14 @@ Out[82]:
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
         <script>
             var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
