@@ -18,7 +18,7 @@ Obs: para esta série de atividades, estarei utilizando o DMPS em uma máquina v
 
 -------------------------
 
-![Screenshot](../../img/dmps1/01.jpg)
+![Screenshot](../img/dmps1/01.jpg)
 
 ------------------------
 
@@ -27,7 +27,7 @@ Obs: para esta série de atividades, estarei utilizando o DMPS em uma máquina v
 
 -------------------------
 
-![Screenshot](../../img/dmps1/02.jpg)
+![Screenshot](../img/dmps1/02.jpg)
 
 ------------------------
 
@@ -37,7 +37,7 @@ Obs: para esta série de atividades, estarei utilizando o DMPS em uma máquina v
 
 -------------------------
 
-![Screenshot](../../img/dmps1/03.jpg)
+![Screenshot](../img/dmps1/03.jpg)
 
 ------------------------
 
@@ -46,7 +46,7 @@ Obs: para esta série de atividades, estarei utilizando o DMPS em uma máquina v
 
 -------------------------
 
-![Screenshot](../../img/dmps1/04.jpg)
+![Screenshot](../img/dmps1/04.jpg)
 
 ------------------------
 
@@ -54,7 +54,7 @@ Obs: para esta série de atividades, estarei utilizando o DMPS em uma máquina v
 
 -------------------------
 
-![Screenshot](../../img/dmps1/05.jpg)
+![Screenshot](../img/dmps1/05.jpg)
 
 ------------------------
 
@@ -66,7 +66,7 @@ Obs: para esta série de atividades, estarei utilizando o DMPS em uma máquina v
 
 -------------------------
 
-![Screenshot](../../img/dmps1/06.jpg)
+![Screenshot](../img/dmps1/06.jpg)
 
 ------------------------
 
@@ -76,7 +76,7 @@ Obs: para esta série de atividades, estarei utilizando o DMPS em uma máquina v
 
 -------------------------
 
-![Screenshot](../../img/dmps1/07.jpg)
+![Screenshot](../img/dmps1/07.jpg)
 
 ------------------------
 
@@ -92,13 +92,13 @@ Link para o arquivo csv:
 
 -------------------------
 
-![Screenshot](../../img/dmps1/08.jpg)
+![Screenshot](../img/dmps1/08.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/09.jpg)
+![Screenshot](../img/dmps1/09.jpg)
 
 ------------------------
 
@@ -107,7 +107,7 @@ Link para o arquivo csv:
 
 -------------------------
 
-![Screenshot](../../img/dmps1/01tab.jpg)
+![Screenshot](../img/dmps1/01tab.jpg)
 
 ------------------------
 
@@ -122,20 +122,20 @@ os tutoriais, iremos corrigindo.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/10.jpg)
+![Screenshot](../img/dmps1/10.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/11.jpg)
+![Screenshot](../img/dmps1/11.jpg)
 
 ------------------------
 
 
 -------------------------
 
-![Screenshot](../../img/dmps1/11Ver.jpg)
+![Screenshot](../img/dmps1/11Ver.jpg)
 
 ------------------------
 
@@ -146,7 +146,7 @@ os tutoriais, iremos corrigindo.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/12.jpg)
+![Screenshot](../img/dmps1/12.jpg)
 
 ------------------------
 
@@ -154,7 +154,7 @@ Obs: sempre ver qual é o delimitador do seu CSV.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/13.jpg)
+![Screenshot](../img/dmps1/13.jpg)
 
 ------------------------
 
@@ -164,13 +164,13 @@ Neste caso, estamos dizendo para o nosso fluxo utilizar a coluna zero do nosso d
 
 -------------------------
 
-![Screenshot](../../img/dmps1/14.jpg)
+![Screenshot](../img/dmps1/14.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/15.jpg)
+![Screenshot](../img/dmps1/15.jpg)
 
 ------------------------
 
@@ -187,13 +187,13 @@ iterations:
 
 -------------------------
 
-![Screenshot](../../img/dmps1/16.jpg)
+![Screenshot](../img/dmps1/16.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/17.jpg)
+![Screenshot](../img/dmps1/17.jpg)
 
 ------------------------
 
@@ -202,31 +202,31 @@ iterations:
 
 -------------------------
 
-![Screenshot](../../img/dmps1/18.jpg)
+![Screenshot](../img/dmps1/18.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/19.jpg)
+![Screenshot](../img/dmps1/19.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/20.jpg)
+![Screenshot](../img/dmps1/20.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/21.jpg)
+![Screenshot](../img/dmps1/21.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/22.jpg)
+![Screenshot](../img/dmps1/22.jpg)
 
 ------------------------
 
@@ -240,13 +240,13 @@ irá transformar o arquivo em Float pois tem dados que possuem dois pontos (1.23
 
 -------------------------
 
-![Screenshot](../../img/dmps1/23.jpg)
+![Screenshot](../img/dmps1/23.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/24.jpg)
+![Screenshot](../img/dmps1/24.jpg)
 
 ------------------------
 
@@ -257,7 +257,7 @@ o tipo de string para integer.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/25.jpg)
+![Screenshot](../img/dmps1/25.jpg)
 
 ------------------------
 
@@ -267,7 +267,7 @@ reza a lenda que ele é infinitas vezes melhor que JS.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/26.jpg)
+![Screenshot](../img/dmps1/26.jpg)
 
 ------------------------
 
@@ -276,7 +276,7 @@ reza a lenda que ele é infinitas vezes melhor que JS.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/27.jpg)
+![Screenshot](../img/dmps1/27.jpg)
 
 ------------------------
 
@@ -288,7 +288,7 @@ integer.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/28.jpg)
+![Screenshot](../img/dmps1/28.jpg)
 
 ------------------------
 
@@ -297,7 +297,7 @@ integer.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/29.jpg)
+![Screenshot](../img/dmps1/29.jpg)
 
 ------------------------
 
@@ -306,7 +306,7 @@ integer.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/30.jpg)
+![Screenshot](../img/dmps1/30.jpg)
 
 ------------------------
 
@@ -317,13 +317,13 @@ resultados do nosso processo de streaming de dados.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/31.jpg)
+![Screenshot](../img/dmps1/31.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/32.jpg)
+![Screenshot](../img/dmps1/32.jpg)
 
 ------------------------
 
@@ -336,13 +336,13 @@ a visualization de erro nos permite ter um log de erros.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/33.jpg)
+![Screenshot](../img/dmps1/33.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/34.jpg)
+![Screenshot](../img/dmps1/34.jpg)
 
 ------------------------
 
@@ -354,7 +354,7 @@ e desmarque as seguintes opções.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/37.jpg)
+![Screenshot](../img/dmps1/37.jpg)
 
 ------------------------
 
@@ -365,7 +365,7 @@ clicar em salvar, verificar o código e por fim clicar em enviar.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/35.jpg)
+![Screenshot](../img/dmps1/35.jpg)
 
 ------------------------
 
@@ -375,7 +375,7 @@ configurado. Agora basta rodar o job e esperar que esteja tudo pronto.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/36.jpg)
+![Screenshot](../img/dmps1/36.jpg)
 
 ------------------------
 
@@ -384,13 +384,13 @@ configurado. Agora basta rodar o job e esperar que esteja tudo pronto.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/38.jpg)
+![Screenshot](../img/dmps1/38.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/39.jpg)
+![Screenshot](../img/dmps1/39.jpg)
 
 ------------------------
 
@@ -401,13 +401,13 @@ configurado. Agora basta rodar o job e esperar que esteja tudo pronto.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/40.jpg)
+![Screenshot](../img/dmps1/40.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/41.jpg)
+![Screenshot](../img/dmps1/41.jpg)
 
 ------------------------
 
@@ -416,7 +416,7 @@ configurado. Agora basta rodar o job e esperar que esteja tudo pronto.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/42.jpg)
+![Screenshot](../img/dmps1/42.jpg)
 
 ------------------------
 
@@ -425,7 +425,7 @@ configurado. Agora basta rodar o job e esperar que esteja tudo pronto.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/43.jpg)
+![Screenshot](../img/dmps1/43.jpg)
 
 ------------------------
 
@@ -435,7 +435,7 @@ A variável local está recebendo o valor da coluna Valor Global do nosso csv.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/44.jpg)
+![Screenshot](../img/dmps1/44.jpg)
 
 ------------------------
 
@@ -448,7 +448,7 @@ Mas para isso devemos parar o nosso job.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/45.jpg)
+![Screenshot](../img/dmps1/45.jpg)
 
 ------------------------
 
@@ -457,7 +457,7 @@ Mas para isso devemos parar o nosso job.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/46.jpg)
+![Screenshot](../img/dmps1/46.jpg)
 
 ------------------------
 
@@ -466,13 +466,13 @@ Neste caso, é a iteration 4. Você deverá mudar o field position para 3.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/47.jpg)
+![Screenshot](../img/dmps1/47.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/48.jpg)
+![Screenshot](../img/dmps1/48.jpg)
 
 ------------------------
 
@@ -482,7 +482,7 @@ Observe a imagem a seguir:
 
 -------------------------
 
-![Screenshot](../../img/dmps1/49.jpg)
+![Screenshot](../img/dmps1/49.jpg)
 
 ------------------------
 
@@ -496,7 +496,7 @@ Ir na aba visualization e clicar em jobs. Ir na opção **stores**
 
 -------------------------
 
-![Screenshot](../../img/dmps1/50.jpg)
+![Screenshot](../img/dmps1/50.jpg)
 
 ------------------------
 
@@ -504,7 +504,7 @@ Ir na aba visualization e clicar em jobs. Ir na opção **stores**
 
 -------------------------
 
-![Screenshot](../../img/dmps1/51.jpg)
+![Screenshot](../img/dmps1/51.jpg)
 
 ------------------------
 
@@ -513,13 +513,13 @@ digite o nome do seu job e clique sobre ele.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/52.jpg)
+![Screenshot](../img/dmps1/52.jpg)
 
 ------------------------
 
 -------------------------
 
-![Screenshot](../../img/dmps1/53.jpg)
+![Screenshot](../img/dmps1/53.jpg)
 
 ------------------------
 
@@ -527,7 +527,7 @@ digite o nome do seu job e clique sobre ele.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/54.jpg)
+![Screenshot](../img/dmps1/54.jpg)
 
 ------------------------
 
@@ -535,7 +535,7 @@ digite o nome do seu job e clique sobre ele.
 
 -------------------------
 
-![Screenshot](../../img/dmps1/55.jpg)
+![Screenshot](../img/dmps1/55.jpg)
 
 ------------------------
 

@@ -24,8 +24,9 @@ Ir em **Configurações Avançadas do Sistema** => propriedades do sistema => **
 
 
 <p align="center">
-<img src="https://i.imgur.com/KroffOk.jpg">
+	<img src="../../img/webScreping/00.jpg">
 </p>
+
 
 Em todos os scripts Selenium incluir o código abaixo:
 
@@ -325,7 +326,7 @@ In [37]: df
 Out[37]:
 ```
 -------------------------
-![Screenshot](../../img/webScreping/01.png)
+![Screenshot](../img/webScreping/01.png)
 
 ------------------------
 
@@ -418,7 +419,7 @@ Out[43]:
 
 
 -------------------------
-![Screenshot](../../img/webScreping/02.png)
+![Screenshot](../img/webScreping/02.png)
 
 ------------------------
 
@@ -430,7 +431,7 @@ Out[44]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/03.png)
+![Screenshot](../img/webScreping/03.png)
 
 ------------------------
 
@@ -442,7 +443,7 @@ Out[45]: bradescoData
 
 
 -------------------------
-![Screenshot](../../img/webScreping/03.png)
+![Screenshot](../img/webScreping/03.png)
 
 ------------------------
 
@@ -529,7 +530,7 @@ Out[60]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/04.png)
+![Screenshot](../img/webScreping/04.png)
 
 ------------------------
 
@@ -566,7 +567,7 @@ Out[65]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/output_60_1.png)
+![Screenshot](../img/webScreping/output_60_1.png)
 
 ------------------------
 
@@ -579,7 +580,7 @@ Out[67]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/output_61_1.png)
+![Screenshot](../img/webScreping/output_61_1.png)
 
 ------------------------
 
@@ -591,7 +592,7 @@ In [69]: bradescoData.plot(x ='DATA', y = columns, figsize=(15, 4), title='Açõ
 Out[69]:
 ```
 -------------------------
-![Screenshot](../../img/webScreping/output_62_1.png)
+![Screenshot](../img/webScreping/output_62_1.png)
 
 ------------------------
 
@@ -604,7 +605,7 @@ Out[70]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/output_63_1.png)
+![Screenshot](../img/webScreping/output_63_1.png)
 
 ------------------------
 
@@ -645,7 +646,7 @@ Out[72]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/05.png)
+![Screenshot](../img/webScreping/05.png)
 
 ------------------------
 
@@ -660,7 +661,7 @@ Out[73]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/output_67_1.png)
+![Screenshot](../img/webScreping/output_67_1.png)
 
 ------------------------
 
@@ -672,7 +673,7 @@ In [74]: fig, ax1 = plt.subplots(1, 1, figsize=(25, 8))
 Out[74]:
 ```
 -------------------------
-![Screenshot](../../img/webScreping/output_68_1.png)
+![Screenshot](../img/webScreping/output_68_1.png)
 
 ------------------------
 
@@ -704,7 +705,7 @@ Out[75]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/output_72_1.png)
+![Screenshot](../img/webScreping/output_72_1.png)
 
 ------------------------
 
@@ -717,7 +718,7 @@ Out[77]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/06.png)
+![Screenshot](../img/webScreping/06.png)
 
 ------------------------
 
@@ -735,7 +736,7 @@ Out[79]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/output_76_0.png)
+![Screenshot](../img/webScreping/output_76_0.png)
 
 ------------------------
 
@@ -755,7 +756,7 @@ Out[80]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/output_78_2.png)
+![Screenshot](../img/webScreping/output_78_2.png)
 
 ------------------------
 
@@ -768,7 +769,7 @@ Out[81]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/output_79_1.png)
+![Screenshot](../img/webScreping/output_79_1.png)
 
 ------------------------
 
@@ -780,7 +781,7 @@ Out[82]:
 ```
 
 -------------------------
-![Screenshot](../../img/webScreping/output_79_2.png)
+![Screenshot](../img/webScreping/output_79_2.png)
 
 ------------------------
 

@@ -36,7 +36,7 @@ Out[03]:
 ```
 
 -------------------------
-![Screenshot](../../img/perceptron/01.png)
+![Screenshot](../img/perceptron/01.png)
 
 ------------------------
 
@@ -161,7 +161,7 @@ Out[15]:
 ```
 
 -------------------------
-![Screenshot](../../img/perceptron/02.png)
+![Screenshot](../img/perceptron/02.png)
 
 ------------------------
 

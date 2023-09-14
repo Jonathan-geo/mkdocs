@@ -1,5 +1,17 @@
 
-![Screenshot](img/dataJon02.jpg)
+
+<style>
+    .imgem {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img {
+        float: right;
+    }
+</style>
+<img src="img/fotoPerfilAtual.jpg" alt="Foto Pessoal" width="150" height="150"> 
 
 ## Introdução
 
@@ -32,11 +44,11 @@ Endereço: Avenida Dona Blandina Ignez Júlio, 741, Jaguaribe, Osasco/SP 06050-1
 
 - FORMAÇÃO ACADÊMICA<br/>
 
-2019 Ciência de Dados - Pós Grad (Cursando).<br/>
+2019 Ciência de Dados - Pós Grad.<br/>
 Universidade Nove de Julho - Uninove<br/>
 
-2019 Análise e Desenvolvimento de Sistemas (Cursando).<br/>
-Centro Universitário Internacional – UNINTER - EAD.<br/>
+2019 Análise e Desenvolvimento de Sistemas.<br/>
+Centro Universitário Internacional – UNINTER.<br/>
 
 2018 Graduação em Matemática.<br/>
 Centro Universitário Internacional – UNINTER.<br/>
@@ -52,7 +64,10 @@ Faculdade de Filosofia, Ciências e Letras de Ouro Fino, ASMEC, Brasil<br/>
 Possui um grande interesse pela área de TI, em especial pelas áreas relacionadas à modelagem e análise de
 dados. Tem um relativo domínio de python e seus principais frameworks para análise de dados como
 pandas, numpy e matplotlib. O principal objetivo é atuar como analista de dados (com foco em modelagem
-estatística/matemática e gerenciamento/tratamento de bancos de dados). <br/>
+estatística/matemática e gerenciamento/tratamento de bancos de dados). 
+
+
+<br/>
 
 
 ## DOWNLOADS

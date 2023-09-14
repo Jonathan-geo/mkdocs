@@ -11,8 +11,8 @@ Após o download, você deverá descompactar os arquivos dentro da pasta **C:\Bl
 >C:\Blaze\projetos\tomcat7
 
 
--------------------------
-![Screenshot](../../img/blaze/82.png)
+------------------------
+![Screenshot](../img/blaze/82.png)
 
 ------------------------
 
@@ -22,8 +22,8 @@ Este arquivo serve para facilitar o serviço de deploy no tomcat.
 
 - Abrir o arquivo startServer.bat com o notepad++.
 
--------------------------
-![Screenshot](../../img/blaze/83.png)
+------------------------
+![Screenshot](../img/blaze/83.png)
 
 ------------------------
 
@@ -44,19 +44,19 @@ Este arquivo serve para facilitar o serviço de deploy no tomcat.
 - Não se esqueça de salvar estas alterações.
 
 -------------------------
-![Screenshot](../../img/blaze/84.png)
+![Screenshot](../img/blaze/84.png)
 
 ------------------------
 
 - Após as alterações de endereço, dê um duplo clique sobre o arquivo startServer e o tomcat7 irá rodar no http://localhost:8081/ 
 
 -------------------------
-![Screenshot](../../img/blaze/85.png)
+![Screenshot](../img/blaze/85.png)
 
 ------------------------
 
 -------------------------
-![Screenshot](../../img/blaze/86.png)
+![Screenshot](../img/blaze/86.png)
 
 ------------------------
 
@@ -67,7 +67,7 @@ Agora iremos gerar um arquivo WAR (**W**eb Application **AR**chive). Este é um 
 - Primeiro você deve criar uma pasta chamada RMA dentro da pasta projetos. 
 
 -------------------------
-![Screenshot](../../img/blaze/87.png)
+![Screenshot](../img/blaze/87.png)
 
 ------------------------
 
@@ -87,21 +87,21 @@ Agora iremos gerar um arquivo WAR (**W**eb Application **AR**chive). Este é um 
 				- Pasta RMA que criamos. No meu caso, ficou assim: C:\Blaze\projetos\rma.
 				
 			-------------------------
-			![Screenshot](../../img/blaze/88.png)
+			![Screenshot](../img/blaze/88.png)
 
 			------------------------	
 		
 		- Next - Selecionar o projeto - Next - Selecionar o .jar - Finish.
 		
 			-------------------------
-			![Screenshot](../../img/blaze/88.png)
+			![Screenshot](../img/blaze/88.png)
 
 			------------------------
 		
 - Após concluir estes passos, o Blaze (Eclipse) irá gerar um arquivo .WAR [**RegrasRMA.war**] na sua pasta RMA. (Isso pode levar algum tempo, dependendo de seu computador). 
 
 	-------------------------
-	![Screenshot](../../img/blaze/89.png)
+	![Screenshot](../img/blaze/89.png)
 
 	------------------------
 
@@ -109,7 +109,7 @@ Agora iremos gerar um arquivo WAR (**W**eb Application **AR**chive). Este é um 
 	- Clicar com o botão direito do mouse e fechar este projeto. (Close Project)
 
 	-------------------------
-	![Screenshot](../../img/blaze/90.png)
+	![Screenshot](../img/blaze/90.png)
 
 	------------------------
 
@@ -124,7 +124,7 @@ Agora iremos executar, no tomcat, o projeto **RegrasRMA.war** que está dentro d
 - Após certificar-se de que o servidor tomcat está ativo no localhost 8081, basta ir na pasta RMA e copiar o arquivo **RegrasRMA.war** para a pasta webapps [**C:\Blaze\projetos\tomcat7\tomcat7\webapps**]
 
 	-------------------------
-	![Screenshot](../../img/blaze/91.png)
+	![Screenshot](../img/blaze/91.png)
 
 	------------------------
 
@@ -132,7 +132,7 @@ Agora iremos executar, no tomcat, o projeto **RegrasRMA.war** que está dentro d
 
 
 	-------------------------
-	![Screenshot](../../img/blaze/92.png)
+	![Screenshot](../img/blaze/92.png)
 
 	------------------------
 
@@ -140,7 +140,7 @@ Agora iremos executar, no tomcat, o projeto **RegrasRMA.war** que está dentro d
 - Após executar todo o processo de gerar o arquivo.WAR e descompactá-lo na pasta webapps do tomcat, basta ir no navegador que o tomcat está rodando, digitar o nome do projeto [**RegrasRMA**] após a porta 8081 e apertar enter para carregar a página, como na imagem abaixo. 
 
 -------------------------
-![Screenshot](../../img/blaze/93.png)
+![Screenshot](../img/blaze/93.png)
 
 ------------------------
 
@@ -148,7 +148,7 @@ Agora iremos executar, no tomcat, o projeto **RegrasRMA.war** que está dentro d
 
 
 -------------------------
-![Screenshot](../../img/blaze/94.png)
+![Screenshot](../img/blaze/94.png)
 
 ------------------------
 
@@ -170,19 +170,19 @@ Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos ge
 	- New - Deployment Entities - Rule Service Definition.
 
 		-------------------------
-		![Screenshot](../../img/blaze/95.png)
+		![Screenshot](../img/blaze/95.png)
 
 		------------------------
 
 		-------------------------
-		![Screenshot](../../img/blaze/96.png)
+		![Screenshot](../img/blaze/96.png)
 
 		------------------------
 	
 	- Manter o mesmo nome, porém sem os espaços e caracteres especiais. Observe o exemplo abaixo:
 	
 		-------------------------
-		![Screenshot](../../img/blaze/97.png)
+		![Screenshot](../img/blaze/97.png)
 
 		------------------------
 
@@ -190,12 +190,12 @@ Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos ge
 		- Em Functional Item [Item Funcional], escolha a opção **entrypoint(decisionInput):DecisionInput**
 		
 		-------------------------
-		![Screenshot](../../img/blaze/98.png)
+		![Screenshot](../img/blaze/98.png)
 
 		------------------------
 
 		-------------------------
-		![Screenshot](../../img/blaze/99.png)
+		![Screenshot](../img/blaze/99.png)
 
 		------------------------
 		
@@ -207,14 +207,14 @@ Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos ge
 	- New - Deployment Entities - Deployment Definition.
 
 		-------------------------
-		![Screenshot](../../img/blaze/100.png)
+		![Screenshot](../img/blaze/100.png)
 
 		------------------------	
 	
 	- Manter o mesmo nome, porém sem os espaços e caracteres especiais. Observe o exemplo abaixo:
 
 		-------------------------
-		![Screenshot](../../img/blaze/101.png)
+		![Screenshot](../img/blaze/101.png)
 
 		------------------------	
 		
@@ -223,7 +223,7 @@ Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos ge
 	
 		
 		-------------------------
-		![Screenshot](../../img/blaze/102.png)
+		![Screenshot](../img/blaze/102.png)
 
 		------------------------	
 		
@@ -234,7 +234,7 @@ Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos ge
 	- Clicar com o botão direito do mouse sobre a pasta Deploy.
 	- New - Deployment Entities - System Definition.
 		-------------------------
-		![Screenshot](../../img/blaze/103.png)
+		![Screenshot](../img/blaze/103.png)
 
 		------------------------
 		
@@ -245,7 +245,7 @@ Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos ge
 	
 	
 		-------------------------
-		![Screenshot](../../img/blaze/104.png)
+		![Screenshot](../img/blaze/104.png)
 
 		------------------------
 	
@@ -262,7 +262,7 @@ Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos ge
 	- Next - Next - Selecionar ou colar o caminho da pasta ruleserver - Next.
 	
 	-------------------------
-	![Screenshot](../../img/blaze/105.png)
+	![Screenshot](../img/blaze/105.png)
 
 	------------------------
 	
@@ -272,12 +272,12 @@ Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos ge
 		- Finish.
 		
 		-------------------------
-		![Screenshot](../../img/blaze/106.png)
+		![Screenshot](../img/blaze/106.png)
 
 		------------------------
 
 		-------------------------
-		![Screenshot](../../img/blaze/107.png)
+		![Screenshot](../img/blaze/107.png)
 
 		------------------------
 
@@ -286,7 +286,7 @@ Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos ge
 	
 	
 		-------------------------
-		![Screenshot](../../img/blaze/108.png)
+		![Screenshot](../img/blaze/108.png)
 
 		------------------------	
 
@@ -298,7 +298,7 @@ Agora, de fato, iremos gerar um Deploy de serviço de regras, isto é, iremos ge
 Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior, na pasta Server. Lembrando que esta pasta se encontra dentro da pasta ruleserver. 
 
 -------------------------
-![Screenshot](../../img/blaze/109.png)
+![Screenshot](../img/blaze/109.png)
 
 ------------------------
 
@@ -310,7 +310,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 			- Observe a imagem a seguir:
 			
 				-------------------------
-				![Screenshot](../../img/blaze/110.png)
+				![Screenshot](../img/blaze/110.png)
 
 				------------------------
 				
@@ -319,7 +319,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 			- Salvar as alterações
 			
 				-------------------------
-				![Screenshot](../../img/blaze/111.png)
+				![Screenshot](../img/blaze/111.png)
 
 				------------------------
 				
@@ -329,7 +329,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 	- Na linha 58, adicionar o código descrito na imagem abaixo. Atenção: o caminho que digitei é o caminho do meu arquivo bom-Carro3.jar
 	- Salvar as alterações.
 		-------------------------
-		![Screenshot](../../img/blaze/116.png)
+		![Screenshot](../img/blaze/116.png)
 
 		------------------------	
 			
@@ -343,7 +343,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 		- Isso irá abrir o cmd na pasta server.
 		
 			-------------------------
-			![Screenshot](../../img/blaze/112.png)
+			![Screenshot](../img/blaze/112.png)
 
 			------------------------
 
@@ -351,12 +351,12 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 
 
 			-------------------------
-			![Screenshot](../../img/blaze/113.png)
+			![Screenshot](../img/blaze/113.png)
 
 			------------------------
 			
 			-------------------------
-			![Screenshot](../../img/blaze/114.png)
+			![Screenshot](../img/blaze/114.png)
 
 			------------------------				
 
@@ -365,7 +365,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 		- Digite Build.bat e aperte enter.
 		- Este comando irá compilar algumas classes. 
 			-------------------------
-			![Screenshot](../../img/blaze/115.png)
+			![Screenshot](../img/blaze/115.png)
 
 			------------------------
 
@@ -375,7 +375,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 		- Digite War.bat e aperte enter.
 
 			-------------------------
-			![Screenshot](../../img/blaze/117.png)
+			![Screenshot](../img/blaze/117.png)
 
 			------------------------
 
@@ -389,7 +389,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 - Startar o Toncat7 pelo arquivo **startServer.bat** (dando um duplo clique) que está na pasta **C:\Blaze\projetos\tomcat7**
 		
 	-------------------------
-	![Screenshot](../../img/blaze/118.png)
+	![Screenshot](../img/blaze/118.png)
 
 	------------------------
 		
@@ -397,14 +397,14 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 	- Se tudo estiver correto, o arquivo **DefinicaoDoServicoDeRegrasServer.war** irá se descompactar automaticamente gerando uma pasta de mesmo nome. 
 	
 		-------------------------
-		![Screenshot](../../img/blaze/119.png)
+		![Screenshot](../img/blaze/119.png)
 
 		------------------------
 	
 	- Ir na pasta C:\Blaze\projetos\ruleserver e abrir o arquivo DeploymentDocumentation.html dando um duplo clique sobre ele. 
 	
 	-------------------------
-	![Screenshot](../../img/blaze/120.png)
+	![Screenshot](../img/blaze/120.png)
 
 	------------------------
 
@@ -413,7 +413,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 	> http://localhost:8080/DefinicaoDoServicoDeRegrasServer/DefinicaoDoServicoDeRegrasService?wsdl
 		
 	-------------------------
-	![Screenshot](../../img/blaze/121.png)
+	![Screenshot](../img/blaze/121.png)
 
 	------------------------
 	
@@ -426,7 +426,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 	- Se tudo ocorreu bem, sua aplicação retornará um XML assim:
 	
 	-------------------------
-	![Screenshot](../../img/blaze/122.png)
+	![Screenshot](../img/blaze/122.png)
 
 	------------------------
 	
@@ -436,7 +436,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 - Criar uma pasta [workspaceSoap] dentro da pasta Projetos.
 
 	-------------------------
-	![Screenshot](../../img/blaze/125.png)
+	![Screenshot](../img/blaze/125.png)
 
 	------------------------
 
@@ -446,12 +446,12 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 	- O SoapUI abrirá sua janela inicial.
 		
 	-------------------------
-	![Screenshot](../../img/blaze/123.png)
+	![Screenshot](../img/blaze/123.png)
 
 	------------------------
 	
 	-------------------------
-	![Screenshot](../../img/blaze/124.png)
+	![Screenshot](../img/blaze/124.png)
 
 	------------------------
 		
@@ -459,14 +459,14 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 	- File - New Workspace - dar o nome de workspaceSoap 
 			
 	-------------------------
-	![Screenshot](../../img/blaze/126.png)
+	![Screenshot](../img/blaze/126.png)
 
 	------------------------
 	
 	- Escolher a pasta workspaceSoap que criamos dentro da pasta Projetos.
 	
 	-------------------------
-	![Screenshot](../../img/blaze/127.png)
+	![Screenshot](../img/blaze/127.png)
 
 	------------------------
 	
@@ -478,7 +478,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 	- File - New Soap Project.
 		
 	-------------------------
-	![Screenshot](../../img/blaze/128.png)
+	![Screenshot](../img/blaze/128.png)
 
 	------------------------
 		
@@ -489,7 +489,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 	- O nome do projeto será gerado automaticamente. 
 		
 	-------------------------
-	![Screenshot](../../img/blaze/129.png)
+	![Screenshot](../img/blaze/129.png)
 
 	------------------------
 	
@@ -498,7 +498,7 @@ Agora iremos configurar alguns arquivos que foram gerados pelo processo anterior
 		- Para isso, basta digitar os dados e ir no ícone Rodar. 
 		
 -------------------------
-![Screenshot](../../img/blaze/130.png)
+![Screenshot](../img/blaze/130.png)
 
 ------------------------
 		
@@ -511,11 +511,11 @@ Esta aplicação recebe dois valores principais (idade e renda) e retorna Negado
 No exemplo acima, a idade é de 22 anos e a renda é de R$ 5420, ou seja, é um cliente apto a alugar um carro. 	
 Já no exemplo abaixo, a idade é de 16 e a renda de R$ 5420. Mesmo a renda sendo maior do que R$ 1000, o resultado é Negado, pois a idade é menor do que 18. 
 -------------------------
-![Screenshot](../../img/blaze/131.png)
+![Screenshot](../img/blaze/131.png)
 
 ------------------------
 		
-## Mais utoriais - Blaze
+## Mais Tutoriais - Blaze
 
 - 1 Introdução ao Blaze <button onclick="window.open('https://jonathan-geo.github.io/mkdocs/BLAZE/blaze01/');">Blaze - Instalações</button>
 
